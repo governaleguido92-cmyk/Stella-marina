@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stella Marina - SEO Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --danger: #f44336;
+            --light: #f8f9fa;
+            --dark: #333;
+            color-scheme: light;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .metric-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--primary);
+        }
+
+        .metric-card h3 {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+        .metric-change {
+            font-size: 0.85em;
+            margin-top: 8px;
+        }
+
+        .metric-change.positive {
+            color: var(--success);
+        }
+
+        .metric-change.negative {
+            color: var(--danger);
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .task-list {
+            list-style: none;
+        }
+
+        .task-item {
+            padding: 15px;
+            margin: 10px 0;
+            background: var(--light);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid var(--warning);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .task-item:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .task-item.completed {
+            border-left-color: var(--success);
+            opacity: 0.7;
+        }
+
+        .task-item.completed .task-title {
+            text-decoration: line-through;
+        }
+
+        .task-content {
+            flex: 1;
+        }
+
+        .task-title {
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .task-week {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .task-checkbox {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--warning);
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+        }
+
+        .task-item.completed .task-checkbox {
+            background: var(--success);
+            border-color: var(--success);
+            color: white;
+        }
+
+        .progress-container {
+            margin: 20px 0;
+        }
+
+        .progress-bar {
+            height: 30px;
+            background: var(--light);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--success) 0%, #45a049 100%);
+            transition: width 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .progress-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            margin: 30px 0;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 500;
+        }
+
+        .status-badge.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-badge.in-progress {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .status-badge.completed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .week-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #fafafa;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .week-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .timeline-item {
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .timeline-item.active {
+            border-color: var(--primary);
+            background: #f3f6ff;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Stella Marina - SEO Tracker</h1>
+            <p>Monitoraggio in tempo reale del piano di ottimizzazione SEO - barchefavignana.it</p>
+        </header>
+
+        <!-- Metrics Summary -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <h3>Posizione Media</h3>
+                <div class="metric-value">29.9</div>
+                <div class="metric-change negative">↓ Attualmente pagina 3</div>
+            </div>
+            <div class="metric-card">
+                <h3>Impressioni</h3>
+                <div class="metric-value">45</div>
+                <div class="metric-change">Ultimi 28 giorni</div>
+            </div>
+            <div class="metric-card">
+                <h3>CTR Attuale</h3>
+                <div class="metric-value">0%</div>
+                <div class="metric-change negative">0 click su 45 impressioni</div>
+            </div>
+            <div class="metric-card">
+                <h3>Target CTR</h3>
+                <div class="metric-value">2-5%</div>
+                <div class="metric-change positive">↑ Dopo ottimizzazione</div>
+            </div>
+        </div>
+
+        <!-- Overall Progress -->
+        <div class="section">
+            <h2>📈 Progresso Complessivo</h2>
+            <div class="progress-container">
+                <div class="progress-text">Completamento del piano: <strong id="overallPercent">0%</strong> (0/15 task completati)</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%">0%</div>
+                </div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item active">
+                    <strong style="color: var(--primary);">Settimana 1-2</strong><br/>
+                    Titoli e Descrizioni
+                </div>
+                <div class="timeline-item">
+                    <strong style="color: var(--primary);">Settimana 2-3</strong><br/>
+                    Schema Markup
+                </div>
+                <div class="timeline-item">
+                    <strong style="color: var(--primary);">Settimana 3-4</strong><br/>
+                    Contenuti
+                </div>
+                <div class="timeline-item">
+                    <strong style="color: var(--primary);">Settimana 4-8</strong><br/>
+                    Monitoraggio
+                </div>
+            </div>
+        </div>
+
+        <!-- Implementation Checklist -->
+        <div class="section">
+            <h2>✅ Checklist Implementazione (8 Settimane)</h2>
+
+            <div class="week-section">
+                <div class="week-title">📅 Settimana 1-2: Ottimizzazione Titoli e Descrizioni</div>
+                <ul class="task-list" id="week1">
+                    <li class="task-item" data-task-id="1">
+                        <div class="task-content">
+                            <div class="task-title">Aggiorna meta title homepage</div>
+                            <div class="task-week">Settimana 1</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 1)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="2">
+                        <div class="task-content">
+                            <div class="task-title">Aggiorna meta description homepage</div>
+                            <div class="task-week">Settimana 1</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 2)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="3">
+                        <div class="task-content">
+                            <div class="task-title">Ottimizza titoli/description per tutte le 9 pagine</div>
+                            <div class="task-week">Settimana 1-2</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 3)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="4">
+                        <div class="task-content">
+                            <div class="task-title">Deploy modifiche a Netlify</div>
+                            <div class="task-week">Settimana 2</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 4)"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="week-section">
+                <div class="week-title">📅 Settimana 2-3: Schema Markup e Dati Strutturati</div>
+                <ul class="task-list" id="week2">
+                    <li class="task-item" data-task-id="5">
+                        <div class="task-content">
+                            <div class="task-title">Aggiungi LocalBusiness schema alla homepage</div>
+                            <div class="task-week">Settimana 2</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 5)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="6">
+                        <div class="task-content">
+                            <div class="task-title">Implementa Product schema per noleggio barche</div>
+                            <div class="task-week">Settimana 2</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 6)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="7">
+                        <div class="task-content">
+                            <div class="task-title">Aggiungi FAQPage schema a faq.html</div>
+                            <div class="task-week">Settimana 2-3</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 7)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="8">
+                        <div class="task-content">
+                            <div class="task-title">Valida schema markup con Google Rich Results Test</div>
+                            <div class="task-week">Settimana 3</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 8)"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="week-section">
+                <div class="week-title">📅 Settimana 3-4: Ottimizzazione Contenuti</div>
+                <ul class="task-list" id="week3">
+                    <li class="task-item" data-task-id="9">
+                        <div class="task-content">
+                            <div class="task-title">Espandi contenuto homepage (+300 parole)</div>
+                            <div class="task-week">Settimana 3</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 9)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="10">
+                        <div class="task-content">
+                            <div class="task-title">Ottimizza immagini e aggiungi alt text (7+ immagini)</div>
+                            <div class="task-week">Settimana 3-4</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 10)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="11">
+                        <div class="task-content">
+                            <div class="task-title">Migliora contenuti pagine di servizio (+200 parole ciascuna)</div>
+                            <div class="task-week">Settimana 3-4</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 11)"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="week-section">
+                <div class="week-title">📅 Settimana 4-8: Monitoraggio e Costruzione Autorità</div>
+                <ul class="task-list" id="week4">
+                    <li class="task-item" data-task-id="12">
+                        <div class="task-content">
+                            <div class="task-title">Monitora GSC posizione media e CTR settimanalmente</div>
+                            <div class="task-week">Settimana 4-8</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 12)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="13">
+                        <div class="task-content">
+                            <div class="task-title">Eseguire audit PageSpeed Insights mensile</div>
+                            <div class="task-week">Settimana 4-8</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 13)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="14">
+                        <div class="task-content">
+                            <div class="task-title">Creare backlink da siti locali Favignana/Egadi</div>
+                            <div class="task-week">Settimana 5-8</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 14)"></div>
+                    </li>
+                    <li class="task-item" data-task-id="15">
+                        <div class="task-content">
+                            <div class="task-title">Analizzare risultati e pianificare fase successiva</div>
+                            <div class="task-week">Settimana 8</div>
+                        </div>
+                        <span class="status-badge pending">In Sospeso</span>
+                        <div class="task-checkbox" onclick="toggleTask(this, 15)"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Expected Results -->
+        <div class="section">
+            <h2>🎯 Risultati Attesi</h2>
+            <div class="chart-container">
+                <canvas id="projectionChart"></canvas>
+            </div>
+            <p style="margin-top: 20px; color: #666; text-align: center;">
+                <strong>Timeline previsto:</strong> Settimana 1-2 (CTR 0%→2-5%), Settimana 3-4 (Posizione 29.9→15-20), Settimana 5-8 (Posizione 15-20→5-10)
+            </p>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="section">
+            <h2>💡 Consigli Implementazione Rapida</h2>
+            <ul class="task-list">
+                <li style="background: #e3f2fd; border-left-color: var(--primary); cursor: default;">
+                    <div class="task-content">
+                        <div class="task-title">Usa il file STELLA-MARINA-SEO-IMPLEMENTATION.xlsx come guida</div>
+                        <div class="task-week">Contiene tutti i titoli e descrizioni ottimizzati pronti per l'implementazione</div>
+                    </div>
+                </li>
+                <li style="background: #e3f2fd; border-left-color: var(--primary); cursor: default;">
+                    <div class="task-content">
+                        <div class="task-title">Modifica i file HTML con un editor di testo</div>
+                        <div class="task-week">Nano, Vi, o VS Code - non serve GUI complicata</div>
+                    </div>
+                </li>
+                <li style="background: #e3f2fd; border-left-color: var(--primary); cursor: default;">
+                    <div class="task-content">
+                        <div class="task-title">Deploy con: netlify deploy --prod --dir=.</div>
+                        <div class="task-week">Dalla cartella PRONTO-NETLIFY - cambiamenti live in ~30 secondi</div>
+                    </div>
+                </li>
+                <li style="background: #e3f2fd; border-left-color: var(--primary); cursor: default;">
+                    <div class="task-content">
+                        <div class="task-title">Monitora in Google Search Console</div>
+                        <div class="task-week">Verifica CTR e posizione media aumentino progressivamente</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        let completedTasks = JSON.parse(localStorage.getItem('completedTasks') || '{}');
+
+        function toggleTask(checkbox, taskId) {
+            const taskItem = checkbox.closest('.task-item');
+            const isCompleted = !taskItem.classList.contains('completed');
+
+            if (isCompleted) {
+                taskItem.classList.add('completed');
+                checkbox.innerHTML = '✓';
+                completedTasks[taskId] = true;
+            } else {
+                taskItem.classList.remove('completed');
+                checkbox.innerHTML = '';
+                delete completedTasks[taskId];
+            }
+
+            localStorage.setItem('completedTasks', JSON.stringify(completedTasks));
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const total = 15;
+            const completed = Object.keys(completedTasks).length;
+            const percentage = Math.round((completed / total) * 100);
+
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressFill').textContent = percentage + '%';
+            document.getElementById('overallPercent').textContent = percentage + '%';
+            document.querySelector('.progress-text').innerHTML =
+                `Completamento del piano: <strong>${percentage}%</strong> (${completed}/${total} task completati)`;
+        }
+
+        function initializeChecklist() {
+            document.querySelectorAll('.task-item').forEach(item => {
+                const taskId = item.getAttribute('data-task-id');
+                if (completedTasks[taskId]) {
+                    item.classList.add('completed');
+                    item.querySelector('.task-checkbox').innerHTML = '✓';
+                }
+            });
+            updateProgress();
+        }
+
+        function initializeChart() {
+            const ctx = document.getElementById('projectionChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Oggi', 'Sett. 2', 'Sett. 4', 'Sett. 8'],
+                    datasets: [
+                        {
+                            label: 'Posizione Media (Lower = Better)',
+                            data: [29.9, 22, 15, 8],
+                            borderColor: '#667eea',
+                            backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 6,
+                            pointBackgroundColor: '#667eea'
+                        },
+                        {
+                            label: 'CTR Stimato (%)',
+                            data: [0, 1.5, 3, 5],
+                            borderColor: '#4caf50',
+                            backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            fill: true,
+                            pointRadius: 6,
+                            pointBackgroundColor: '#4caf50',
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: { display: true, text: 'Posizione (Lower = Better)' }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: { display: true, text: 'CTR (%)' },
+                            grid: { drawOnChartArea: false }
+                        }
+                    },
+                    plugins: {
+                        legend: { position: 'top' },
+                        title: { display: true, text: 'Proiezioni SEO - 8 Settimane' }
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeChecklist();
+            initializeChart();
+        });
+    </script>
+</body>
+</html>
