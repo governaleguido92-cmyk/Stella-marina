@@ -1,6 +1,6 @@
 headersOrigin = "config"
 redirectsOrigin = "config"
-functionsDirectory = "/Users/guidogovernale/Downloads/outputs/netlify/functions"
+functionsDirectory = "netlify/functions"
 functionsDirectoryOrigin = "config-v1"
 
 [functions]
@@ -15,11 +15,11 @@ pinned_version = "6"
   [plugins.inputs]
 
 [build]
-publish = "/Users/guidogovernale/Downloads/outputs"
+publish = "."
 publishOrigin = "config"
 commandOrigin = "config"
 command = "echo 'Static site - no build needed'"
-functions = "/Users/guidogovernale/Downloads/outputs/netlify/functions"
+functions = "netlify/functions"
 
   [build.environment]
   NODE_ENV = "production"
