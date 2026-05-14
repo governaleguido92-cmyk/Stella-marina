@@ -1,234 +1,125 @@
-headersOrigin = "config"
-redirectsOrigin = "config"
-functionsDirectory = "/Users/guidogovernale/Downloads/outputs/netlify/functions"
-functionsDirectoryOrigin = "config-v1"
+[build]
+  publish = "."
+  command = "echo 'Static site - no build needed'"
 
-[functions]
-
-  [functions."*"]
+  [build.environment]
+    NODE_ENV = "production"
 
 [[plugins]]
-origin = "ui"
-package = "@netlify/plugin-lighthouse"
-pinned_version = "6"
+  package = "@netlify/plugin-lighthouse"
 
   [plugins.inputs]
 
-[build]
-publish = "/Users/guidogovernale/Downloads/outputs"
-publishOrigin = "config"
-commandOrigin = "config"
-command = "echo 'Static site - no build needed'"
-functions = "/Users/guidogovernale/Downloads/outputs/netlify/functions"
-
-  [build.environment]
-  NODE_ENV = "production"
-
-  [build.processing]
-
-    [build.processing.css]
-
-    [build.processing.html]
-
-    [build.processing.images]
-
-    [build.processing.js]
-
-  [build.services]
-
 [[headers]]
-for = "/*"
+  for = "/*"
 
   [headers.values]
-  X-Frame-Options = "SAMEORIGIN"
-  X-Content-Type-Options = "nosniff"
-  X-XSS-Protection = "1; mode=block"
-  Referrer-Policy = "strict-origin-when-cross-origin"
-  Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
-  Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-  X-Robots-Tag = "index, follow"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Robots-Tag = "index, follow"
 
 [[headers]]
-for = "/*.html"
+  for = "/*.html"
 
   [headers.values]
-  Cache-Control = "public, max-age=0, must-revalidate"
-  Content-Type = "text/html; charset=utf-8"
-  X-Robots-Tag = "index, follow"
+    Cache-Control = "public, max-age=0, must-revalidate"
+    Content-Type = "text/html; charset=utf-8"
+    X-Robots-Tag = "index, follow"
 
 [[headers]]
-for = "/assets/*.{js,css}"
+  for = "/assets/*.{js,css}"
 
   [headers.values]
-  Cache-Control = "public, max-age=31536000, immutable"
-  Content-Type = "application/javascript"
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "application/javascript"
 
 [[headers]]
-for = "/images/*.{png,jpg,jpeg,gif,webp,svg}"
+  for = "/images/*.{png,jpg,jpeg,gif,webp,svg}"
 
   [headers.values]
-  Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-for = "/fonts/*.{woff,woff2,ttf,eot}"
+  for = "/fonts/*.{woff,woff2,ttf,eot}"
 
   [headers.values]
-  Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-for = "/sitemap.xml"
+  for = "/sitemap.xml"
 
   [headers.values]
-  Cache-Control = "public, max-age=604800"
-  Content-Type = "application/xml"
+    Cache-Control = "public, max-age=604800"
+    Content-Type = "application/xml"
 
 [[headers]]
-for = "/robots.txt"
+  for = "/robots.txt"
 
   [headers.values]
-  Cache-Control = "public, max-age=604800"
-  Content-Type = "text/plain"
+    Cache-Control = "public, max-age=604800"
+    Content-Type = "text/plain"
 
 [[redirects]]
-from = "https://www.barchefavignana.it/*"
-to = "https://barchefavignana.it/:splat"
-status = 301
-force = true
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "https://www.barchefavignana.it/*"
+  to = "https://barchefavignana.it/:splat"
+  status = 301
+  force = true
 
 [[redirects]]
-from = "/index.html"
-to = "/"
-status = 301
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/index.html"
+  to = "/"
+  status = 301
 
 [[redirects]]
-from = "/noleggio-gommoni-favignana"
-to = "/noleggio-gommoni-favignana.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/noleggio-gommoni-favignana"
+  to = "/noleggio-gommoni-favignana.html"
+  status = 200
 
 [[redirects]]
-from = "/noleggio-barche-favignana"
-to = "/noleggio-barche-favignana.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/noleggio-barche-favignana"
+  to = "/noleggio-barche-favignana.html"
+  status = 200
 
 [[redirects]]
-from = "/cosa-vedere-favignana-in-barca"
-to = "/cosa-vedere-favignana-in-barca.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/cosa-vedere-favignana-in-barca"
+  to = "/cosa-vedere-favignana-in-barca.html"
+  status = 200
 
 [[redirects]]
-from = "/escursioni-egadi-favignana"
-to = "/escursioni-egadi-favignana.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/escursioni-egadi-favignana"
+  to = "/escursioni-egadi-favignana.html"
+  status = 200
 
 [[redirects]]
-from = "/aperitivo-tramonto-favignana"
-to = "/aperitivo-tramonto-favignana.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/aperitivo-tramonto-favignana"
+  to = "/aperitivo-tramonto-favignana.html"
+  status = 200
 
 [[redirects]]
-from = "/transfer-trapani-favignana"
-to = "/transfer-trapani-favignana.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/transfer-trapani-favignana"
+  to = "/transfer-trapani-favignana.html"
+  status = 200
 
 [[redirects]]
-from = "/faq"
-to = "/faq.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/faq"
+  to = "/faq.html"
+  status = 200
 
 [[redirects]]
-from = "/contatti"
-to = "/contatti.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/contatti"
+  to = "/contatti.html"
+  status = 200
 
 [[redirects]]
-from = "/*"
-to = "/404.html"
-status = 404
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/*"
+  to = "/404.html"
+  status = 404
 
 [[redirects]]
-from = "/admin"
-to = "/admin/index.html"
-status = 200
-force = false
-
-  [redirects.query]
-
-  [redirects.conditions]
-
-  [redirects.headers]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
