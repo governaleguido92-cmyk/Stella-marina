@@ -33,6 +33,176 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--ocean:#0a3d5c;--sky:#1a7fa8;--teal:#00b5c8;--foam:#e8f4f9;--sand:#f5e6c8;--sun:#f0b429;--sunset:#e8651a;--white:#fff;--text:#1a2a36;--muted:#3d5b6b;--night:#040f1a;--warm-dark:#3d1f0f;--sunset-coral:#ff6b35;--sunset-orange:#ff8c42;--peach:#ffd9c8}html{scroll-behavior:smooth}body{font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--text);background:#fff;line-height:1.6;overflow-x:hidden}a{color:#d97706;text-decoration:none}img{max-width:100%;height:auto;display:block}.skip-link{position:absolute;top:-40px;left:0;background:#d97706;color:#fff;padding:.5rem 1rem;border-radius:0 0 8px 0;z-index:99999;font-weight:600}.skip-link:focus{top:0}nav.main{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(10,61,92,.98);backdrop-filter:blur(12px);padding:0 1.5rem;height:58px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,.07)}nav.main .brand{color:#fff;font-family:'Playfair Display',Georgia,serif;font-size:1.15rem;font-weight:700;letter-spacing:.04em}nav.main .brand small{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.78);font-family:'DM Sans',sans-serif;font-weight:500}nav.main .nav-center{display:flex;gap:.2rem;align-items:center;flex-wrap:wrap}nav.main .nav-center a{color:rgba(255,255,255,.92);text-decoration:none;font-size:.82rem;padding:.45rem .8rem;border-radius:100px;transition:background .2s}nav.main .nav-center a:hover,nav.main .nav-center a[aria-current="page"]{color:#fff;background:rgba(255,140,66,.25)}nav.main .nav-center a.wa{background:#25D366;color:#fff;font-weight:600;padding:.45rem 1rem}.hamburger{display:none;flex-direction:column;cursor:pointer;gap:6px;background:0;border:0;padding:0;margin-left:1rem}.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:all .3s ease}.hamburger.active span:nth-child(1){transform:translateY(10px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-10px) rotate(-45deg)}@media(max-width:768px){.hamburger{display:flex}nav.main .nav-center a:not(.wa){display:none}}.mobile-sidebar{position:fixed;top:0;left:-100%;width:280px;height:100vh;background:linear-gradient(180deg,#0a3d5c 0%,#1a5f7a 100%);color:#fff;z-index:998;transition:left .3s ease;overflow-y:auto;padding-top:80px;padding-bottom:80px}.mobile-sidebar.active{left:0}.mobile-sidebar nav{display:flex;flex-direction:column;gap:0}.mobile-sidebar nav a{display:block;padding:1rem 1.5rem;color:rgba(255,255,255,.85);border-bottom:1px solid rgba(255,255,255,.08);transition:all .2s;font-weight:500}.mobile-sidebar nav a:hover,.mobile-sidebar nav a[aria-current="page"]{background:rgba(255,140,66,.2);color:#fff;border-left:4px solid #ff8c42;padding-left:calc(1.5rem - 4px)}.mobile-sidebar nav a.wa{background:#25D366;color:#fff;margin:1rem 1rem 0 1rem;border-radius:100px;text-align:center;border:0;font-weight:600}.sidebar-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.4);z-index:997;display:none;opacity:0;transition:opacity .3s ease}.sidebar-overlay.active{display:block;opacity:1}main{margin-top:58px}.hero-lp{position:relative;color:#fff;padding:5rem 1.5rem 4rem;background:linear-gradient(160deg,#0a3d5c 0%,#1a5f7a 50%,#3a8eb8 100%)}.hero-lp::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(58,142,184,.35),transparent 60%);pointer-events:none}.hero-lp .container{position:relative;max-width:1080px;margin:0 auto}.hero-lp h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.9rem,5vw,3.2rem);line-height:1.1;margin-bottom:1rem}.hero-lp h1 em{color:#b0e4f7;font-style:italic}.hero-lp p.lead{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.95);max-width:680px}.hero-lp .ctas{margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.7rem;border-radius:100px;font-size:.95rem;font-weight:600;text-decoration:none;transition:transform .2s,box-shadow .2s;border:0;cursor:pointer}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25)}.btn-wa{background:#25D366;color:#fff}.btn-tel{background:var(--sky);color:#fff;border:1px solid var(--sky)}section.lp{padding:4rem 1.5rem}section.lp.alt{background:#f0f8fc}section.lp .container{max-width:1080px;margin:0 auto}section.lp h2{font-family:'Playfair Display',Georgia,serif;color:#0a3d5c;font-size:clamp(1.6rem,4vw,2.4rem);line-height:1.2;margin-bottom:1rem}section.lp h2 em{color:#1a7fa8;font-style:italic}section.lp p{color:var(--text);max-width:780px;margin-bottom:1rem}footer.main{background:#0a3d5c;color:rgba(255,255,255,.82);padding:3rem 1.5rem 1.5rem;font-size:.88rem;margin-top:3rem}footer.main .inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}footer.main h5{color:rgba(255,255,255,.95);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.8rem}footer.main a{color:rgba(255,255,255,.82);display:block;line-height:2;transition:color .2s}footer.main a:hover{color:#ff8c42}.mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:996;background:rgba(10,61,92,.98);backdrop-filter:blur(12px);padding:.7rem .9rem;border-top:1px solid rgba(255,255,255,.08);gap:.5rem}@media(max-width:768px){.mobile-cta{display:flex}body{padding-bottom:60px}}.mobile-cta a{flex:1;text-align:center;font-size:.85rem;font-weight:600;border-radius:100px;padding:.7rem .5rem;text-decoration:none}.mc-wa{background:#25D366;color:#fff}.mc-tel{background:var(--sky);color:#fff;border:1px solid var(--sky)}@media(max-width:768px){section.lp{padding:2.5rem 1rem}}@media print{nav.main,.mobile-cta,.hamburger,.mobile-sidebar{display:none}}
+
+/* ═══════════════════════════════════════════════════════════════ */
+/* MOBILE OPTIMIZATIONS - Touch targets, spacing, font sizing */
+/* ═══════════════════════════════════════════════════════════════ */
+
+/* Touch target sizes - WCAG minimum 44x44px */
+nav.main .nav-center a,
+.btn,
+.mobile-cta a {
+  min-height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+}
+
+/* Hero section mobile optimization */
+.hero-lp {
+  padding: clamp(2rem, 5vw, 5rem) 1rem clamp(1.5rem, 4vw, 4rem);
+  min-height: clamp(350px, 60vh, 600px);
+}
+
+.hero-lp h1 {
+  font-size: clamp(1.5rem, 4.5vw, 3.2rem);
+}
+
+.hero-lp p.lead {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  line-height: 1.5;
+}
+
+.hero-lp .ctas {
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: clamp(0.7rem, 2vw, 0.85rem) clamp(1rem, 3vw, 1.7rem);
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  white-space: nowrap;
+}
+
+/* Main sections mobile */
+section.lp {
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+}
+
+section.lp h2 {
+  font-size: clamp(1.3rem, 3.5vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+section.lp p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  line-height: 1.6;
+}
+
+/* Navigation improvements for mobile */
+nav.main {
+  padding: 0 1rem;
+  height: 56px;
+}
+
+nav.main .brand {
+  font-size: clamp(0.9rem, 2vw, 1.15rem);
+}
+
+nav.main .brand small {
+  font-size: clamp(0.45rem, 1vw, 0.62rem);
+}
+
+/* Mobile sidebar improvements */
+.mobile-sidebar {
+  width: 85vw;
+  max-width: 300px;
+}
+
+.mobile-sidebar nav a {
+  padding: clamp(0.8rem, 2vw, 1rem) 1.2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile CTA bar improvements */
+.mobile-cta {
+  height: 60px;
+  padding: clamp(0.5rem, 1vw, 0.7rem) clamp(0.6rem, 1vw, 0.9rem);
+}
+
+.mobile-cta a {
+  padding: clamp(0.6rem, 1vw, 0.7rem) 0.3rem;
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+  min-height: 44px;
+}
+
+/* Footer mobile optimization */
+footer.main {
+  padding: 2rem 1rem 1rem;
+  font-size: clamp(0.78rem, 1.2vw, 0.88rem);
+}
+
+footer.main .inner {
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+footer.main h5 {
+  font-size: clamp(0.65rem, 1vw, 0.78rem);
+}
+
+/* Enhanced mobile breakpoint */
+@media (max-width: 768px) {
+  main {
+    margin-top: 56px;
+  }
+  
+  body {
+    padding-bottom: 60px;
+  }
+  
+  section.lp.alt {
+    background: #f0f8fc;
+  }
+  
+  footer.main .inner {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-lp .ctas {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Small devices optimization */
+@media (max-width: 480px) {
+  .hero-lp h1 {
+    font-size: clamp(1.3rem, 3.5vw, 2.5rem);
+  }
+  
+  .hero-lp .ctas {
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+  }
+  
+  nav.main .brand {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+  }
+  
+  section.lp h2 {
+    font-size: clamp(1.1rem, 3vw, 2rem);
+  }
+  
+  .mobile-sidebar {
+    padding-top: 70px;
+  }
+}
+
 </style>
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
