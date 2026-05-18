@@ -85,10 +85,9 @@
     main { margin-top: 58px; }
 
     /* ═══ HERO ═══ */
-    .hero-lp { position: relative; color: #fff; padding: 5rem 1.5rem 4rem; background: linear-gradient(160deg, #040f1a 0%, #0a3d5c 50%, #1a7fa8 100%); background-size: cover; background-position: center; background-attachment: fixed; min-height: 500px; display: flex; align-items: center; }
-    .hero-lp::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, rgba(0, 181, 200, 0.35), transparent 60%), linear-gradient(180deg, rgba(4,15,26,0.4) 0%, rgba(4,15,26,0.2) 100%); pointer-events: none; }
-    .hero-lp .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; opacity: 0.3; }
-    .hero-lp .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-lp { position: relative; color: #fff; padding: 5rem 1.5rem 4rem; background: url('/images/noleggio-gommoni-favignana-mare-snorkeling.jpg') center/cover fixed no-repeat, linear-gradient(160deg, #040f1a 0%, #0a3d5c 50%, #1a7fa8 100%); background-size: cover; background-position: center; background-attachment: fixed; min-height: 500px; display: flex; align-items: center; }
+    .hero-lp::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, rgba(0, 181, 200, 0.35), transparent 60%), linear-gradient(180deg, rgba(4,15,26,0.6) 0%, rgba(4,15,26,0.35) 100%); pointer-events: none; z-index: 1; }
+    .hero-lp .container { z-index: 2; }
     .hero-lp .container { position: relative; max-width: 1080px; margin: 0 auto; z-index: 1; }
     .hero-lp h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 1rem; }
     .hero-lp h1 em { color: var(--teal); font-style: italic; }
