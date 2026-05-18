@@ -1,5 +1,5 @@
 # robots.txt - Stella Marina Boat Rentals
-# https://barchefavignana.it
+# https://www.barchefavignana.it
 
 User-agent: *
 Allow: /
@@ -11,4 +11,4 @@ Disallow: /stella-marina-seo-tracker.html
 Crawl-delay: 1
 
 # Sitemap
-Sitemap: https://barchefavignana.it/sitemap.xml
+Sitemap: https://www.barchefavignana.it/sitemap.xml

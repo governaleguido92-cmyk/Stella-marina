@@ -5,72 +5,72 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://barchefavignana.it/</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Noleggio Barche -->
   <url>
-    <loc>https://barchefavignana.it/noleggio-barche-favignana.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/noleggio-barche-favignana.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Noleggio Gommoni -->
   <url>
-    <loc>https://barchefavignana.it/noleggio-gommoni-favignana.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/noleggio-gommoni-favignana.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Escursioni Egadi -->
   <url>
-    <loc>https://barchefavignana.it/escursioni-egadi-favignana.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/escursioni-egadi-favignana.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- Cosa Vedere in Barca -->
   <url>
-    <loc>https://barchefavignana.it/cosa-vedere-favignana-in-barca.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/cosa-vedere-favignana-in-barca.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Aperitivo al Tramonto -->
   <url>
-    <loc>https://barchefavignana.it/aperitivo-tramonto-favignana.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/aperitivo-tramonto-favignana.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Transfer Trapani -->
   <url>
-    <loc>https://barchefavignana.it/transfer-trapani-favignana.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/transfer-trapani-favignana.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- FAQ -->
   <url>
-    <loc>https://barchefavignana.it/faq.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/faq.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Contatti -->
   <url>
-    <loc>https://barchefavignana.it/contatti.html</loc>
-    <lastmod>2026-05-14</lastmod>
+    <loc>https://www.barchefavignana.it/contatti.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
