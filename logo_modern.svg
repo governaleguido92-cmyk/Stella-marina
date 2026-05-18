@@ -1,0 +1,50 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definizioni -->
+  <defs>
+    <linearGradient id="seaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b5c8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3d5c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sfondo cerchio subtile -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="#e8f4f9" stroke-width="1" opacity="0.5"/>
+
+  <!-- Onde del mare (3 onde stilizzate) -->
+  <path d="M 40 140 Q 60 130 80 140 T 120 140 T 160 140"
+        fill="none" stroke="#00b5c8" stroke-width="2" opacity="0.6"/>
+  <path d="M 35 155 Q 55 145 75 155 T 115 155 T 155 155"
+        fill="none" stroke="#1a7fa8" stroke-width="2" opacity="0.4"/>
+
+  <!-- Barca a vela stilizzata (forma geometrica moderna) -->
+  <!-- Vela superiore -->
+  <polygon points="100,35 130,95 75,95" fill="url(#seaGradient)" opacity="0.95"/>
+
+  <!-- Vela inferiore (più piccola) -->
+  <polygon points="95,75 118,110 78,110" fill="#00b5c8" opacity="0.7"/>
+
+  <!-- Asta della barca -->
+  <line x1="100" y1="35" x2="100" y2="115" stroke="#0a3d5c" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Scafo della barca (semicerchio stilizzato) -->
+  <path d="M 85 115 Q 85 128 100 130 Q 115 128 115 115"
+        fill="#0a3d5c" stroke="#00b5c8" stroke-width="1.5"/>
+
+  <!-- Cerchio decorativo interno (rappresenta il porto/centro) -->
+  <circle cx="100" cy="125" r="3" fill="#00b5c8"/>
+
+  <!-- Stella (elemento simbolico) -->
+  <g transform="translate(140, 65)">
+    <polygon points="0,-6 1.8,-1.8 6,-0.5 3.5,3.5 4.5,8 0,5.5 -4.5,8 -3.5,3.5 -6,-0.5 -1.8,-1.8"
+             fill="#f0b429" opacity="0.85"/>
+  </g>
+
+  <!-- Testo "STELLA MARINA" - semplice e moderno -->
+  <text x="100" y="175" font-family="'Playfair Display', Georgia, serif" font-size="11" font-weight="700"
+        text-anchor="middle" fill="#0a3d5c" letter-spacing="1">
+    STELLA MARINA
+  </text>
+
+  <!-- Linea decorativa sottile -->
+  <line x1="60" y1="180" x2="140" y2="180" stroke="#00b5c8" stroke-width="0.75" opacity="0.6"/>
+</svg>
