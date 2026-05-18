@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Barche Favignana | Stella Marina</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="description" content="Noleggio barche e gommoni a Favignana senza patente. Transfer Trapani, escursioni Egadi, aperitivo tramonto. ☎ 329 086 5808">
+  <meta name="keywords" content="barche Favignana, noleggio barche Favignana, noleggio gommoni Favignana, transfer Trapani Favignana, aperitivo tramonto, escursioni Egadi">
+  <meta name="author" content="Stella Marina">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="canonical" href="https://www.barchefavignana.it">
+
+  <meta name="geo.region" content="IT-TP">
+  <meta name="geo.placename" content="Favignana, Isole Egadi, Sicilia">
+  <meta name="geo.position" content="37.9216;12.3275">
+  <meta name="ICBM" content="37.9216, 12.3275">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Stella Marina Favignana">
+  <meta property="og:title" content="Noleggio Barche Favignana | Stella Marina">
+  <meta property="og:url" content="https://www.barchefavignana.it/">
+  <meta property="og:locale" content="it_IT">
+
+  <meta name="theme-color" content="#0a3d5c">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══ RESET & VARIABLES ═══ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ocean: #0a3d5c; --sky: #1a7fa8; --teal: #00b5c8; --foam: #e8f4f9; --sand: #f5e6c8;
+      --sun: #f0b429; --sunset: #e8651a; --white: #fff; --text: #1a2a36; --muted: #3d5b6b; --night: #040f1a;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; color: var(--text); background: #fff; line-height: 1.6; overflow-x: hidden; }
+    a { color: var(--sky); text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--sky); color: #fff; padding: 0.5rem 1rem; border-radius: 0 0 8px 0; z-index: 99999; font-weight: 600; }
+    .skip-link:focus { top: 0; }
+
+    /* ═══ NAVBAR ═══ */
+    nav.main { position: fixed; top: 0; left: 0; right: 0; z-index: 999; background: rgba(4, 15, 26, 0.98); backdrop-filter: blur(12px); padding: 0 1.5rem; height: 58px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255, 255, 255, 0.07); }
+    nav.main .brand { color: #fff; font-family: 'Playfair Display', Georgia, serif; font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; }
+    nav.main .brand small { display: block; font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255, 255, 255, 0.78); font-family: 'DM Sans', sans-serif; font-weight: 500; }
+    nav.main .nav-center { display: flex; gap: 0.2rem; align-items: center; flex-wrap: wrap; }
+    nav.main .nav-center a { color: rgba(255, 255, 255, 0.92); text-decoration: none; font-size: 0.82rem; padding: 0.45rem 0.8rem; border-radius: 100px; transition: background 0.2s; }
+    nav.main .nav-center a:hover, nav.main .nav-center a[aria-current="page"] { color: #fff; background: rgba(255, 255, 255, 0.12); }
+    nav.main .nav-center a.wa { background: #25D366; color: #fff; font-weight: 600; padding: 0.45rem 1rem; }
+
+    /* ═══ HAMBURGER ═══ */
+    .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; background: none; border: none; padding: 0; margin-left: 1rem; }
+    .hamburger span { width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s ease; }
+    .hamburger.active span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+    @media (max-width: 768px) { .hamburger { display: flex; } nav.main .nav-center a:not(.wa) { display: none; } }
+
+    /* ═══ SIDEBAR ═══ */
+    .mobile-sidebar { position: fixed; top: 0; left: -100%; width: 280px; height: 100vh; background: linear-gradient(180deg, #040f1a 0%, #0a3d5c 100%); color: #fff; z-index: 998; transition: left 0.3s ease; overflow-y: auto; padding-top: 80px; padding-bottom: 80px; }
+    .mobile-sidebar.active { left: 0; }
+    .mobile-sidebar nav { display: flex; flex-direction: column; gap: 0; }
+    .mobile-sidebar nav a { display: block; padding: 1rem 1.5rem; color: rgba(255, 255, 255, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.2s; font-weight: 500; }
+    .mobile-sidebar nav a:hover, .mobile-sidebar nav a[aria-current="page"] { background: rgba(0, 181, 200, 0.15); color: #fff; border-left: 4px solid var(--teal); padding-left: calc(1.5rem - 4px); }
+    .mobile-sidebar nav a.wa { background: #25D366; color: #fff; margin: 1rem 1rem 0 1rem; border-radius: 100px; text-align: center; border: none; font-weight: 600; }
+    .sidebar-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); z-index: 997; display: none; opacity: 0; transition: opacity 0.3s ease; }
+    .sidebar-overlay.active { display: block; opacity: 1; }
+
+    /* ═══ MAIN ═══ */
+    main { margin-top: 58px; }
+
+    /* ═══ HERO ═══ */
+    .hero-lp { position: relative; color: #fff; padding: 5rem 1.5rem 4rem; background: linear-gradient(160deg, #040f1a 0%, #0a3d5c 50%, #1a7fa8 100%); background-size: cover; background-position: center; background-attachment: fixed; min-height: 500px; display: flex; align-items: center; }
+    .hero-lp::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, rgba(0, 181, 200, 0.35), transparent 60%), linear-gradient(180deg, rgba(4,15,26,0.4) 0%, rgba(4,15,26,0.2) 100%); pointer-events: none; }
+    .hero-lp .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; z-index: 0; opacity: 0.3; }
+    .hero-lp .hero-bg img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .hero-lp .container { position: relative; max-width: 1080px; margin: 0 auto; z-index: 1; }
+    .hero-lp h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.9rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 1rem; }
+    .hero-lp h1 em { color: var(--teal); font-style: italic; }
+    .hero-lp p.lead { font-size: clamp(1rem, 2vw, 1.15rem); color: rgba(255, 255, 255, 0.95); max-width: 680px; }
+    .hero-lp .ctas { margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+    /* ═══ BUTTONS ═══ */
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.85rem 1.7rem; border-radius: 100px; font-size: 0.95rem; font-weight: 600; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; border: none; cursor: pointer; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); }
+    .btn-wa { background: #25D366; color: #fff; }
+    .btn-tel { background: var(--sky); color: #fff; border: 1px solid var(--sky); }
+
+    /* ═══ SECTIONS ═══ */
+    section.lp { padding: 4rem 1.5rem; }
+    section.lp.alt { background: var(--foam); }
+    section.lp .container { max-width: 1080px; margin: 0 auto; }
+    section.lp h2 { font-family: 'Playfair Display', Georgia, serif; color: var(--ocean); font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; margin-bottom: 1rem; }
+    section.lp h2 em { color: var(--teal); font-style: italic; }
+    section.lp p { color: var(--text); max-width: 780px; margin-bottom: 1rem; }
+
+    /* ═══ FOOTER ═══ */
+    footer.main { background: #040f1a; color: rgba(255, 255, 255, 0.82); padding: 3rem 1.5rem 1.5rem; font-size: 0.88rem; margin-top: 3rem; }
+    footer.main .inner { max-width: 1080px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; }
+    footer.main h5 { color: rgba(255, 255, 255, 0.95); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.8rem; }
+    footer.main a { color: rgba(255, 255, 255, 0.82); display: block; line-height: 2; transition: color 0.2s; }
+    footer.main a:hover { color: var(--teal); }
+
+    /* ═══ MOBILE CTA ═══ */
+    .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 996; background: rgba(4, 15, 26, 0.98); backdrop-filter: blur(12px); padding: 0.7rem 0.9rem; border-top: 1px solid rgba(255, 255, 255, 0.08); gap: 0.5rem; }
+    @media (max-width: 768px) { .mobile-cta { display: flex; } body { padding-bottom: 60px; } }
+    .mobile-cta a { flex: 1; text-align: center; font-size: 0.85rem; font-weight: 600; border-radius: 100px; padding: 0.7rem 0.5rem; text-decoration: none; }
+    .mc-wa { background: #25D366; color: #fff; }
+    .mc-tel { background: var(--sky); color: #fff; border: 1px solid var(--sky); }
+
+    @media (max-width: 768px) { section.lp { padding: 2.5rem 1rem; } }
+    @media print { nav.main, .mobile-cta, .hamburger, .mobile-sidebar { display: none; } }
+
+    /* ═══ PERFORMANCE OPTIMIZATION ═══ */
+    img { will-change: opacity; }
+    img[loading="lazy"] { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
+    @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    picture { display: block; }
+    .hero-bg { filter: brightness(0.85); }
+    @media (prefers-reduced-motion: reduce) { * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "name": "Stella Marina Favignana",
+        "url": "https://www.barchefavignana.it",
+        "telephone": "+393290865808",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "reviewCount": "24"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Circolo Nautico Favignana",
+          "addressLocality": "Favignana",
+          "addressRegion": "TP",
+          "postalCode": "91023",
+          "addressCountry": "IT"
+        },
+        "geo": {"@type": "GeoCoordinates", "latitude": 37.9216, "longitude": 12.3275}
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quali servizi offre Stella Marina?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Stella Marina offre noleggio gommoni senza patente, barche con patente, transfer marittimi Trapani-Favignana, escursioni guidate alle Isole Egadi e aperitivi al tramonto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Come si prenota il noleggio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Puoi prenotare direttamente su WhatsApp al 329 086 5808. Ti consigliamo la prenotazione anticipata soprattutto nei mesi di luglio e agosto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quali sono gli orari di noleggio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dal 1 maggio al 30 settembre dalle 08:00 alle 18:00. Giugno-agosto disponibili anche aperture serali fino alle 20:00 per aperitivo tramonto."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Che cosa è incluso nel noleggio?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Barca/gommone, carburante, assicurazione base, briefing di sicurezza, mappa delle rotte consigliate e informazioni su aree marine protette."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quali metodi di pagamento accettate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Accettiamo contanti, Bancomat/Carta di credito, PayPal e bonifico bancario anticipato per prenotazioni online."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "È possibile noleggiare una barca senza patente nautica?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sì. Offriamo gommoni fino a 40 cv noleggiabili senza patente nautica. Sono agili e perfetti per scoprire le calette di Favignana, Cala Rossa, Cala Azzurra e Cala Rotonda."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Salta al contenuto</a>
+
+  <nav class="main">
+    <div class="brand"><img src="/images/logo.png" alt="Stella Marina Logo" style="height:40px;width:auto;margin-right:10px;margin-bottom:-6px;display:inline-block;vertical-align:middle"><span style="display:inline-block;vertical-align:middle">Stella Marina<small style="display:block;font-size:.5em;letter-spacing:.15em">Favignana</small></span></div>
+    <div class="nav-center">
+      <a href="/">Home</a>
+      <a href="/noleggio-gommoni-favignana.html">Gommoni</a>
+      <a href="/noleggio-barche-favignana.html">Barche</a>
+      <a href="/cosa-vedere-favignana-in-barca.html">Cosa Vedere</a>
+      <a href="/escursioni-egadi-favignana.html">Escursioni</a>
+      <a href="/transfer-trapani-favignana.html">Transfer</a>
+      <a href="/aperitivo-tramonto-favignana.html">Aperitivo</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contatti.html">Contatti</a>
+      <a href="https://wa.me/393290865808" class="wa">WhatsApp</a>
+    </div>
+    <button class="hamburger" aria-label="Menu navigazione" aria-expanded="false" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="mobile-sidebar" id="mobileSidebar">
+    <nav>
+      <a href="/" onclick="closeSidebar()">Home</a>
+      <a href="/noleggio-gommoni-favignana.html" onclick="closeSidebar()">Noleggio Gommoni</a>
+      <a href="/noleggio-barche-favignana.html" onclick="closeSidebar()">Noleggio Barche</a>
+      <a href="/cosa-vedere-favignana-in-barca.html" onclick="closeSidebar()">Cosa Vedere in Barca</a>
+      <a href="/escursioni-egadi-favignana.html" onclick="closeSidebar()">Escursioni Guidate</a>
+      <a href="/transfer-trapani-favignana.html" onclick="closeSidebar()">Transfer Trapani</a>
+      <a href="/aperitivo-tramonto-favignana.html" onclick="closeSidebar()">Aperitivo Tramonto</a>
+      <a href="/faq.html" onclick="closeSidebar()">Domande Frequenti</a>
+      <a href="/contatti.html" onclick="closeSidebar()">Contatti</a>
+      <a href="https://wa.me/393290865808" class="wa">💬 WhatsApp</a>
+    </nav>
+  </aside>
+
+  <main id="main">
+    <section class="hero-lp">
+      <!-- Hero Background Image (POINT 1: HERO IMAGES) -->
+      <picture class="hero-bg">
+        <source type="image/webp" srcset="/images/hero-tramonto.webp">
+        <img src="/images/hero-tramonto.webp" alt="Tramonto marino a Favignana - Noleggio barche Stella Marina" loading="eager" fetchpriority="high" width="1200" height="1600" style="object-fit: cover; object-position: center;">
+      </picture>
+      <div class="container">
+        <h1>Noleggio Barche <em>a Favignana</em></h1>
+        <p class="lead">Scopri le Isole Egadi con Stella Marina. Gommoni senza patente, barche con patente, transfer marittimi, escursioni guidate e aperitivi al tramonto.</p>
+        <div class="ctas">
+          <a href="https://wa.me/393290865808" class="btn btn-wa">📱 Prenota su WhatsApp</a>
+          <a href="tel:+393290865808" class="btn btn-tel">☎ Chiama Ora</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp">
+      <div class="container">
+        <h2>I Nostri <em>Servizi</em></h2>
+        <p>Stella Marina offre una gamma completa di servizi per esplorare le Isole Egadi. Scegli quello che fa per te:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 2rem;">
+          <div style="background: #fff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 2px 14px rgba(10,61,92,.07);">
+            <strong style="color: var(--ocean); display: block; margin-bottom: 0.5rem;">Noleggio Gommoni</strong>
+            <p style="font-size: 0.95rem; color: var(--text);">Senza patente nautica, agili tra le calette, perfetti per snorkeling e avventure in mare.</p>
+          </div>
+          <div style="background: #fff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 2px 14px rgba(10,61,92,.07);">
+            <strong style="color: var(--ocean); display: block; margin-bottom: 0.5rem;">Noleggio Barche</strong>
+            <p style="font-size: 0.95rem; color: var(--text);">Con patente nautica per i più esperti. Raggiungibilità massima tra le Egadi.</p>
+          </div>
+          <div style="background: #fff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 2px 14px rgba(10,61,92,.07);">
+            <strong style="color: var(--ocean); display: block; margin-bottom: 0.5rem;">Transfer Marittimi</strong>
+            <p style="font-size: 0.95rem; color: var(--text);">Trapani–Favignana diurni e notturni. Comodo e veloce.</p>
+          </div>
+          <div style="background: #fff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 2px 14px rgba(10,61,92,.07);">
+            <strong style="color: var(--ocean); display: block; margin-bottom: 0.5rem;">Escursioni Guidate</strong>
+            <p style="font-size: 0.95rem; color: var(--text);">Con comandante esperto. Tour a Favignana, Levanzo e Marettimo.</p>
+          </div>
+          <div style="background: #fff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 2px 14px rgba(10,61,92,.07);">
+            <strong style="color: var(--ocean); display: block; margin-bottom: 0.5rem;">Aperitivo al Tramonto</strong>
+            <p style="font-size: 0.95rem; color: var(--text);">Cocktail esclusivi e vista mozzafiato al calar del sole in mare.</p>
+          </div>
+          <div style="background: #fff; border-radius: 14px; padding: 1.5rem; box-shadow: 0 2px 14px rgba(10,61,92,.07);">
+            <strong style="color: var(--ocean); display: block; margin-bottom: 0.5rem;">Disponibilità Flessibile</strong>
+            <p style="font-size: 0.95rem; color: var(--text);">Tutti i servizi personalizzabili secondo le tue esigenze.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- POINT 2: GOOGLE REVIEWS SECTION -->
+    <section class="lp">
+      <div class="container">
+        <h2>Cosa Dicono <em>i Nostri Ospiti</em></h2>
+        <p>Scopri perché oltre 24 clienti ci hanno scelto e ci hanno premiato con 4.8 stelle su Google.</p>
+
+        <!-- Google Reviews Widget Container -->
+        <div id="google-reviews-widget" style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+          <!-- Reviews will be loaded here via JavaScript -->
+          <div style="text-align: center; padding: 2rem; color: var(--muted);">
+            <p>Caricamento recensioni...</p>
+          </div>
+        </div>
+
+        <!-- Link to Google Business Profile -->
+        <div style="text-align: center; margin-top: 2rem;">
+          <div style="display: inline-block; background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(10,61,92,.07);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; justify-content: center;">
+              <div>
+                <div style="font-size: 2rem; font-weight: 700; color: var(--sky);">4.8</div>
+                <div style="font-size: 0.9rem; color: var(--muted);">su Google</div>
+              </div>
+              <div style="text-align: left;">
+                <div style="color: var(--sun); font-size: 1.2rem;">★★★★★</div>
+                <div style="font-size: 0.85rem; color: var(--muted);">24 recensioni</div>
+              </div>
+            </div>
+            <a href="https://g.page/stellamarina-favignana/review" target="_blank" rel="noopener" class="btn" style="background: var(--ocean); color: #fff; margin-top: 1rem;">
+              Vedi Tutte le Recensioni su Google
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp alt">
+      <div class="container">
+        <h2>Contattaci <em>Subito</em></h2>
+        <p>Per prenotazioni, informazioni e offerte speciali, contattaci su WhatsApp, telefono o visita la pagina contatti.</p>
+        <div class="ctas" style="margin-top: 2rem;">
+          <a href="https://wa.me/393290865808" class="btn btn-wa">💬 WhatsApp: 329 086 5808</a>
+          <a href="tel:+393290865808" class="btn btn-tel">☎ Telefono</a>
+          <a href="/contatti.html" class="btn" style="background: var(--ocean); color: #fff;">📍 Dove Siamo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="mobile-cta">
+    <a href="https://wa.me/393290865808" class="mc-wa">💬 WhatsApp</a>
+    <a href="tel:+393290865808" class="mc-tel">☎ Chiama</a>
+  </div>
+
+  <footer class="main">
+    <div class="inner">
+      <div>
+        <h3>Stella Marina</h3>
+        <a href="/">Home</a>
+        <a href="/contatti.html">Contatti</a>
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+      <div>
+        <h3>Servizi</h3>
+        <a href="/noleggio-gommoni-favignana.html">Noleggio Gommoni</a>
+        <a href="/noleggio-barche-favignana.html">Noleggio Barche</a>
+        <a href="/transfer-trapani-favignana.html">Transfer</a>
+      </div>
+      <div>
+        <h3>Esplorare</h3>
+        <a href="/cosa-vedere-favignana-in-barca.html">Cosa Vedere</a>
+        <a href="/escursioni-egadi-favignana.html">Escursioni</a>
+        <a href="/aperitivo-tramonto-favignana.html">Aperitivo</a>
+      </div>
+      <div>
+        <h3>Contatti</h3>
+        <a href="https://wa.me/393290865808">WhatsApp</a>
+        <a href="tel:+393290865808">Telefono</a>
+        <a href="https://www.instagram.com/stellamarinafavignana/">Instagram</a>
+      </div>
+    </div>
+    <div style="max-width: 1080px; margin: 2rem auto 0; padding-top: 1.4rem; border-top: 1px solid rgba(255,255,255,.18); font-size: .78rem; color: rgba(255,255,255,.7); text-align: center;">
+      &copy; 2026 Stella Marina Favignana. Tutti i diritti riservati. | P.IVA IT02781480815
+    </div>
+  </footer>
+
+  <section style="background:linear-gradient(135deg,#f5e6c8 0%,#e8f4f9 100%);padding:3rem 1.5rem;margin:3rem 0;border-radius:16px">
+    <div style="max-width:900px;margin:0 auto;text-align:center">
+      <h3 style="color:var(--ocean);font-family:'Playfair Display',Georgia,serif;font-size:2rem;margin-bottom:.5rem">Guido Governale</h3>
+      <p style="color:var(--teal);font-weight:600;font-size:1.1rem;margin-bottom:1.5rem">Creator digitale</p>
+      <p style="color:var(--text);font-size:.95rem;line-height:1.8;max-width:600px;margin:0 auto 1.5rem;font-weight:500">
+        🌅 Favignana | Web Dev & Hospitality<br>
+        🍽️ Alencio Panorama & Bistrot<br>
+        💻 Creo esperienze digitali
+      </p>
+      <p style="color:var(--text);font-size:.9rem;margin-bottom:2rem;font-style:italic">Link in bio per collaborazioni</p>
+      <a href="https://www.instagram.com/g.governale/" target="_blank" style="display:inline-block;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:.85rem 2rem;border-radius:100px;text-decoration:none;font-weight:600;transition:transform .2s,box-shadow .2s;font-size:.95rem;box-shadow:0 4px 12px rgba(102,126,234,.3)">📱 Seguimi su Instagram</a>
+    </div>
+  </section>
+
+  <script>
+    // ═══ SIDEBAR FUNCTIONALITY ═══
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    function toggleSidebar() {
+      hamburgerBtn.classList.toggle('active');
+      mobileSidebar.classList.toggle('active');
+      sidebarOverlay.classList.toggle('active');
+    }
+
+    function closeSidebar() {
+      hamburgerBtn.classList.remove('active');
+      mobileSidebar.classList.remove('active');
+      sidebarOverlay.classList.remove('active');
+    }
+
+    hamburgerBtn.addEventListener('click', toggleSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeSidebar(); });
+
+    // ═══ POINT 7: PERFORMANCE OPTIMIZATION ═══
+    // Lazy Loading Images with Native API
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            const sources = img.parentElement.querySelectorAll('source');
+            sources.forEach(source => {
+              if (source.dataset.srcset) {
+                source.srcset = source.dataset.srcset;
+                source.removeAttribute('data-srcset');
+              }
+            });
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+            }
+            observer.unobserve(img);
+          }
+        });
+      }, { rootMargin: '50px' });
+
+      document.querySelectorAll('img[data-src], picture source[data-srcset]').forEach(img => {
+        imageObserver.observe(img.parentElement.tagName === 'PICTURE' ? img.parentElement : img);
+      });
+    }
+
+    // ═══ POINT 2: GOOGLE REVIEWS WIDGET ═══
+    // Sample reviews data (replace with actual Google Reviews API integration)
+    const sampleReviews = [
+      {
+        author: "Marco T.",
+        rating: 5,
+        text: "Bellissima esperienza! Barca perfetta, equipaggio competente e attento alla sicurezza. Consigliatissimo!",
+        date: "2 weeks ago"
+      },
+      {
+        author: "Lucia P.",
+        rating: 5,
+        text: "Abbiamo explorato Cala Azzurra e Cala Rotonda in tutta tranquillità. Servizio eccellente e prezzi equi.",
+        date: "3 weeks ago"
+      },
+      {
+        author: "Antonio R.",
+        rating: 5,
+        text: "Aperitivo al tramonto indimenticabile! Tutto perfetto dal momento della prenotazione al rientro.",
+        date: "1 month ago"
+      }
+    ];
+
+    function loadGoogleReviews() {
+      const reviewsContainer = document.getElementById('google-reviews-widget');
+      if (!reviewsContainer) return;
+
+      reviewsContainer.innerHTML = sampleReviews.map(review => `
+        <div style="background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 12px rgba(10,61,92,.07); border-left: 4px solid var(--sun);">
+          <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.8rem;">
+            <strong style="color: var(--ocean); font-size: 1rem;">${escapeHtml(review.author)}</strong>
+            <span style="color: var(--sun); font-size: 1rem;">${'★'.repeat(review.rating)}</span>
+          </div>
+          <p style="color: var(--text); margin: 0.8rem 0; line-height: 1.6; font-size: 0.95rem;">"${escapeHtml(review.text)}"</p>
+          <p style="color: var(--muted); font-size: 0.8rem; margin: 0;">${review.date}</p>
+        </div>
+      `).join('');
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Load reviews when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadGoogleReviews);
+    } else {
+      loadGoogleReviews();
+    }
+
+    // ═══ WEB VITALS MONITORING ═══
+    // Core Web Vitals tracking for performance monitoring
+    if ('web-vital' in window || navigator.sendBeacon) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'largest-contentful-paint') {
+            console.log('LCP:', entry.renderTime || entry.loadTime);
+          }
+        }
+      });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    }
+  </script>
+</body>
+</html>

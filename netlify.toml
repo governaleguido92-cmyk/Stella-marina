@@ -1,0 +1,212 @@
+# Netlify Configuration for Stella Marina - Boat Rental Favignana
+# Production-ready configuration with SEO, security, and performance optimization
+
+# ============================================================================
+# BUILD SETTINGS
+# ============================================================================
+[build]
+# No build command needed for static site
+command = "echo 'Static site - no build needed'"
+publish = "."
+functions = "netlify/functions"
+
+# Environment variables
+environment = { NODE_ENV = "production" }
+
+# ============================================================================
+# REDIRECTS & REWRITES
+# ============================================================================
+# Main site redirect (www to non-www)
+[[redirects]]
+from = "https://www.barchefavignana.it/*"
+to = "https://barchefavignana.it/:splat"
+status = 301
+force = true
+
+# Trailing slash normalization - add trailing slash
+[[redirects]]
+from = "/index.html"
+to = "/"
+status = 301
+
+# Service pages with trailing slash
+[[redirects]]
+from = "/noleggio-gommoni-favignana"
+to = "/noleggio-gommoni-favignana.html"
+status = 200
+
+[[redirects]]
+from = "/noleggio-barche-favignana"
+to = "/noleggio-barche-favignana.html"
+status = 200
+
+[[redirects]]
+from = "/cosa-vedere-favignana-in-barca"
+to = "/cosa-vedere-favignana-in-barca.html"
+status = 200
+
+[[redirects]]
+from = "/escursioni-egadi-favignana"
+to = "/escursioni-egadi-favignana.html"
+status = 200
+
+[[redirects]]
+from = "/aperitivo-tramonto-favignana"
+to = "/aperitivo-tramonto-favignana.html"
+status = 200
+
+[[redirects]]
+from = "/transfer-trapani-favignana"
+to = "/transfer-trapani-favignana.html"
+status = 200
+
+# Support pages
+[[redirects]]
+from = "/faq"
+to = "/faq.html"
+status = 200
+
+[[redirects]]
+from = "/contatti"
+to = "/contatti.html"
+status = 200
+
+# 404 handling - serve custom 404 page
+[[redirects]]
+from = "/*"
+to = "/404.html"
+status = 404
+
+# ============================================================================
+# HEADERS CONFIGURATION
+# ============================================================================
+# Security headers for all pages
+[[headers]]
+for = "/*"
+[headers.values]
+# Prevent clickjacking attacks
+X-Frame-Options = "SAMEORIGIN"
+# Prevent MIME type sniffing
+X-Content-Type-Options = "nosniff"
+# XSS Protection
+X-XSS-Protection = "1; mode=block"
+# Referrer Policy - send referrer only to same origin
+Referrer-Policy = "strict-origin-when-cross-origin"
+# Feature Policy / Permissions Policy
+Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+# HSTS - enforce HTTPS (1 year, include subdomains)
+Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+# SEO indexing - allow all pages to be indexed by default
+X-Robots-Tag = "index, follow"
+
+# HTML pages - no caching + SEO indexing enabled
+[[headers]]
+for = "/*.html"
+[headers.values]
+Cache-Control = "public, max-age=0, must-revalidate"
+Content-Type = "text/html; charset=utf-8"
+X-Robots-Tag = "index, follow"
+
+# CSS and JS - 30 days cache
+[[headers]]
+for = "/assets/*.{js,css}"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+Content-Type = "application/javascript"
+
+# Images - 1 year cache
+[[headers]]
+for = "/images/*.{png,jpg,jpeg,gif,webp,svg}"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# Fonts - 1 year cache
+[[headers]]
+for = "/fonts/*.{woff,woff2,ttf,eot}"
+[headers.values]
+Cache-Control = "public, max-age=31536000, immutable"
+
+# XML Sitemap and Robots.txt - 1 week cache
+[[headers]]
+for = "/sitemap.xml"
+[headers.values]
+Cache-Control = "public, max-age=604800"
+Content-Type = "application/xml"
+
+[[headers]]
+for = "/robots.txt"
+[headers.values]
+Cache-Control = "public, max-age=604800"
+Content-Type = "text/plain"
+
+# ============================================================================
+# CONTEXT: PRODUCTION (MAIN SITE)
+# ============================================================================
+[context.production]
+environment = { NODE_ENV = "production" }
+
+# ============================================================================
+# CONTEXT: DEPLOY PREVIEWS
+# ============================================================================
+[context.deploy-preview]
+environment = { NODE_ENV = "preview" }
+
+[[context.deploy-preview.headers]]
+for = "/*"
+[context.deploy-preview.headers.values]
+X-Robots-Tag = "noindex, nofollow"
+X-Preview = "true"
+
+# ============================================================================
+# CONTEXT: BRANCH PREVIEWS
+# ============================================================================
+[context.branch-deploy]
+environment = { NODE_ENV = "development" }
+
+[[context.branch-deploy.headers]]
+for = "/*"
+[context.branch-deploy.headers.values]
+X-Robots-Tag = "noindex, nofollow"
+
+# ============================================================================
+# DECAP CMS CONFIGURATION
+# ============================================================================
+# Enables admin panel at /admin for content management
+# Requires Netlify Identity for authentication
+
+[[redirects]]
+from = "/admin"
+to = "/admin/index.html"
+status = 200
+
+# ============================================================================
+# PLUGINS (Optional - for future enhancements)
+# ============================================================================
+# Uncomment to use Netlify plugins
+# [[plugins]]
+# package = "@netlify/plugin-lighthouse"
+# [plugins.inputs]
+# output_dir = "lighthousereport"
+# audits = ["accessibility", "best-practices", "performance", "pwa", "seo"]
+
+# ============================================================================
+# FORMS (for future contact form integration)
+# ============================================================================
+# Enable form handling
+# [functions]
+# directory = "netlify/functions"
+
+# ============================================================================
+# ANALYTICS & MONITORING
+# ============================================================================
+# Google Analytics 4 is integrated directly in HTML files with measurement ID
+# Netlify Analytics can be enabled in dashboard
+
+# ============================================================================
+# NOTES
+# ============================================================================
+# 1. Update GA4 Measurement ID in HTML files from G-XXXXXXXXXX to actual ID
+# 2. Submit sitemap.xml to Google Search Console
+# 3. Monitor Core Web Vitals in Netlify Analytics dashboard
+# 4. Test redirects after deployment
+# 5. Verify SSL certificate (auto-provisioned by Netlify)
