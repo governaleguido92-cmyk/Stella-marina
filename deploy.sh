@@ -1,48 +1,44 @@
 #!/bin/bash
 
-# Simple deploy script for SEO files
-set -e
+# Script di deploy automatico - esegui: ./deploy.sh "messaggio commit"
+# Oppure: ./deploy.sh (ti chiederà il messaggio)
 
-TOKEN="${GITHUB_TOKEN}"
-if [ -z "$TOKEN" ]; then
-  echo "❌ GITHUB_TOKEN non impostato"
-  echo ""
-  echo "Esegui:"
-  echo '  export GITHUB_TOKEN="ghp_xxxxxxxxxxxxxxxxxxxxx"'
-  echo "  bash ~/Downloads/outputs/deploy.sh"
-  exit 1
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+RED='\033[0;31m'
+NC='\033[0m'
+
+if [ -z "$1" ]; then
+    echo -e "${BLUE}📝 Inserisci il messaggio di commit:${NC}"
+    read COMMIT_MSG
+else
+    COMMIT_MSG="$1"
 fi
 
-REPO_DIR="/tmp/stella-marina-seo"
-REPO_URL="https://${TOKEN}@github.com/governaleguido92-cmyk/Stella-marina.git"
+if [ ! -d ".git" ]; then
+    echo -e "${RED}❌ Non sei in una repository git${NC}"
+    exit 1
+fi
 
-echo "🚀 Deploy SEO Files"
-echo "=================="
+rm -f .git/index.lock .git/HEAD.lock 2>/dev/null
 
-# Clean and clone
-echo "📦 Cloning repository..."
-rm -rf "$REPO_DIR" 2>/dev/null || true
-git clone "$REPO_URL" "$REPO_DIR" 2>&1 | grep -v "Cloning" || true
-cd "$REPO_DIR"
+echo -e "${BLUE}🔄 Aggiungendo file modificati...${NC}"
+git add -A
 
-# Copy files
-echo "📄 Copying files..."
-cp ~/Downloads/outputs/sitemap.xml ./
-cp ~/Downloads/outputs/robots.txt ./
+echo -e "${BLUE}💾 Creando commit...${NC}"
+git commit -m "$COMMIT_MSG"
 
-# Configure git
-git config user.email "governaleguido92@gmail.com"
-git config user.name "Admin"
+if [ $? -ne 0 ]; then
+    echo -e "${RED}❌ Errore nel commit${NC}"
+    exit 1
+fi
 
-# Commit
-echo "💾 Committing..."
-git add sitemap.xml robots.txt
-git commit -m "chore: add SEO files" 2>&1 | grep -v "changed" || true
+echo -e "${BLUE}🚀 Pushando su GitHub...${NC}"
+git push
 
-# Push
-echo "🌐 Pushing to GitHub..."
-GIT_TERMINAL_PROMPT=0 git push origin main 2>&1 | grep -v "^To " || true
-
-echo ""
-echo "✅ Done!"
-echo "Netlify deploy in 30-60 secondi"
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✅ Deploy completato!${NC}"
+else
+    echo -e "${RED}❌ Errore nel push${NC}"
+    exit 1
+fi
