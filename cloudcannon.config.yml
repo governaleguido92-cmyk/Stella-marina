@@ -1,0 +1,34 @@
+collections_config:
+  pages:
+    name: Pagine
+    path: ''
+    glob:
+      - index.html
+      - noleggio-gommoni-favignana.html
+      - noleggio-barche-favignana.html
+      - aperitivo-tramonto-favignana.html
+      - escursioni-egadi-favignana.html
+      - transfer-trapani-favignana.html
+      - cosa-vedere-favignana-in-barca.html
+      - faq.html
+      - contatti.html
+    _enabled_editors:
+      - visual
+      - source
+
+_editables:
+  block:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    align: true
+
+paths:
+  uploads: images
+  static: ''
+
+_inputs:
+  layout:
+    hidden: true
