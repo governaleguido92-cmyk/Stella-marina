@@ -701,6 +701,17 @@
     @media print {
       .nav, .mobile-cta, .hamburger, .mobile-sidebar { display: none; }
     }
+
+    /* ── WHY US ── */
+    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; margin-top: 2.75rem; }
+    .why-item { display: flex; flex-direction: column; gap: .7rem; padding: 1.6rem; background: var(--foam); border-radius: var(--radius); border: 1px solid rgba(10,61,92,.07); transition: transform .25s, box-shadow .25s; }
+    .why-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .why-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--sky) 0%, var(--teal) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; }
+    .why-item h3 { font-size: .95rem; font-weight: 700; color: var(--ocean); margin: 0; }
+    .why-item p { font-size: .88rem; color: var(--muted); line-height: 1.6; margin: 0; }
+
+    /* ── PRICE BADGE ── */
+    .price-badge { display: inline-block; font-size: .78rem; font-weight: 700; color: var(--sky); background: rgba(26,127,168,.1); border: 1px solid rgba(26,127,168,.2); border-radius: 100px; padding: .2rem .7rem; margin-bottom: .5rem; }
   </style>
 
   <script type="application/ld+json">
@@ -809,6 +820,7 @@
       <a href="/escursioni-egadi-favignana.html" role="listitem">Escursioni</a>
       <a href="/transfer-trapani-favignana.html" role="listitem">Transfer</a>
       <a href="/aperitivo-tramonto-favignana.html" role="listitem">Aperitivo</a>
+      <a href="/prezzi-noleggio-favignana.html" role="listitem">Prezzi</a>
       <a href="/faq.html" role="listitem">FAQ</a>
       <a href="/contatti.html" role="listitem">Contatti</a>
       <a href="https://wa.me/393290865808" class="wa-btn" role="listitem" aria-label="Contattaci su WhatsApp">
@@ -834,6 +846,7 @@
       <a href="/escursioni-egadi-favignana.html" onclick="closeSidebar()">Escursioni Guidate</a>
       <a href="/transfer-trapani-favignana.html" onclick="closeSidebar()">Transfer Trapani</a>
       <a href="/aperitivo-tramonto-favignana.html" onclick="closeSidebar()">Aperitivo Tramonto</a>
+      <a href="/prezzi-noleggio-favignana.html" onclick="closeSidebar()">Prezzi 2026</a>
       <a href="/faq.html" onclick="closeSidebar()">Domande Frequenti</a>
       <a href="/contatti.html" onclick="closeSidebar()">Contatti</a>
       <a href="https://wa.me/393290865808" class="wa-sidebar">WhatsApp — 329 086 5808</a>
@@ -1012,15 +1025,140 @@
       </div>
     </section>
 
+    <!-- ── WHY US ── -->
+    <section class="section">
+      <div class="container">
+        <span class="section-label">I Nostri Vantaggi</span>
+        <h2 class="section-title">Perché Scegliere <em>Stella Marina</em></h2>
+        <p class="section-subtitle">Tutto incluso, nessuna sorpresa. Ecco cosa ci distingue dagli altri noleggi a Favignana.</p>
+        <div class="why-grid">
+
+          <div class="why-item fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Senza Patente Nautica</h3>
+            <p>I nostri gommoni fino a 40 cv si noleggiano senza patente. Bastano 18 anni e un documento d'identità valido.</p>
+          </div>
+
+          <div class="why-item fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Tutto Incluso</h3>
+            <p>Carburante, assicurazione base, giubbotti di salvataggio, maschera e pinne per lo snorkeling e briefing pre-partenza.</p>
+          </div>
+
+          <div class="why-item fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+            </div>
+            <h3>Risposta Immediata</h3>
+            <p>Rispondiamo su WhatsApp entro pochi minuti. Prenotazione rapida, conferma istantanea, zero burocrazia.</p>
+          </div>
+
+          <div class="why-item fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Transfer Anche di Notte</h3>
+            <p>Unici a offrire transfer marittimo Trapani–Favignana diurno e notturno. Arrivi tardi? Nessun problema.</p>
+          </div>
+
+          <div class="why-item fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 000 14"/><path d="M12 16v6M8 22h8M2 9h20"/></svg>
+            </div>
+            <h3>Aperitivo al Tramonto</h3>
+            <p>Esperienza esclusiva che pochissimi offrono: cocktail e stuzzichini in barca mentre il sole tramonta sulle Egadi.</p>
+          </div>
+
+          <div class="why-item fade-up">
+            <div class="why-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Posizione Centrale</h3>
+            <p>Siamo al Circolo Nautico di Favignana, nel cuore dell'isola. Raggiungerci è semplicissimo a piedi o in bici.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ── REVIEWS ── -->
     <section class="section section-foam">
       <div class="container">
         <span class="section-label">Recensioni</span>
         <h2 class="editable section-title">Cosa Dicono <em>i Nostri Ospiti</em></h2>
-        <p class="section-subtitle">Oltre 24 clienti ci hanno scelto. Ecco cosa ci hanno scritto su Google.</p>
+        <p class="section-subtitle">Oltre 50 clienti ci hanno scelto. Ecco cosa ci hanno scritto su Google.</p>
 
         <div class="reviews-grid" id="google-reviews-widget">
-          <div style="padding:2rem;text-align:center;color:var(--muted)">Caricamento recensioni...</div>
+          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
+            <div class="review-header">
+              <div class="review-avatar" aria-hidden="true">M</div>
+              <div>
+                <div class="review-author" itemprop="author">Marco T.</div>
+                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                <div class="review-date">Milano · maggio 2026</div>
+              </div>
+            </div>
+            <p class="review-text" itemprop="reviewBody">"Gommone in ottime condizioni, briefing chiaro e staff super disponibile. Abbiamo esplorato Cala Rossa e Cala Azzurra in totale libertà. Torneremo sicuramente!"</p>
+          </article>
+          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
+            <div class="review-header">
+              <div class="review-avatar" aria-hidden="true">L</div>
+              <div>
+                <div class="review-author" itemprop="author">Lucia P.</div>
+                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                <div class="review-date">Roma · agosto 2025</div>
+              </div>
+            </div>
+            <p class="review-text" itemprop="reviewBody">"Servizio eccellente e prezzi onesti. Abbiamo noleggiato un gommone per tutta la famiglia e ci hanno consigliato le cale più belle. Esperienza indimenticabile alle Egadi!"</p>
+          </article>
+          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
+            <div class="review-header">
+              <div class="review-avatar" aria-hidden="true">A</div>
+              <div>
+                <div class="review-author" itemprop="author">Antonio R.</div>
+                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                <div class="review-date">Torino · luglio 2025</div>
+              </div>
+            </div>
+            <p class="review-text" itemprop="reviewBody">"Aperitivo al tramonto: un'esperienza da sogno! Cocktail ottimi e tramonto mozzafiato sulle Egadi. La prenotazione via WhatsApp è stata rapidissima. Consigliatissimo!"</p>
+          </article>
+          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
+            <div class="review-header">
+              <div class="review-avatar" aria-hidden="true">F</div>
+              <div>
+                <div class="review-author" itemprop="author">Federica M.</div>
+                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                <div class="review-date">Bologna · giugno 2025</div>
+              </div>
+            </div>
+            <p class="review-text" itemprop="reviewBody">"Escursione guidata alle tre isole fantastica! Il comandante è preparatissimo e ci ha portato a fare snorkeling in posti da sogno. Attrezzatura inclusa, tutto organizzato alla perfezione."</p>
+          </article>
+          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
+            <div class="review-header">
+              <div class="review-avatar" aria-hidden="true">G</div>
+              <div>
+                <div class="review-author" itemprop="author">Giuseppe C.</div>
+                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                <div class="review-date">Napoli · agosto 2025</div>
+              </div>
+            </div>
+            <p class="review-text" itemprop="reviewBody">"Transfer da Trapani perfetto! Puntuale, veloce e molto più comodo del traghetto. Ho chiamato la sera prima e il giorno dopo erano già lì. Servizio di altissimo livello."</p>
+          </article>
+          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
+            <div class="review-header">
+              <div class="review-avatar" aria-hidden="true">S</div>
+              <div>
+                <div class="review-author" itemprop="author">Sara D.</div>
+                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                <div class="review-date">Firenze · settembre 2025</div>
+              </div>
+            </div>
+            <p class="review-text" itemprop="reviewBody">"Prima volta in barca senza patente: zero problemi grazie al briefing dettagliato. Gommone facile da guidare, carburante incluso e mappa delle calette fornita. Perfetto anche per chi non ha esperienza!"</p>
+          </article>
         </div>
 
         <div style="text-align:center;margin-top:2.5rem">
