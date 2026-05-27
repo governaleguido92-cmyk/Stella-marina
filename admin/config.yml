@@ -15,53 +15,71 @@ collections:
       - name: "home"
         label: "Home"
         file: "index.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "gommoni"
         label: "Noleggio Gommoni"
         file: "noleggio-gommoni-favignana.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "barche"
         label: "Noleggio Barche"
         file: "noleggio-barche-favignana.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "aperitivo"
         label: "Aperitivo al Tramonto"
         file: "aperitivo-tramonto-favignana.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "escursioni"
         label: "Escursioni Egadi"
         file: "escursioni-egadi-favignana.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "transfer"
         label: "Transfer Trapani"
         file: "transfer-trapani-favignana.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "cosa-vedere"
         label: "Cosa Vedere in Barca"
         file: "cosa-vedere-favignana-in-barca.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "faq"
         label: "FAQ"
         file: "faq.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
 
       - name: "contatti"
         label: "Contatti"
         file: "contatti.html"
+        format: raw
+        extension: html
         fields:
-          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+          - { label: "Contenuto", name: "body", widget: "text" }
