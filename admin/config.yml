@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: it
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pagine"
+    files:
+
+      - name: "home"
+        label: "Home"
+        file: "index.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "gommoni"
+        label: "Noleggio Gommoni"
+        file: "noleggio-gommoni-favignana.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "barche"
+        label: "Noleggio Barche"
+        file: "noleggio-barche-favignana.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "aperitivo"
+        label: "Aperitivo al Tramonto"
+        file: "aperitivo-tramonto-favignana.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "escursioni"
+        label: "Escursioni Egadi"
+        file: "escursioni-egadi-favignana.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "transfer"
+        label: "Transfer Trapani"
+        file: "transfer-trapani-favignana.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "cosa-vedere"
+        label: "Cosa Vedere in Barca"
+        file: "cosa-vedere-favignana-in-barca.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "faq"
+        label: "FAQ"
+        file: "faq.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
+
+      - name: "contatti"
+        label: "Contatti"
+        file: "contatti.html"
+        fields:
+          - { label: "Contenuto HTML", name: "body", widget: "code", default_language: "html" }
