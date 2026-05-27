@@ -95,15 +95,14 @@
     /* ── NAVBAR ── */
     .nav {
       position: fixed;
-      top: 12px; left: 12px; right: 12px;
+      top: 0; left: 0; right: 0;
       z-index: 999;
-      background: rgba(4, 15, 26, .92);
+      background: rgba(4, 15, 26, .95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-radius: 20px;
-      border: 1px solid rgba(255,255,255,.08);
-      padding: 0 1.25rem;
-      height: 60px;
+      border-bottom: 1px solid rgba(255,255,255,.10);
+      padding: 0 2rem;
+      height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -208,7 +207,7 @@
       z-index: 998;
       transition: left .3s ease;
       overflow-y: auto;
-      padding-top: 84px;
+      padding-top: 64px;
       padding-bottom: 80px;
     }
     .mobile-sidebar.active { left: 0; }
@@ -240,7 +239,7 @@
     }
 
     /* ── MAIN ── */
-    main { margin-top: 84px; }
+    main { margin-top: 64px; }
 
     /* ── HERO ── */
     .hero {
