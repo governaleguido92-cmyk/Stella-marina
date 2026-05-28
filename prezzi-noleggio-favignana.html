@@ -153,9 +153,17 @@
     .faq-q{padding:1.1rem 1.5rem;font-weight:600;color:var(--ocean);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.95rem}
     .faq-a{padding:0 1.5rem 1.1rem;color:var(--muted);font-size:.9rem;line-height:1.65}
 
-    /* Footer minimal */
-    footer{background:var(--night);color:rgba(255,255,255,.6);padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
-    footer a{color:rgba(255,255,255,.6)}
+    footer{background:var(--night);color:rgba(255,255,255,.75);padding:4rem 1.5rem 2rem;font-size:.88rem}
+    .footer-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:2.5rem}
+    .footer-brand p{font-size:.83rem;color:rgba(255,255,255,.5);margin-bottom:1.25rem;line-height:1.6}
+    .footer-col h5{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:.9rem;font-weight:600}
+    .footer-col a{display:block;color:rgba(255,255,255,.7);line-height:2.1;transition:color .2s;font-size:.88rem}
+    .footer-col a:hover{color:var(--teal)}
+    .footer-copy{max-width:1100px;margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.1);font-size:.78rem;color:rgba(255,255,255,.4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+    .footer-copy a{color:rgba(255,255,255,.4)}
+    .footer-copy a:hover{color:var(--teal)}
+    @media(max-width:768px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}}
+    @media(max-width:480px){.footer-grid{grid-template-columns:1fr}}
     .mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:990;background:var(--night);border-top:1px solid rgba(255,255,255,.08);padding:.6rem 1rem;gap:.5rem}
     @media(max-width:600px){.mobile-cta{display:flex}.mc-wa,.mc-tel{flex:1;display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.75rem;border-radius:100px;font-weight:600;font-size:.9rem}.mc-wa{background:var(--green);color:#fff}.mc-tel{background:var(--sky);color:#fff}}
   </style>
@@ -468,7 +476,38 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Stella Marina Favignana — P.IVA IT02781480815 | <a href="/contatti.html">Contatti</a> | <a href="/">Home</a></p>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/logo_modern.svg" alt="Stella Marina" style="height:44px;width:auto;margin-bottom:.8rem">
+        <p>Noleggio barche, transfer, aperitivi ed escursioni nelle Isole Egadi.<br>Circolo Nautico Favignana, 91023 (TP).</p>
+      </div>
+      <div class="footer-col">
+        <h5>Servizi</h5>
+        <a href="/noleggio-gommoni-favignana.html">Noleggio Gommoni</a>
+        <a href="/noleggio-barche-favignana.html">Noleggio Barche</a>
+        <a href="/transfer-trapani-favignana.html">Transfer Trapani</a>
+        <a href="/aperitivo-tramonto-favignana.html">Aperitivo Tramonto</a>
+        <a href="/escursioni-egadi-favignana.html">Escursioni Egadi</a>
+        <a href="/prezzi-noleggio-favignana.html" aria-current="page">Prezzi 2026</a>
+      </div>
+      <div class="footer-col">
+        <h5>Esplora</h5>
+        <a href="/cosa-vedere-favignana-in-barca.html">Cosa Vedere in Barca</a>
+        <a href="/faq.html">Domande Frequenti</a>
+        <a href="/contatti.html">Contatti</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contatti</h5>
+        <a href="https://wa.me/393290865808" target="_blank" rel="noopener">WhatsApp 329 086 5808</a>
+        <a href="tel:+393290865808">Telefono 329 086 5808</a>
+        <a href="https://www.instagram.com/stellamarinafavignana/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.google.com/maps/search/Circolo+Nautico+Favignana/" target="_blank" rel="noopener">Google Maps</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <span>&copy; 2026 Stella Marina Favignana — P.IVA IT02781480815</span>
+      <a href="/">www.barchefavignana.it</a>
+    </div>
   </footer>
 
   <div class="mobile-cta" aria-label="Contatti rapidi">
