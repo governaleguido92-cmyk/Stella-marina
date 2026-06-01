@@ -11,12 +11,10 @@
   <meta name="author" content="Stella Marina">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.barchefavignana.it">
-
   <meta name="geo.region" content="IT-TP">
   <meta name="geo.placename" content="Favignana, Isole Egadi, Sicilia">
   <meta name="geo.position" content="37.9216;12.3275">
   <meta name="ICBM" content="37.9216, 12.3275">
-
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Stella Marina Favignana">
   <meta property="og:title" content="Noleggio Barche e Gommoni a Favignana | Stella Marina">
@@ -26,69 +24,79 @@
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://www.barchefavignana.it/">
   <meta property="og:locale" content="it_IT">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Noleggio Barche e Gommoni a Favignana | Stella Marina">
   <meta name="twitter:description" content="Noleggio barche e gommoni a Favignana senza patente. Transfer Trapani, escursioni Egadi, aperitivo tramonto.">
   <meta name="twitter:image" content="https://www.barchefavignana.it/images/Hero.jpeg">
-
   <meta name="theme-color" content="#0a3d5c">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
   <meta name="google-site-verification" content="wO0AVPVuuIInymwRFlMBcdZRlsE4OCNTB613rdKEtio">
   <link rel="sitemap" type="application/xml" href="https://www.barchefavignana.it/sitemap.xml">
-
   <link rel="preload" as="image" href="/images/Hero.jpeg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 
   <style>
-    /* ── RESET & BASE ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ═══════════════════════════════════════════
+       STELLA MARINA — REDESIGN 2026
+    ═══════════════════════════════════════════ */
 
     :root {
-      --ocean:   #0a3d5c;
-      --sky:     #1a7fa8;
-      --teal:    #00b5c8;
-      --foam:    #e8f4f9;
-      --sand:    #fdf6ec;
-      --sun:     #f0b429;
-      --sunset:  #e8651a;
-      --green:   #25D366;
-      --white:   #ffffff;
-      --text:    #1a2a36;
-      --muted:   #4a6a7a;
-      --night:   #040f1a;
-      --radius:  16px;
-      --shadow:  0 4px 24px rgba(10,61,92,.10);
-      --shadow-lg: 0 8px 40px rgba(10,61,92,.18);
+      --ocean:      #0a3d5c;
+      --ocean-deep: #061f2e;
+      --sky:        #1a7fa8;
+      --teal:       #00b5c8;
+      --teal-lt:    #4dd4e2;
+      --foam:       #e8f4f9;
+      --sand:       #fdf6ec;
+      --gold:       #e6a817;
+      --gold-warm:  #f0b429;
+      --coral:      #e8651a;
+      --green:      #25D366;
+      --white:      #ffffff;
+      --text:       #1a2a36;
+      --muted:      #4a6a7a;
+      --night:      #040f1a;
+      --radius:     16px;
+      --radius-lg:  28px;
+      --shadow:     0 4px 24px rgba(10,61,92,.10);
+      --shadow-lg:  0 12px 48px rgba(10,61,92,.20);
+      --shadow-xl:  0 24px 80px rgba(10,61,92,.28);
     }
 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
     body {
-      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      font-family: 'DM Sans', system-ui, sans-serif;
       color: var(--text);
       background: #fff;
       line-height: 1.6;
       overflow-x: hidden;
     }
-
     a { color: var(--sky); text-decoration: none; }
     img { max-width: 100%; height: auto; display: block; }
 
+    /* ── SCROLL PROGRESS ── */
+    .scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--teal), var(--gold-warm), var(--coral));
+      z-index: 10000;
+      transition: width .08s linear;
+      pointer-events: none;
+    }
+
     /* ── SKIP LINK ── */
     .skip-link {
-      position: absolute;
-      top: -40px; left: 0;
+      position: absolute; top: -40px; left: 0;
       background: var(--sky); color: #fff;
-      padding: .5rem 1rem;
-      border-radius: 0 0 8px 0;
-      z-index: 99999;
-      font-weight: 600;
+      padding: .5rem 1rem; border-radius: 0 0 8px 0;
+      z-index: 99999; font-weight: 600;
     }
     .skip-link:focus { top: 0; }
 
@@ -97,86 +105,61 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 999;
-      background: rgba(4, 15, 26, .95);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      padding: 0 2rem;
-      height: 64px;
+      height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 0 2rem;
+      background: transparent;
+      transition: background .35s ease, box-shadow .35s ease;
+    }
+    .nav.is-scrolled {
+      background: rgba(4,15,26,.97);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 1px 0 rgba(255,255,255,.07);
     }
 
     .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display: flex; align-items: center; gap: 10px;
       color: #fff;
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: .03em;
-      flex-shrink: 0;
+      font-size: 1.1rem; font-weight: 700;
+      letter-spacing: .03em; flex-shrink: 0;
     }
     .nav-brand img { height: 36px; width: auto; }
     .nav-brand small {
-      display: block;
-      font-size: .55rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.65);
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 500;
+      display: block; font-size: .55rem;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
     }
 
     .nav-links {
-      display: flex;
-      align-items: center;
-      gap: .1rem;
-      flex-wrap: nowrap;
+      display: flex; align-items: center; gap: .1rem; flex-wrap: nowrap;
     }
     .nav-links a {
-      color: rgba(255,255,255,.85);
-      font-size: .8rem;
-      font-weight: 500;
-      padding: .4rem .7rem;
-      border-radius: 100px;
-      transition: background .2s, color .2s;
-      white-space: nowrap;
+      color: rgba(255,255,255,.82); font-size: .8rem; font-weight: 500;
+      padding: .4rem .7rem; border-radius: 100px;
+      transition: background .2s, color .2s; white-space: nowrap;
     }
-    .nav-links a:hover,
-    .nav-links a[aria-current="page"] {
-      color: #fff;
-      background: rgba(255,255,255,.1);
+    .nav-links a:hover, .nav-links a[aria-current="page"] {
+      color: #fff; background: rgba(255,255,255,.1);
     }
     .nav-links a.wa-btn {
-      background: var(--green);
-      color: #fff;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      padding: .4rem .9rem;
+      background: var(--green); color: #fff; font-weight: 600;
+      display: flex; align-items: center; gap: 6px;
+      padding: .4rem .9rem; margin-left: .4rem;
     }
-    .nav-links a.wa-btn:hover { background: #20bd5c; }
+    .nav-links a.wa-btn:hover { background: #1daa4e; }
 
     /* ── HAMBURGER ── */
     .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 5px;
-      background: transparent;
-      border: 0;
-      padding: 4px;
-      margin-left: .75rem;
+      display: none; flex-direction: column; cursor: pointer;
+      gap: 5px; background: transparent; border: 0; padding: 4px; margin-left: .75rem;
     }
     .hamburger span {
-      width: 22px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
+      width: 22px; height: 2px; background: #fff; border-radius: 2px;
       transition: all .3s ease;
     }
     .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -190,518 +173,670 @@
 
     /* ── MOBILE SIDEBAR ── */
     .sidebar-overlay {
-      position: fixed; inset: 0;
-      background: rgba(0,0,0,.45);
-      z-index: 997;
-      display: none;
-      opacity: 0;
-      transition: opacity .3s;
+      position: fixed; inset: 0; background: rgba(0,0,0,.5);
+      z-index: 997; display: none; opacity: 0; transition: opacity .3s;
     }
     .sidebar-overlay.active { display: block; opacity: 1; }
-
     .mobile-sidebar {
-      position: fixed;
-      top: 0; left: -100%;
+      position: fixed; top: 0; left: -100%;
       width: 280px; height: 100vh;
       background: linear-gradient(160deg, #040f1a 0%, #0a3d5c 100%);
-      z-index: 998;
-      transition: left .3s ease;
-      overflow-y: auto;
-      padding-top: 64px;
-      padding-bottom: 80px;
+      z-index: 998; transition: left .3s ease; overflow-y: auto;
+      padding-top: 68px; padding-bottom: 80px;
     }
     .mobile-sidebar.active { left: 0; }
     .mobile-sidebar nav { display: flex; flex-direction: column; }
     .mobile-sidebar nav a {
-      display: block;
-      padding: .9rem 1.5rem;
-      color: rgba(255,255,255,.82);
-      border-bottom: 1px solid rgba(255,255,255,.07);
-      transition: all .2s;
-      font-weight: 500;
-      font-size: .95rem;
+      display: block; padding: .9rem 1.5rem;
+      color: rgba(255,255,255,.82); border-bottom: 1px solid rgba(255,255,255,.07);
+      transition: all .2s; font-weight: 500; font-size: .95rem;
     }
-    .mobile-sidebar nav a:hover,
-    .mobile-sidebar nav a[aria-current="page"] {
-      background: rgba(0,181,200,.12);
-      color: #fff;
-      border-left: 3px solid var(--teal);
-      padding-left: calc(1.5rem - 3px);
+    .mobile-sidebar nav a:hover, .mobile-sidebar nav a[aria-current="page"] {
+      background: rgba(0,181,200,.12); color: #fff;
+      border-left: 3px solid var(--teal); padding-left: calc(1.5rem - 3px);
     }
     .mobile-sidebar nav a.wa-sidebar {
-      background: var(--green);
-      color: #fff;
-      margin: 1.25rem 1rem 0;
-      border-radius: 100px;
-      text-align: center;
-      border: 0;
-      font-weight: 600;
+      background: var(--green); color: #fff;
+      margin: 1.25rem 1rem 0; border-radius: 100px;
+      text-align: center; border: 0; font-weight: 600;
     }
 
     /* ── MAIN ── */
-    main { margin-top: 64px; }
+    main { margin-top: 68px; }
 
-    /* ── HERO ── */
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
     .hero {
       position: relative;
-      min-height: 88vh;
-      display: flex;
-      align-items: center;
+      min-height: calc(100vh - 68px);
+      display: flex; align-items: center;
       color: #fff;
-      background:
-        linear-gradient(160deg, rgba(4,15,26,.75) 0%, rgba(10,61,92,.55) 60%, rgba(0,181,200,.2) 100%),
-        url('/images/Hero.jpeg') center / cover no-repeat;
-      padding: 6rem 1.5rem 5rem;
+      overflow: hidden;
+      background: url('/images/Hero.jpeg') center / cover no-repeat;
     }
 
-    .hero-inner {
-      position: relative;
-      max-width: 720px;
-      margin: 0 auto;
-      text-align: center;
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(4,15,26,.84) 0%, rgba(10,61,92,.62) 55%, rgba(0,181,200,.15) 100%);
       z-index: 1;
     }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.25);
-      backdrop-filter: blur(8px);
-      color: #fff;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: .35rem .9rem;
-      border-radius: 100px;
-      margin-bottom: 1.5rem;
+    /* Floating particles */
+    .hero-particles {
+      position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      overflow: hidden;
     }
-    .hero-badge svg { opacity: .85; }
+    .hero-particles span {
+      position: absolute;
+      bottom: -10%; border-radius: 50%;
+      background: rgba(0,181,200,.15);
+      border: 1px solid rgba(0,181,200,.25);
+      animation: bubble-rise linear infinite;
+    }
+    .hero-particles span:nth-child(1)  { left:8%;  width:18px; height:18px; animation-duration:12s; animation-delay:0s; }
+    .hero-particles span:nth-child(2)  { left:18%; width:10px; height:10px; animation-duration:9s;  animation-delay:2s; }
+    .hero-particles span:nth-child(3)  { left:30%; width:24px; height:24px; animation-duration:15s; animation-delay:1s; }
+    .hero-particles span:nth-child(4)  { left:42%; width:8px;  height:8px;  animation-duration:11s; animation-delay:4s; }
+    .hero-particles span:nth-child(5)  { left:55%; width:20px; height:20px; animation-duration:13s; animation-delay:0.5s; }
+    .hero-particles span:nth-child(6)  { left:67%; width:14px; height:14px; animation-duration:10s; animation-delay:3s; }
+    .hero-particles span:nth-child(7)  { left:78%; width:28px; height:28px; animation-duration:16s; animation-delay:1.5s; }
+    .hero-particles span:nth-child(8)  { left:88%; width:12px; height:12px; animation-duration:8s;  animation-delay:5s; }
+    .hero-particles span:nth-child(9)  { left:25%; width:6px;  height:6px;  animation-duration:14s; animation-delay:2.5s; }
+    .hero-particles span:nth-child(10) { left:72%; width:16px; height:16px; animation-duration:11s; animation-delay:3.5s; }
+
+    @keyframes bubble-rise {
+      0%   { transform: translateY(0) scale(1);   opacity: 0; }
+      10%  { opacity: .8; }
+      90%  { opacity: .3; }
+      100% { transform: translateY(-110vh) scale(1.3); opacity: 0; }
+    }
+
+    .hero-inner {
+      position: relative; z-index: 3;
+      max-width: 760px; margin: 0 auto;
+      text-align: center; padding: 5rem 1.5rem 8rem;
+    }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(12px);
+      color: rgba(255,255,255,.9);
+      font-size: .78rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .38rem 1rem; border-radius: 100px;
+      margin-bottom: 1.75rem;
+      animation: badge-glow 3s ease-in-out infinite;
+    }
+    @keyframes badge-glow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,181,200,0); }
+      50%       { box-shadow: 0 0 18px 4px rgba(0,181,200,.25); }
+    }
 
     .hero h1 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(2.2rem, 6vw, 3.8rem);
-      line-height: 1.1;
-      font-weight: 700;
-      margin-bottom: 1.25rem;
-      text-shadow: 0 2px 20px rgba(0,0,0,.4);
+      font-size: clamp(2.4rem, 7vw, 4.6rem);
+      line-height: 1.08; font-weight: 900;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 30px rgba(0,0,0,.35);
+      letter-spacing: -.01em;
     }
     .hero h1 em {
-      color: var(--teal);
       font-style: italic;
+      background: linear-gradient(135deg, var(--teal-lt), var(--gold-warm));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-lead {
-      font-size: clamp(1rem, 2.2vw, 1.15rem);
-      color: rgba(255,255,255,.9);
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.7;
+      font-size: clamp(1rem, 2.4vw, 1.2rem);
+      color: rgba(255,255,255,.88);
+      max-width: 560px; margin: 0 auto 2.75rem;
+      line-height: 1.75; font-weight: 300;
     }
 
     .hero-ctas {
-      display: flex;
-      gap: .75rem;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center;
+      margin-bottom: 3.5rem;
     }
 
-    /* ── BUTTONS ── */
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute; bottom: 5.5rem; left: 50%; transform: translateX(-50%);
+      z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 6px;
+      color: rgba(255,255,255,.55); font-size: .72rem; letter-spacing: .1em;
+      text-transform: uppercase; font-weight: 500;
+      animation: scroll-bounce 2.5s ease-in-out infinite;
+    }
+    @keyframes scroll-bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); opacity: .55; }
+      50%       { transform: translateX(-50%) translateY(6px); opacity: .9; }
+    }
+
+    /* Wave bottom of hero */
+    .hero-wave {
+      position: absolute; bottom: -1px; left: 0; right: 0; z-index: 3;
+      line-height: 0;
+    }
+    .hero-wave svg { display: block; width: 100%; }
+    .wave-path-1 { animation: wave-anim 8s ease-in-out infinite; transform-origin: center bottom; }
+    .wave-path-2 { animation: wave-anim 10s ease-in-out infinite reverse; transform-origin: center bottom; opacity: .6; }
+    @keyframes wave-anim {
+      0%, 100% { d: path("M0,60 C200,20 400,100 600,60 C800,20 1000,80 1200,60 C1400,40 1440,55 1440,55 L1440,100 L0,100 Z"); }
+      50%       { d: path("M0,40 C200,80 400,20 600,50 C800,80 1000,30 1200,55 C1400,70 1440,45 1440,45 L1440,100 L0,100 Z"); }
+    }
+
+    /* ═══════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════ */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      padding: .85rem 1.75rem;
-      border-radius: 100px;
-      font-size: .95rem;
-      font-weight: 600;
-      cursor: pointer;
-      border: 0;
-      transition: transform .2s, box-shadow .2s, background .2s;
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .9rem 1.9rem; border-radius: 100px;
+      font-size: .95rem; font-weight: 600;
+      cursor: pointer; border: 0;
+      transition: transform .22s, box-shadow .22s, background .2s;
+      position: relative; overflow: hidden;
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,.22); }
+    .btn::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: rgba(255,255,255,0);
+      transition: background .2s;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,.25); }
+    .btn:hover::after { background: rgba(255,255,255,.08); }
+    .btn:active { transform: translateY(-1px); }
     .btn-wa { background: var(--green); color: #fff; }
-    .btn-wa:hover { background: #20bd5c; }
+    .btn-wa:hover { background: #1daa4e; }
     .btn-sky { background: var(--sky); color: #fff; }
-    .btn-sky:hover { background: #1670960; }
     .btn-ocean { background: var(--ocean); color: #fff; }
-    .btn-outline { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.5); }
-    .btn-outline:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+    .btn-outline {
+      background: transparent; color: #fff;
+      border: 2px solid rgba(255,255,255,.45);
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,.1); }
+    .btn-teal { background: linear-gradient(135deg, var(--sky), var(--teal)); color: #fff; }
 
-    /* ── TRUST BAR ── */
-    .trust-bar {
+    /* ═══════════════════════════════════════════
+       WAVE DIVIDER
+    ═══════════════════════════════════════════ */
+    .wave-divider {
+      line-height: 0;
+      margin: -1px 0;
+    }
+    .wave-divider svg { display: block; width: 100%; }
+
+    /* ═══════════════════════════════════════════
+       STATS / TRUST
+    ═══════════════════════════════════════════ */
+    .stats-section {
       background: #fff;
-      padding: 2.5rem 1.5rem;
-      border-bottom: 1px solid rgba(10,61,92,.08);
+      padding: 4rem 1.5rem;
     }
-    .trust-bar-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-      text-align: center;
+    .stats-grid {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem;
     }
-    .trust-item { padding: 1.25rem; }
-    .trust-number {
+    .stat-card {
+      text-align: center; padding: 2rem 1.25rem;
+      background: var(--foam);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(10,61,92,.07);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .stat-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .stat-icon {
+      width: 50px; height: 50px; border-radius: 14px;
+      background: linear-gradient(135deg, var(--sky), var(--teal));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; margin: 0 auto 1rem;
+    }
+    .stat-number {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: var(--ocean);
-      line-height: 1;
-      margin-bottom: .3rem;
+      font-size: 2.8rem; font-weight: 900;
+      color: var(--ocean); line-height: 1; margin-bottom: .35rem;
     }
-    .trust-label {
-      font-size: .85rem;
-      color: var(--muted);
-      font-weight: 500;
+    .stat-label {
+      font-size: .85rem; color: var(--muted); font-weight: 500;
     }
-    .trust-stars { color: var(--sun); font-size: 1rem; margin-bottom: .2rem; }
+    .stat-stars { color: var(--gold-warm); font-size: .95rem; margin-bottom: .2rem; }
 
     @media (max-width: 600px) {
-      .trust-bar-inner { grid-template-columns: 1fr; gap: .75rem; }
+      .stats-grid { grid-template-columns: 1fr; gap: 1rem; }
     }
 
-    /* ── SECTION ── */
-    .section {
-      padding: 5rem 1.5rem;
-    }
-    .section-alt { background: var(--sand); }
-    .section-ocean {
-      background: linear-gradient(135deg, var(--ocean) 0%, #0d5078 100%);
+    /* ═══════════════════════════════════════════
+       SECTION BASES
+    ═══════════════════════════════════════════ */
+    .section { padding: 5.5rem 1.5rem; }
+    .section-alt  { background: var(--sand); }
+    .section-foam { background: var(--foam); }
+    .section-dark {
+      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean) 100%);
       color: #fff;
     }
-    .section-foam { background: var(--foam); }
+    .container { max-width: 1100px; margin: 0 auto; }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
+    .section-eyebrow {
+      display: inline-block; font-size: .74rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: .65rem;
     }
-
-    .section-label {
-      display: inline-block;
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--teal);
-      margin-bottom: .6rem;
-    }
-    .section-ocean .section-label { color: rgba(0,181,200,.8); }
+    .section-dark .section-eyebrow { color: var(--teal-lt); }
 
     .section-title {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.75rem, 4vw, 2.6rem);
-      line-height: 1.15;
-      color: var(--ocean);
-      margin-bottom: 1rem;
-      font-weight: 700;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.12; color: var(--ocean);
+      margin-bottom: 1rem; font-weight: 700;
     }
     .section-title em { color: var(--teal); font-style: italic; }
-    .section-ocean .section-title { color: #fff; }
+    .section-dark .section-title { color: #fff; }
 
-    .section-subtitle {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 600px;
-      line-height: 1.7;
+    .section-sub {
+      font-size: 1.05rem; color: var(--muted);
+      max-width: 580px; line-height: 1.75;
     }
-    .section-ocean .section-subtitle { color: rgba(255,255,255,.75); }
+    .section-dark .section-sub { color: rgba(255,255,255,.72); }
 
-    /* ── SERVICE CARDS ── */
-    .services-grid {
+    /* ═══════════════════════════════════════════
+       SERVICES BENTO GRID
+    ═══════════════════════════════════════════ */
+    .services-bento {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(12, 1fr);
       gap: 1.25rem;
       margin-top: 3rem;
     }
 
+    /* Span sizes */
+    .sc-wide  { grid-column: span 7; }
+    .sc-mid   { grid-column: span 5; }
+    .sc-third { grid-column: span 4; }
+
     .service-card {
       background: #fff;
-      border-radius: var(--radius);
-      padding: 2rem;
+      border-radius: var(--radius-lg);
+      padding: 2.25rem;
       box-shadow: var(--shadow);
       border: 1px solid rgba(10,61,92,.06);
-      transition: transform .25s, box-shadow .25s;
+      transition: transform .3s cubic-bezier(.34,1.56,.64,1), box-shadow .3s;
       cursor: pointer;
+      display: flex; flex-direction: column;
+      position: relative; overflow: hidden;
     }
+    .service-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--sky), var(--teal));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform .3s ease;
+    }
+    .service-card:hover::before { transform: scaleX(1); }
     .service-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
+      transform: translateY(-6px) scale(1.005);
+      box-shadow: var(--shadow-xl);
     }
-    .section-alt .service-card { background: #fff; }
+    .service-card.featured {
+      background: linear-gradient(145deg, var(--ocean) 0%, #0d5478 100%);
+      color: #fff;
+    }
+    .service-card.featured::before {
+      background: linear-gradient(90deg, var(--teal), var(--gold-warm));
+    }
 
     .service-icon {
-      width: 52px; height: 52px;
-      background: var(--foam);
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-      color: var(--ocean);
-      transition: background .25s, color .25s;
+      width: 54px; height: 54px;
+      background: var(--foam); border-radius: 15px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--ocean); margin-bottom: 1.35rem;
+      transition: background .3s, color .3s, transform .3s;
     }
     .service-card:hover .service-icon {
-      background: var(--ocean);
-      color: #fff;
+      background: linear-gradient(135deg, var(--sky), var(--teal));
+      color: #fff; transform: rotate(-8deg) scale(1.1);
+    }
+    .service-card.featured .service-icon {
+      background: rgba(255,255,255,.12); color: #fff;
+    }
+    .service-card.featured:hover .service-icon {
+      background: rgba(255,255,255,.2);
     }
 
     .service-card h3 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.15rem;
-      color: var(--ocean);
-      margin-bottom: .5rem;
-      font-weight: 700;
+      font-size: 1.2rem; color: var(--ocean);
+      margin-bottom: .6rem; font-weight: 700;
+      transition: color .2s;
     }
+    .service-card.featured h3 { color: #fff; }
+    .service-card:hover h3 { color: var(--sky); }
+    .service-card.featured:hover h3 { color: var(--teal-lt); }
+
     .service-card p {
-      font-size: .92rem;
-      color: var(--muted);
-      line-height: 1.65;
-      margin-bottom: 1.25rem;
+      font-size: .93rem; color: var(--muted);
+      line-height: 1.7; margin-bottom: 1.5rem; flex: 1;
     }
+    .service-card.featured p { color: rgba(255,255,255,.75); }
+
     .service-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-size: .85rem;
-      font-weight: 600;
-      color: var(--sky);
-      transition: gap .2s;
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .85rem; font-weight: 600; color: var(--sky);
+      transition: gap .2s, color .2s; margin-top: auto;
     }
-    .service-link:hover { gap: 9px; }
+    .service-link:hover { gap: 10px; color: var(--teal); }
+    .service-card.featured .service-link { color: var(--teal-lt); }
+    .service-card.featured .service-link:hover { color: #fff; }
 
-    /* ── REVIEWS ── */
-    .reviews-grid {
+    @media (max-width: 900px) {
+      .sc-wide, .sc-mid, .sc-third { grid-column: span 12; }
+    }
+
+    /* ═══════════════════════════════════════════
+       WHY US — NUMBERED GRID
+    ═══════════════════════════════════════════ */
+    .why-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.25rem;
-      margin-top: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem; margin-top: 3rem;
     }
-
-    .review-card {
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      box-shadow: var(--shadow);
-      border-left: 4px solid var(--sun);
+    .why-item {
+      display: flex; flex-direction: column; gap: .75rem;
+      padding: 1.85rem;
+      background: var(--foam);
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(10,61,92,.07);
+      position: relative; overflow: hidden;
+      transition: transform .3s, box-shadow .3s;
     }
+    .why-item::after {
+      content: attr(data-num);
+      position: absolute; bottom: -.3rem; right: .75rem;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 5rem; font-weight: 900;
+      color: rgba(10,61,92,.05); line-height: 1;
+      pointer-events: none;
+    }
+    .why-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .why-icon {
+      width: 46px; height: 46px;
+      background: linear-gradient(135deg, var(--sky), var(--teal));
+      border-radius: 13px; display: flex;
+      align-items: center; justify-content: center;
+      color: #fff; flex-shrink: 0;
+    }
+    .why-item h3 { font-size: .97rem; font-weight: 700; color: var(--ocean); margin: 0; }
+    .why-item p  { font-size: .88rem; color: var(--muted); line-height: 1.65; margin: 0; }
 
-    .review-header {
+    /* ═══════════════════════════════════════════
+       REVIEWS CAROUSEL
+    ═══════════════════════════════════════════ */
+    .reviews-wrapper {
+      position: relative; margin-top: 3rem; overflow: hidden;
+    }
+    .reviews-track {
       display: flex;
-      align-items: center;
-      gap: .85rem;
-      margin-bottom: 1rem;
+      transition: transform .55s cubic-bezier(.4,0,.2,1);
+      will-change: transform;
+    }
+    .review-card {
+      min-width: calc(33.333% - 1rem);
+      margin-right: 1.5rem;
+      background: #fff;
+      border-radius: var(--radius-lg);
+      padding: 1.85rem;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--gold-warm);
+      flex-shrink: 0;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .review-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+    .review-header {
+      display: flex; align-items: center; gap: .9rem; margin-bottom: 1rem;
     }
     .review-avatar {
-      width: 42px; height: 42px;
+      width: 44px; height: 44px;
       background: linear-gradient(135deg, var(--ocean), var(--teal));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 700;
-      font-size: 1rem;
-      flex-shrink: 0;
+      border-radius: 50%; display: flex; align-items: center;
+      justify-content: center; color: #fff;
+      font-weight: 700; font-size: 1.05rem; flex-shrink: 0;
     }
-    .review-author { font-weight: 700; color: var(--ocean); font-size: .95rem; }
-    .review-stars { color: var(--sun); font-size: .9rem; }
-    .review-date { font-size: .78rem; color: var(--muted); margin-top: 1px; }
-    .review-text {
-      font-size: .93rem;
-      color: var(--text);
-      line-height: 1.65;
-      font-style: italic;
+    .review-author  { font-weight: 700; color: var(--ocean); font-size: .95rem; }
+    .review-stars   { color: var(--gold-warm); font-size: .88rem; }
+    .review-date    { font-size: .78rem; color: var(--muted); margin-top: 1px; }
+    .review-text    { font-size: .92rem; color: var(--text); line-height: 1.7; font-style: italic; }
+
+    /* Carousel controls */
+    .carousel-controls {
+      display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 2rem;
+    }
+    .carousel-btn {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--ocean); color: #fff; border: 0;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background .2s, transform .2s;
+    }
+    .carousel-btn:hover { background: var(--sky); transform: scale(1.1); }
+    .carousel-dots { display: flex; gap: 8px; }
+    .cdot {
+      width: 8px; height: 8px; border-radius: 100px;
+      background: rgba(10,61,92,.2);
+      border: 0; cursor: pointer; padding: 0;
+      transition: width .3s, background .3s;
+    }
+    .cdot.active { width: 24px; background: var(--sky); }
+
+    @media (max-width: 900px) {
+      .review-card { min-width: calc(80% - 1rem); }
+    }
+    @media (max-width: 600px) {
+      .review-card { min-width: calc(100% - 1rem); }
     }
 
+    /* Rating summary */
     .rating-summary {
-      display: inline-flex;
-      align-items: center;
-      gap: 1.25rem;
-      background: #fff;
-      border-radius: var(--radius);
-      padding: 1.5rem 2rem;
-      box-shadow: var(--shadow);
-      margin-top: 2.5rem;
+      display: inline-flex; align-items: center; gap: 1.25rem;
+      background: #fff; border-radius: var(--radius);
+      padding: 1.5rem 2rem; box-shadow: var(--shadow); margin-top: 0;
     }
     .rating-number {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--sky);
-      line-height: 1;
+      font-size: 3rem; font-weight: 900; color: var(--sky); line-height: 1;
     }
     .rating-info { text-align: left; }
-    .rating-stars { color: var(--sun); font-size: 1.1rem; }
+    .rating-stars { color: var(--gold-warm); font-size: 1.1rem; }
     .rating-count { font-size: .85rem; color: var(--muted); margin-top: 2px; }
-    .rating-cta { margin-top: .8rem; }
+    .rating-cta   { margin-top: .75rem; }
+    .service-link-sm {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .85rem; font-weight: 600; color: var(--sky);
+      transition: gap .2s;
+    }
+    .service-link-sm:hover { gap: 10px; }
 
-    /* ── CTA SECTION ── */
+    /* ═══════════════════════════════════════════
+       CTA SECTION
+    ═══════════════════════════════════════════ */
     .cta-section {
-      padding: 5rem 1.5rem;
-      background: linear-gradient(135deg, var(--ocean) 0%, #0d5078 50%, var(--sky) 100%);
-      position: relative;
-      overflow: hidden;
+      padding: 7rem 1.5rem;
+      position: relative; overflow: hidden;
       text-align: center;
+      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean) 50%, #0d5078 100%);
     }
-    .cta-section::before {
-      content: "";
-      position: absolute;
-      top: -50%; left: -20%;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(0,181,200,.2), transparent 70%);
-      pointer-events: none;
+    .cta-bg-blob {
+      position: absolute; border-radius: 50%; pointer-events: none;
+      filter: blur(60px); opacity: .25;
     }
+    .cta-bg-blob.b1 {
+      width: 500px; height: 500px; background: var(--teal);
+      top: -150px; left: -100px;
+      animation: blob-drift 14s ease-in-out infinite alternate;
+    }
+    .cta-bg-blob.b2 {
+      width: 400px; height: 400px; background: var(--gold);
+      bottom: -100px; right: -80px;
+      animation: blob-drift 10s ease-in-out infinite alternate-reverse;
+    }
+    .cta-bg-blob.b3 {
+      width: 300px; height: 300px; background: var(--sky);
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      animation: blob-drift 18s ease-in-out infinite alternate;
+    }
+    @keyframes blob-drift {
+      0%   { transform: translate(0,0) scale(1); }
+      33%  { transform: translate(30px,-20px) scale(1.05); }
+      66%  { transform: translate(-20px,30px) scale(.95); }
+      100% { transform: translate(15px,15px) scale(1.02); }
+    }
+    .cta-blob-b2 {
+      animation: blob-drift 10s ease-in-out infinite alternate-reverse !important;
+    }
+
+    .cta-inner { position: relative; z-index: 1; }
     .cta-section h2 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      color: #fff;
-      margin-bottom: .75rem;
-      line-height: 1.2;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #fff; margin-bottom: .85rem; line-height: 1.15;
+    }
+    .cta-section h2 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--teal-lt), var(--gold-warm));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
     .cta-section p {
-      color: rgba(255,255,255,.8);
-      font-size: 1.05rem;
-      max-width: 500px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.65;
+      color: rgba(255,255,255,.78); font-size: 1.1rem;
+      max-width: 520px; margin: 0 auto 2.75rem; line-height: 1.7;
     }
-    .cta-btns {
-      display: flex;
-      gap: .75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .cta-btns { display: flex; gap: .75rem; justify-content: center; flex-wrap: wrap; }
 
-    /* ── FOOTER ── */
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
     footer {
       background: var(--night);
-      color: rgba(255,255,255,.75);
-      padding: 4rem 1.5rem 2rem;
+      color: rgba(255,255,255,.7);
+      padding: 4.5rem 1.5rem 2.5rem;
       font-size: .88rem;
     }
     .footer-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.5fr repeat(3, 1fr);
-      gap: 2.5rem;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.6fr repeat(3,1fr); gap: 2.5rem;
     }
     .footer-brand h4 {
       font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.3rem;
-      color: #fff;
-      margin-bottom: .3rem;
+      font-size: 1.35rem; color: #fff; margin-bottom: .3rem;
     }
-    .footer-brand p {
-      font-size: .83rem;
-      color: rgba(255,255,255,.5);
-      margin-bottom: 1.25rem;
-      line-height: 1.6;
-    }
+    .footer-brand p { font-size: .83rem; color: rgba(255,255,255,.5); margin-bottom: 1.25rem; line-height: 1.6; }
     .footer-col h5 {
-      font-size: .72rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.4);
-      margin-bottom: .9rem;
-      font-weight: 600;
+      font-size: .72rem; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.38); margin-bottom: .9rem; font-weight: 600;
     }
     .footer-col a {
-      display: block;
-      color: rgba(255,255,255,.7);
-      line-height: 2.1;
-      transition: color .2s;
-      font-size: .88rem;
+      display: block; color: rgba(255,255,255,.68);
+      line-height: 2.1; transition: color .2s; font-size: .88rem;
     }
-    .footer-col a:hover { color: var(--teal); }
+    .footer-col a:hover { color: var(--teal-lt); }
     .footer-bottom {
-      max-width: 1100px;
-      margin: 2.5rem auto 0;
+      max-width: 1100px; margin: 2.5rem auto 0;
       padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,.1);
-      font-size: .78rem;
-      color: rgba(255,255,255,.4);
-      text-align: center;
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: .78rem; color: rgba(255,255,255,.38); text-align: center;
     }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
 
-    @media (max-width: 768px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+    /* ═══════════════════════════════════════════
+       FLOATING WHATSAPP
+    ═══════════════════════════════════════════ */
+    .float-wa {
+      position: fixed; bottom: 88px; right: 22px;
+      z-index: 990;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: var(--green);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; box-shadow: 0 4px 20px rgba(37,211,102,.45);
+      transition: transform .2s, box-shadow .2s;
     }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
+    .float-wa:hover {
+      transform: scale(1.12);
+      box-shadow: 0 6px 28px rgba(37,211,102,.6);
     }
+    .float-wa::before, .float-wa::after {
+      content: '';
+      position: absolute; border-radius: 50%;
+      background: rgba(37,211,102,.35);
+      animation: wa-ripple 2.5s ease-out infinite;
+    }
+    .float-wa::before { width: 100%; height: 100%; animation-delay: 0s; }
+    .float-wa::after  { width: 100%; height: 100%; animation-delay: .8s; }
+    @keyframes wa-ripple {
+      0%   { transform: scale(1); opacity: .7; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+    @media (max-width: 768px) { .float-wa { bottom: 76px; } }
+
+    /* ── SCROLL-TO-TOP ── */
+    .scroll-top-btn {
+      position: fixed; bottom: 88px; left: 22px;
+      z-index: 990; width: 46px; height: 46px; border-radius: 50%;
+      background: var(--ocean); color: #fff; border: 0;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; box-shadow: var(--shadow);
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s, transform .3s;
+    }
+    .scroll-top-btn.visible { opacity: 1; pointer-events: auto; }
+    .scroll-top-btn:hover { transform: scale(1.1); background: var(--sky); }
+    @media (max-width: 768px) { .scroll-top-btn { bottom: 76px; } }
 
     /* ── MOBILE CTA BAR ── */
     .mobile-cta {
-      display: none;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
       z-index: 996;
-      background: rgba(4,15,26,.96);
-      backdrop-filter: blur(12px);
-      padding: .65rem .85rem;
-      border-top: 1px solid rgba(255,255,255,.07);
+      background: rgba(4,15,26,.97); backdrop-filter: blur(12px);
+      padding: .65rem .85rem; border-top: 1px solid rgba(255,255,255,.07);
       gap: .5rem;
     }
     @media (max-width: 768px) {
       .mobile-cta { display: flex; }
-      body { padding-bottom: 62px; }
-      .section { padding: 3.5rem 1.25rem; }
+      body { padding-bottom: 64px; }
+      .section { padding: 4rem 1.25rem; }
+      .float-wa { display: none; }
     }
     .mobile-cta a {
-      flex: 1;
-      text-align: center;
-      font-size: .85rem;
-      font-weight: 600;
-      border-radius: 100px;
-      padding: .7rem .5rem;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
+      flex: 1; text-align: center; font-size: .85rem; font-weight: 600;
+      border-radius: 100px; padding: .72rem .5rem;
+      text-decoration: none; display: flex; align-items: center;
+      justify-content: center; gap: 6px;
     }
-    .mc-wa { background: var(--green); color: #fff; }
+    .mc-wa  { background: var(--green); color: #fff; }
     .mc-tel { background: var(--sky); color: #fff; }
 
     /* ── ANIMATIONS ── */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .6s ease, transform .6s ease;
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .65s ease, transform .65s ease;
     }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-up:nth-child(2) { transition-delay: .1s; }
-    .fade-up:nth-child(3) { transition-delay: .2s; }
-    .fade-up:nth-child(4) { transition-delay: .3s; }
-    .fade-up:nth-child(5) { transition-delay: .4s; }
-    .fade-up:nth-child(6) { transition-delay: .5s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
+    .reveal-delay-4 { transition-delay: .4s; }
+    .reveal-delay-5 { transition-delay: .5s; }
 
     @media (prefers-reduced-motion: reduce) {
-      .fade-up { opacity: 1; transform: none; transition: none; }
+      .reveal, .hero-particles span, .wave-path-1, .wave-path-2,
+      .float-wa::before, .float-wa::after, .hero-badge,
+      .cta-bg-blob { animation: none !important; transition: none !important; opacity: 1 !important; transform: none !important; }
     }
 
     @media print {
-      .nav, .mobile-cta, .hamburger, .mobile-sidebar { display: none; }
+      .nav, .mobile-cta, .hamburger, .mobile-sidebar,
+      .float-wa, .scroll-top-btn { display: none; }
     }
-
-    /* ── WHY US ── */
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem; margin-top: 2.75rem; }
-    .why-item { display: flex; flex-direction: column; gap: .7rem; padding: 1.6rem; background: var(--foam); border-radius: var(--radius); border: 1px solid rgba(10,61,92,.07); transition: transform .25s, box-shadow .25s; }
-    .why-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-    .why-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--sky) 0%, var(--teal) 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #fff; flex-shrink: 0; }
-    .why-item h3 { font-size: .95rem; font-weight: 700; color: var(--ocean); margin: 0; }
-    .why-item p { font-size: .88rem; color: var(--muted); line-height: 1.6; margin: 0; }
-
-    /* ── PRICE BADGE ── */
-    .price-badge { display: inline-block; font-size: .78rem; font-weight: 700; color: var(--sky); background: rgba(26,127,168,.1); border: 1px solid rgba(26,127,168,.2); border-radius: 100px; padding: .2rem .7rem; margin-bottom: .5rem; }
   </style>
 
   <script type="application/ld+json">
@@ -731,54 +866,11 @@
       {
         "@type": "FAQPage",
         "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Quali servizi offre Stella Marina?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Stella Marina offre noleggio gommoni senza patente, barche con patente, transfer marittimi Trapani-Favignana, escursioni guidate alle Isole Egadi e aperitivi al tramonto."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Come si prenota il noleggio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Puoi prenotare direttamente su WhatsApp al 329 086 5808. Ti consigliamo la prenotazione anticipata soprattutto nei mesi di luglio e agosto."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quali sono gli orari di noleggio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Dal 1 maggio al 30 settembre dalle 08:00 alle 18:00. Giugno-agosto disponibili anche aperture serali fino alle 20:00 per aperitivo tramonto."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Che cosa è incluso nel noleggio?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Barca/gommone, carburante, assicurazione base, briefing di sicurezza, mappa delle rotte consigliate e informazioni su aree marine protette."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quali metodi di pagamento accettate?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Accettiamo contanti, Bancomat/Carta di credito.
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "È possibile noleggiare una barca senza patente nautica?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Sì. Offriamo gommoni fino a 40 cv noleggiabili senza patente nautica. Sono agili e perfetti per scoprire le calette di Favignana, Cala Rossa, Cala Azzurra e Cala Rotonda."
-            }
-          }
+          {"@type":"Question","name":"Quali servizi offre Stella Marina?","acceptedAnswer":{"@type":"Answer","text":"Stella Marina offre noleggio gommoni senza patente, barche con patente, transfer marittimi Trapani-Favignana, escursioni guidate alle Isole Egadi e aperitivi al tramonto."}},
+          {"@type":"Question","name":"Come si prenota il noleggio?","acceptedAnswer":{"@type":"Answer","text":"Puoi prenotare direttamente su WhatsApp al 329 086 5808. Ti consigliamo la prenotazione anticipata soprattutto nei mesi di luglio e agosto."}},
+          {"@type":"Question","name":"Quali sono gli orari di noleggio?","acceptedAnswer":{"@type":"Answer","text":"Dal 1 maggio al 30 settembre dalle 08:00 alle 18:00. Giugno-agosto disponibili anche aperture serali fino alle 20:00 per aperitivo tramonto."}},
+          {"@type":"Question","name":"Che cosa è incluso nel noleggio?","acceptedAnswer":{"@type":"Answer","text":"Barca/gommone, carburante, assicurazione base, briefing di sicurezza, mappa delle rotte consigliate e informazioni su aree marine protette."}},
+          {"@type":"Question","name":"È possibile noleggiare una barca senza patente nautica?","acceptedAnswer":{"@type":"Answer","text":"Sì. Offriamo gommoni fino a 40 cv noleggiabili senza patente nautica. Sono agili e perfetti per scoprire le calette di Favignana, Cala Rossa, Cala Azzurra e Cala Rotonda."}}
         ]
       }
     ]
@@ -789,22 +881,24 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-WEY5393Y7F');
+    gtag('js', new Date()); gtag('config', 'G-WEY5393Y7F');
   </script>
 </head>
 <body>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <a href="#main" class="skip-link">Salta al contenuto</a>
 
   <!-- ── NAVBAR ── -->
-  <nav class="nav" role="navigation" aria-label="Navigazione principale">
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Navigazione principale">
     <a class="nav-brand" href="/" aria-label="Stella Marina — Home">
       <img src="/logo_modern.svg" alt="Stella Marina" width="36" height="36">
       <span>Stella Marina<small>Favignana</small></span>
     </a>
-
     <div class="nav-links" role="list">
-      <a href="/" role="listitem">Home</a>
+      <a href="/" aria-current="page" role="listitem">Home</a>
       <a href="/noleggio-gommoni-favignana.html" role="listitem">Gommoni</a>
       <a href="/noleggio-barche-favignana.html" role="listitem">Barche</a>
       <a href="/escursioni-egadi-favignana.html" role="listitem">Escursioni</a>
@@ -814,14 +908,11 @@
       <a href="/faq.html" role="listitem">FAQ</a>
       <a href="/contatti.html" role="listitem">Contatti</a>
       <a href="https://wa.me/393290865808" class="wa-btn" role="listitem" aria-label="Contattaci su WhatsApp">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp
       </a>
     </div>
-
-    <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu di navigazione" aria-expanded="false">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
@@ -843,13 +934,30 @@
     </nav>
   </aside>
 
+  <!-- ── FLOATING WHATSAPP ── -->
+  <a href="https://wa.me/393290865808" class="float-wa" aria-label="Contattaci su WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ── SCROLL TO TOP ── -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Torna in cima">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
   <main id="main">
 
-    <!-- ── HERO ── -->
-    <section class="hero">
+    <!-- ═══════ HERO ═══════ -->
+    <section class="hero" aria-label="Stella Marina Favignana — Noleggio barche">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
       <div class="hero-inner">
         <div class="hero-badge">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           Isole Egadi, Sicilia
         </div>
 
@@ -862,78 +970,91 @@
 
         <div class="hero-ctas">
           <a href="https://wa.me/393290865808" class="btn btn-wa" aria-label="Prenota via WhatsApp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Prenota su WhatsApp
           </a>
           <a href="tel:+393290865808" class="btn btn-outline" aria-label="Chiama Stella Marina">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-            </svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             329 086 5808
           </a>
         </div>
       </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+
+      <!-- Wave at bottom -->
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="wave-path-2" d="M0,50 C240,90 480,10 720,50 C960,90 1200,20 1440,55 L1440,100 L0,100 Z" fill="rgba(255,255,255,0.5)"/>
+          <path class="wave-path-1" d="M0,60 C200,20 400,100 600,60 C800,20 1000,80 1200,60 C1400,40 1440,55 1440,55 L1440,100 L0,100 Z" fill="#ffffff"/>
+        </svg>
+      </div>
     </section>
 
-    <!-- ── TRUST BAR ── -->
-    <section class="trust-bar" aria-label="I nostri numeri">
-      <div class="trust-bar-inner">
-        <div class="trust-item">
-          <div class="trust-stars" aria-hidden="true">★★★★★</div>
-          <div class="trust-number">4.8</div>
-          <div class="trust-label">Rating su Google</div>
+    <!-- ═══════ STATS ═══════ -->
+    <section class="stats-section" aria-label="I nostri numeri">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="stat-stars" aria-hidden="true">★★★★★</div>
+          <div class="stat-number" data-count="4.8" data-decimal="1">4.8</div>
+          <div class="stat-label">Rating su Google</div>
         </div>
-        <div class="trust-item">
-          <div class="trust-number">24+</div>
-          <div class="trust-label">Clienti soddisfatti</div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div class="stat-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="stat-number" data-count="200" data-suffix="+">200+</div>
+          <div class="stat-label">Clienti soddisfatti</div>
         </div>
-        <div class="trust-item">
-          <div class="trust-number">5</div>
-          <div class="trust-label">Servizi disponibili</div>
+        <div class="stat-card reveal reveal-delay-4">
+          <div class="stat-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z"/><path d="M9 4v13M15 7v13"/></svg>
+          </div>
+          <div class="stat-number" data-count="5">5</div>
+          <div class="stat-label">Servizi disponibili</div>
         </div>
       </div>
     </section>
 
-    <!-- ── SERVICES ── -->
+    <!-- Wave divider: white → sand -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#fdf6ec"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ SERVICES ═══════ -->
     <section class="section section-alt">
       <div class="container">
-        <span class="section-label">Cosa offriamo</span>
+        <span class="section-eyebrow">Cosa offriamo</span>
         <h2 class="editable section-title">I Nostri <em>Servizi</em></h2>
-        <p class="section-subtitle">Dalla mattina al tramonto, tutto ciò di cui hai bisogno per esplorare le Isole Egadi.</p>
+        <p class="section-sub">Dalla mattina al tramonto, tutto ciò di cui hai bisogno per esplorare le Isole Egadi.</p>
 
-        <div class="services-grid">
+        <div class="services-bento">
 
-          <article class="service-card fade-up">
+          <!-- Featured: Gommoni -->
+          <article class="service-card featured sc-wide reveal" onclick="location.href='/noleggio-gommoni-favignana.html'">
             <div class="service-icon" aria-hidden="true">
-              <!-- Waves / gommoni -->
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2 12c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/>
-                <path d="M2 17c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/>
-                <path d="M2 7h4.5"/>
-                <path d="M12 7h10"/>
-                <circle cx="8" cy="7" r="1.5" fill="currentColor" stroke="none"/>
-              </svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><path d="M2 17c1.5-2 3-2 4.5 0s3 2 4.5 0 3-2 4.5 0 3 2 4.5 0"/><path d="M2 7h4.5"/><path d="M12 7h10"/><circle cx="8" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg>
             </div>
             <h3>Noleggio Gommoni</h3>
-            <p>Senza patente nautica. Agili tra le calette, perfetti per snorkeling e avventure libere a Cala Rossa, Cala Azzurra e Cala Rotonda.</p>
+            <p>Senza patente nautica. Agili tra le calette, perfetti per snorkeling e avventure libere a Cala Rossa, Cala Azzurra e Cala Rotonda. Ideali per famiglie e gruppi di amici.</p>
             <a href="/noleggio-gommoni-favignana.html" class="service-link" aria-label="Scopri il noleggio gommoni">
               Scopri di più
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </article>
 
-          <article class="service-card fade-up">
+          <!-- Barche -->
+          <article class="service-card sc-mid reveal reveal-delay-2" onclick="location.href='/noleggio-barche-favignana.html'">
             <div class="service-icon" aria-hidden="true">
-              <!-- Sailboat -->
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 3v11"/>
-                <path d="M12 3L5 14h14L12 3z"/>
-                <path d="M3 19c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/>
-                <path d="M7 14v3"/>
-                <path d="M17 14v3"/>
-              </svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v11"/><path d="M12 3L5 14h14L12 3z"/><path d="M3 19c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/><path d="M7 14v3M17 14v3"/></svg>
             </div>
             <h3>Noleggio Barche</h3>
             <p>Con patente nautica per i più esperti. Massima libertà tra le Egadi: Favignana, Levanzo e Marettimo a portata di timone.</p>
@@ -943,70 +1064,54 @@
             </a>
           </article>
 
-          <article class="service-card fade-up">
+          <!-- Transfer -->
+          <article class="service-card sc-third reveal" onclick="location.href='/transfer-trapani-favignana.html'">
             <div class="service-icon" aria-hidden="true">
-              <!-- Navigation / transfer -->
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" fill="currentColor" stroke="none" opacity=".9"/>
-              </svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" fill="currentColor" stroke="none" opacity=".9"/></svg>
             </div>
             <h3>Transfer Marittimi</h3>
-            <p>Trapani–Favignana diurni e notturni. Comodo, veloce e affidabile: il modo migliore per raggiungere l'isola.</p>
-            <a href="/transfer-trapani-favignana.html" class="service-link" aria-label="Scopri il transfer marittimo">
+            <p>Trapani–Favignana diurni e notturni. Comodo, veloce e affidabile.</p>
+            <a href="/transfer-trapani-favignana.html" class="service-link" aria-label="Scopri il transfer">
               Scopri di più
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </article>
 
-          <article class="service-card fade-up">
+          <!-- Escursioni -->
+          <article class="service-card sc-third reveal reveal-delay-1" onclick="location.href='/escursioni-egadi-favignana.html'">
             <div class="service-icon" aria-hidden="true">
-              <!-- Map/compass -->
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z"/>
-                <path d="M9 4v13M15 7v13"/>
-              </svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z"/><path d="M9 4v13M15 7v13"/></svg>
             </div>
             <h3>Escursioni Guidate</h3>
-            <p>Con comandante esperto. Tour guidati a Favignana, Levanzo e Marettimo: storia, natura e snorkeling in un'unica esperienza.</p>
-            <a href="/escursioni-egadi-favignana.html" class="service-link" aria-label="Scopri le escursioni guidate">
+            <p>Tour guidati a Favignana, Levanzo e Marettimo con comandante esperto.</p>
+            <a href="/escursioni-egadi-favignana.html" class="service-link" aria-label="Scopri le escursioni">
               Scopri di più
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </article>
 
-          <article class="service-card fade-up">
+          <!-- Aperitivo -->
+          <article class="service-card sc-third reveal reveal-delay-2" onclick="location.href='/aperitivo-tramonto-favignana.html'">
             <div class="service-icon" aria-hidden="true">
-              <!-- Sunset/cocktail -->
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a7 7 0 000 14"/>
-                <path d="M12 16v6"/>
-                <path d="M8 22h8"/>
-                <path d="M2 9h20"/>
-                <path d="M5 6l1.5 1.5M18.5 7.5L20 6"/>
-              </svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 000 14"/><path d="M12 16v6"/><path d="M8 22h8"/><path d="M2 9h20"/><path d="M5 6l1.5 1.5M18.5 7.5L20 6"/></svg>
             </div>
             <h3>Aperitivo al Tramonto</h3>
-            <p>Cocktail esclusivi e vista mozzafiato mentre il sole tramonta sul mare. Un'esperienza da vivere almeno una volta.</p>
-            <a href="/aperitivo-tramonto-favignana.html" class="service-link" aria-label="Scopri l'aperitivo al tramonto">
+            <p>Cocktail esclusivi e vista mozzafiato sulle Egadi. Un'esperienza unica.</p>
+            <a href="/aperitivo-tramonto-favignana.html" class="service-link" aria-label="Scopri l'aperitivo">
               Scopri di più
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </article>
 
-          <article class="service-card fade-up">
+          <!-- Prezzi -->
+          <article class="service-card sc-third reveal reveal-delay-3" onclick="location.href='/prezzi-noleggio-favignana.html'">
             <div class="service-icon" aria-hidden="true">
-              <!-- Calendar -->
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2"/>
-                <path d="M16 2v4M8 2v4M3 10h18"/>
-                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
-              </svg>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
             </div>
-            <h3>Disponibilità Flessibile</h3>
-            <p>Tutti i servizi personalizzabili per gruppi, famiglie e coppie. Prenota con anticipo a luglio e agosto: le date vanno esaurite presto.</p>
-            <a href="/contatti.html" class="service-link" aria-label="Contattaci per personalizzare">
-              Contattaci
+            <h3>Tariffe 2026</h3>
+            <p>Prezzi trasparenti, senza sorprese. Scopri tutte le offerte e le tariffe stagionali.</p>
+            <a href="/prezzi-noleggio-favignana.html" class="service-link" aria-label="Vedi i prezzi">
+              Vedi i prezzi
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </article>
@@ -1015,150 +1120,170 @@
       </div>
     </section>
 
-    <!-- ── WHY US ── -->
+    <!-- Wave divider: sand → white -->
+    <div class="wave-divider" aria-hidden="true" style="background:#fdf6ec">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ WHY US ═══════ -->
     <section class="section">
       <div class="container">
-        <span class="section-label">I Nostri Vantaggi</span>
+        <span class="section-eyebrow">I Nostri Vantaggi</span>
         <h2 class="section-title">Perché Scegliere <em>Stella Marina</em></h2>
-        <p class="section-subtitle">Tutto incluso, nessuna sorpresa. Ecco cosa ci distingue dagli altri noleggi a Favignana.</p>
-        <div class="why-grid">
+        <p class="section-sub">Tutto incluso, nessuna sorpresa. Ecco cosa ci distingue dagli altri noleggi a Favignana.</p>
 
-          <div class="why-item fade-up">
+        <div class="why-grid">
+          <div class="why-item reveal" data-num="01">
             <div class="why-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
             </div>
             <h3>Senza Patente Nautica</h3>
             <p>I nostri gommoni fino a 40 cv si noleggiano senza patente. Bastano 18 anni e un documento d'identità valido.</p>
           </div>
-
-          <div class="why-item fade-up">
+          <div class="why-item reveal reveal-delay-1" data-num="02">
             <div class="why-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <h3>Tutto Incluso</h3>
-            <p>Carburante, assicurazione base, giubbotti di salvataggio, maschera e pinne per lo snorkeling e briefing pre-partenza.</p>
+            <p>Carburante, assicurazione, giubbotti di salvataggio, maschera, pinne e briefing pre-partenza.</p>
           </div>
-
-          <div class="why-item fade-up">
+          <div class="why-item reveal reveal-delay-2" data-num="03">
             <div class="why-icon" aria-hidden="true">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6.76-6.76 19.79 19.79 0 01-3.07-8.63A2 2 0 014.34 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             </div>
             <h3>Risposta Immediata</h3>
-            <p>Rispondiamo su WhatsApp entro pochi minuti. Prenotazione rapida, conferma istantanea, zero burocrazia.</p>
+            <p>Rispondiamo su WhatsApp entro pochi minuti. Prenotazione rapida, conferma istantanea.</p>
           </div>
-
-          <div class="why-item fade-up">
+          <div class="why-item reveal reveal-delay-3" data-num="04">
             <div class="why-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
             <h3>Transfer Anche di Notte</h3>
             <p>Unici a offrire transfer marittimo Trapani–Favignana diurno e notturno. Arrivi tardi? Nessun problema.</p>
           </div>
-
-          <div class="why-item fade-up">
+          <div class="why-item reveal reveal-delay-4" data-num="05">
             <div class="why-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 000 14"/><path d="M12 16v6M8 22h8M2 9h20"/></svg>
             </div>
-            <h3>Aperitivo al Tramonto</h3>
-            <p>Esperienza esclusiva che pochissimi offrono: cocktail e stuzzichini in barca mentre il sole tramonta sulle Egadi.</p>
+            <h3>Aperitivo Esclusivo</h3>
+            <p>Esperienza che pochissimi offrono: cocktail e stuzzichini in barca mentre il sole tramonta sulle Egadi.</p>
           </div>
-
-          <div class="why-item fade-up">
+          <div class="why-item reveal reveal-delay-5" data-num="06">
             <div class="why-icon" aria-hidden="true">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <h3>Posizione Centrale</h3>
-            <p>Siamo al Circolo Nautico di Favignana, nel cuore dell'isola. Raggiungerci è semplicissimo a piedi o in bici.</p>
+            <p>Siamo al Circolo Nautico di Favignana, nel cuore dell'isola. Raggiungerci è semplicissimo.</p>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ── REVIEWS ── -->
-    <section class="section section-foam">
-      <div class="container">
-        <span class="section-label">Recensioni</span>
-        <h2 class="editable section-title">Cosa Dicono <em>i Nostri Ospiti</em></h2>
-        <p class="section-subtitle">Oltre 50 clienti ci hanno scelto. Ecco cosa ci hanno scritto su Google.</p>
+    <!-- Wave divider: white → foam -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,0 720,60 1080,20 C1260,5 1380,45 1440,30 L1440,60 L0,60 Z" fill="#e8f4f9"/>
+      </svg>
+    </div>
 
-        <div class="reviews-grid" id="google-reviews-widget">
-          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
-            <div class="review-header">
-              <div class="review-avatar" aria-hidden="true">M</div>
-              <div>
-                <div class="review-author" itemprop="author">Marco T.</div>
-                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
-                <div class="review-date">Milano · maggio 2026</div>
+    <!-- ═══════ REVIEWS ═══════ -->
+    <section class="section section-foam" aria-label="Recensioni dei clienti">
+      <div class="container">
+        <span class="section-eyebrow">Recensioni</span>
+        <h2 class="editable section-title">Cosa Dicono <em>i Nostri Ospiti</em></h2>
+        <p class="section-sub">Oltre 200 clienti ci hanno scelto. Ecco cosa ci hanno scritto su Google.</p>
+
+        <div class="reviews-wrapper">
+          <div class="reviews-track" id="reviewsTrack">
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+              <div class="review-header">
+                <div class="review-avatar" aria-hidden="true">M</div>
+                <div>
+                  <div class="review-author" itemprop="author">Marco T.</div>
+                  <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                  <div class="review-date">Milano · maggio 2026</div>
+                </div>
               </div>
-            </div>
-            <p class="review-text" itemprop="reviewBody">"Gommone in ottime condizioni, briefing chiaro e staff super disponibile. Abbiamo esplorato Cala Rossa e Cala Azzurra in totale libertà. Torneremo sicuramente!"</p>
-          </article>
-          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
-            <div class="review-header">
-              <div class="review-avatar" aria-hidden="true">L</div>
-              <div>
-                <div class="review-author" itemprop="author">Lucia P.</div>
-                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
-                <div class="review-date">Roma · agosto 2025</div>
+              <p class="review-text" itemprop="reviewBody">"Gommone in ottime condizioni, briefing chiaro e staff super disponibile. Abbiamo esplorato Cala Rossa e Cala Azzurra in totale libertà. Torneremo sicuramente!"</p>
+            </article>
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+              <div class="review-header">
+                <div class="review-avatar" aria-hidden="true">L</div>
+                <div>
+                  <div class="review-author" itemprop="author">Lucia P.</div>
+                  <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                  <div class="review-date">Roma · agosto 2025</div>
+                </div>
               </div>
-            </div>
-            <p class="review-text" itemprop="reviewBody">"Servizio eccellente e prezzi onesti. Abbiamo noleggiato un gommone per tutta la famiglia e ci hanno consigliato le cale più belle. Esperienza indimenticabile alle Egadi!"</p>
-          </article>
-          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
-            <div class="review-header">
-              <div class="review-avatar" aria-hidden="true">A</div>
-              <div>
-                <div class="review-author" itemprop="author">Antonio R.</div>
-                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
-                <div class="review-date">Torino · luglio 2025</div>
+              <p class="review-text" itemprop="reviewBody">"Servizio eccellente e prezzi onesti. Abbiamo noleggiato un gommone per tutta la famiglia e ci hanno consigliato le cale più belle. Esperienza indimenticabile alle Egadi!"</p>
+            </article>
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+              <div class="review-header">
+                <div class="review-avatar" aria-hidden="true">A</div>
+                <div>
+                  <div class="review-author" itemprop="author">Antonio R.</div>
+                  <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                  <div class="review-date">Torino · luglio 2025</div>
+                </div>
               </div>
-            </div>
-            <p class="review-text" itemprop="reviewBody">"Aperitivo al tramonto: un'esperienza da sogno! Cocktail ottimi e tramonto mozzafiato sulle Egadi. La prenotazione via WhatsApp è stata rapidissima. Consigliatissimo!"</p>
-          </article>
-          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
-            <div class="review-header">
-              <div class="review-avatar" aria-hidden="true">F</div>
-              <div>
-                <div class="review-author" itemprop="author">Federica M.</div>
-                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
-                <div class="review-date">Bologna · giugno 2025</div>
+              <p class="review-text" itemprop="reviewBody">"Aperitivo al tramonto: un'esperienza da sogno! Cocktail ottimi e tramonto mozzafiato sulle Egadi. La prenotazione via WhatsApp è stata rapidissima. Consigliatissimo!"</p>
+            </article>
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+              <div class="review-header">
+                <div class="review-avatar" aria-hidden="true">F</div>
+                <div>
+                  <div class="review-author" itemprop="author">Federica M.</div>
+                  <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                  <div class="review-date">Bologna · giugno 2025</div>
+                </div>
               </div>
-            </div>
-            <p class="review-text" itemprop="reviewBody">"Escursione guidata alle tre isole fantastica! Il comandante è preparatissimo e ci ha portato a fare snorkeling in posti da sogno. Attrezzatura inclusa, tutto organizzato alla perfezione."</p>
-          </article>
-          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
-            <div class="review-header">
-              <div class="review-avatar" aria-hidden="true">G</div>
-              <div>
-                <div class="review-author" itemprop="author">Giuseppe C.</div>
-                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
-                <div class="review-date">Napoli · agosto 2025</div>
+              <p class="review-text" itemprop="reviewBody">"Escursione guidata alle tre isole fantastica! Il comandante è preparatissimo e ci ha portato a fare snorkeling in posti da sogno. Attrezzatura inclusa, tutto organizzato alla perfezione."</p>
+            </article>
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+              <div class="review-header">
+                <div class="review-avatar" aria-hidden="true">G</div>
+                <div>
+                  <div class="review-author" itemprop="author">Giuseppe C.</div>
+                  <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                  <div class="review-date">Napoli · agosto 2025</div>
+                </div>
               </div>
-            </div>
-            <p class="review-text" itemprop="reviewBody">"Transfer da Trapani perfetto! Puntuale, veloce e molto più comodo del traghetto. Ho chiamato la sera prima e il giorno dopo erano già lì. Servizio di altissimo livello."</p>
-          </article>
-          <article class="review-card fade-up visible" itemscope itemtype="https://schema.org/Review">
-            <div class="review-header">
-              <div class="review-avatar" aria-hidden="true">S</div>
-              <div>
-                <div class="review-author" itemprop="author">Sara D.</div>
-                <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
-                <div class="review-date">Firenze · settembre 2025</div>
+              <p class="review-text" itemprop="reviewBody">"Transfer da Trapani perfetto! Puntuale, veloce e molto più comodo del traghetto. Ho chiamato la sera prima e il giorno dopo erano già lì. Servizio di altissimo livello."</p>
+            </article>
+            <article class="review-card" itemscope itemtype="https://schema.org/Review">
+              <div class="review-header">
+                <div class="review-avatar" aria-hidden="true">S</div>
+                <div>
+                  <div class="review-author" itemprop="author">Sara D.</div>
+                  <div class="review-stars" aria-label="5 stelle su 5">★★★★★</div>
+                  <div class="review-date">Firenze · settembre 2025</div>
+                </div>
               </div>
-            </div>
-            <p class="review-text" itemprop="reviewBody">"Prima volta in barca senza patente: zero problemi grazie al briefing dettagliato. Gommone facile da guidare, carburante incluso e mappa delle calette fornita. Perfetto anche per chi non ha esperienza!"</p>
-          </article>
+              <p class="review-text" itemprop="reviewBody">"Prima volta in barca senza patente: zero problemi grazie al briefing dettagliato. Gommone facile da guidare, carburante incluso e mappa delle calette fornita."</p>
+            </article>
+          </div>
         </div>
 
-        <div style="text-align:center;margin-top:2.5rem">
-          <div class="rating-summary" style="display:inline-flex">
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="carouselPrev" aria-label="Recensione precedente">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+          </button>
+          <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Seleziona recensione"></div>
+          <button class="carousel-btn" id="carouselNext" aria-label="Recensione successiva">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+
+        <div style="text-align:center;margin-top:2rem">
+          <div class="rating-summary">
             <div class="rating-number" aria-label="Valutazione 4.8 su 5">4.8</div>
             <div class="rating-info">
               <div class="rating-stars" aria-hidden="true">★★★★★</div>
               <div class="rating-count">24 recensioni su Google</div>
               <div class="rating-cta">
-                <a href="https://g.page/stellamarina-favignana/review" target="_blank" rel="noopener" class="service-link" aria-label="Vedi tutte le recensioni su Google">
+                <a href="https://g.page/stellamarina-favignana/review" target="_blank" rel="noopener" class="service-link-sm" aria-label="Vedi tutte le recensioni su Google">
                   Vedi tutte
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </a>
@@ -1166,33 +1291,35 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ── CTA ── -->
+    <!-- Wave divider: foam → dark -->
+    <div class="wave-divider" aria-hidden="true" style="background:#e8f4f9">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,35 C240,70 480,0 720,35 C960,70 1200,10 1440,40 L1440,70 L0,70 Z" fill="#061f2e"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ CTA ═══════ -->
     <section class="cta-section">
-      <div class="container" style="position:relative;z-index:1">
-        <h2>Pronto a Salpare?</h2>
+      <div class="cta-bg-blob b1" aria-hidden="true"></div>
+      <div class="cta-bg-blob b2 cta-blob-b2" aria-hidden="true"></div>
+      <div class="cta-bg-blob b3" aria-hidden="true"></div>
+      <div class="cta-inner container">
+        <h2>Pronto a <em>Salpare?</em></h2>
         <p>Contattaci oggi per prenotare il tuo noleggio o chiedere informazioni. Ti rispondiamo entro pochi minuti.</p>
         <div class="cta-btns">
           <a href="https://wa.me/393290865808" class="btn btn-wa" aria-label="Scrivici su WhatsApp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             WhatsApp — 329 086 5808
           </a>
           <a href="tel:+393290865808" class="btn btn-outline" aria-label="Chiama Stella Marina">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-            </svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
             Chiama Ora
           </a>
           <a href="/contatti.html" class="btn btn-outline" aria-label="Dove siamo">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
             Dove Siamo
           </a>
         </div>
@@ -1207,12 +1334,11 @@
       <div class="footer-brand">
         <h4>Stella Marina</h4>
         <p>Circolo Nautico Favignana<br>Isole Egadi, Sicilia — 91023</p>
-        <a href="https://www.instagram.com/stellamarinafavignana/" target="_blank" rel="noopener" aria-label="Seguici su Instagram" style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.6);font-size:.85rem;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.6)'">
+        <a href="https://www.instagram.com/stellamarinafavignana/" target="_blank" rel="noopener" aria-label="Seguici su Instagram" style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.55);font-size:.85rem;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
           Instagram
         </a>
       </div>
-
       <div class="footer-col">
         <h5>Servizi</h5>
         <a href="/noleggio-gommoni-favignana.html">Noleggio Gommoni</a>
@@ -1220,7 +1346,6 @@
         <a href="/transfer-trapani-favignana.html">Transfer Trapani</a>
         <a href="/prezzi-noleggio-favignana.html">Prezzi 2026</a>
       </div>
-
       <div class="footer-col">
         <h5>Esplorare</h5>
         <a href="/cosa-vedere-favignana-in-barca.html">Cosa Vedere</a>
@@ -1228,7 +1353,6 @@
         <a href="/aperitivo-tramonto-favignana.html">Aperitivo Tramonto</a>
         <a href="/faq.html">Domande Frequenti</a>
       </div>
-
       <div class="footer-col">
         <h5>Contatti</h5>
         <a href="https://wa.me/393290865808">WhatsApp</a>
@@ -1237,7 +1361,6 @@
         <a href="#privacy">Privacy Policy</a>
       </div>
     </div>
-
     <div class="footer-bottom">
       &copy; 2026 Stella Marina Favignana. Tutti i diritti riservati. | P.IVA IT02781480815
     </div>
@@ -1246,29 +1369,45 @@
   <!-- ── MOBILE CTA BAR ── -->
   <div class="mobile-cta" aria-label="Contatti rapidi">
     <a href="https://wa.me/393290865808" class="mc-wa" aria-label="WhatsApp">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-      </svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
       WhatsApp
     </a>
     <a href="tel:+393290865808" class="mc-tel" aria-label="Chiama">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
-      </svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
       Chiama
     </a>
   </div>
 
-  <!-- ── ELFSIGHT ── -->
   <script src="https://elfsightcdn.com/platform.js" async></script>
   <div class="elfsight-app-ab714237-b899-4c25-951d-8334ba7eb36b" data-elfsight-app-lazy style="display:none"></div>
 
   <script>
-    // ── SIDEBAR ──
+    /* ─── NAVBAR scroll class ─── */
+    const nav = document.getElementById('mainNav');
+    function updateNav() {
+      nav.classList.toggle('is-scrolled', window.scrollY > 40);
+    }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    /* ─── SCROLL PROGRESS ─── */
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    }, { passive: true });
+
+    /* ─── SCROLL-TO-TOP ─── */
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ─── SIDEBAR ─── */
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileSidebar = document.getElementById('mobileSidebar');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
-
     function toggleSidebar() {
       const open = mobileSidebar.classList.toggle('active');
       hamburgerBtn.classList.toggle('active');
@@ -1281,80 +1420,118 @@
       sidebarOverlay.classList.remove('active');
       hamburgerBtn.setAttribute('aria-expanded', 'false');
     }
-
     hamburgerBtn.addEventListener('click', toggleSidebar);
     sidebarOverlay.addEventListener('click', closeSidebar);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidebar(); });
 
-    // ── SCROLL FADE-IN ──
-    if ('IntersectionObserver' in window) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
-      }, { threshold: 0.12 });
-      document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
-    } else {
-      document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
-    }
-
-    // ── REVIEWS ──
-    const reviews = [
-      { author: "Marco T.", rating: 5, text: "Bellissima esperienza! Barca perfetta, equipaggio competente e attento alla sicurezza. Consigliatissimo!" },
-      { author: "Lucia P.", rating: 5, text: "Abbiamo esplorato Cala Azzurra e Cala Rotonda in tutta tranquillità. Servizio eccellente e prezzi equi." },
-      { author: "Antonio R.", rating: 5, text: "Aperitivo al tramonto indimenticabile! Tutto perfetto dal momento della prenotazione al rientro." }
-    ];
-
-    function escHtml(s) { const d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
-
-    function loadReviews() {
-      const el = document.getElementById('google-reviews-widget');
-      if (!el) return;
-      el.innerHTML = reviews.map(r => `
-        <article class="review-card fade-up">
-          <div class="review-header">
-            <div class="review-avatar" aria-hidden="true">${escHtml(r.author[0])}</div>
-            <div>
-              <div class="review-author">${escHtml(r.author)}</div>
-              <div class="review-stars" aria-label="${r.rating} stelle su 5">${'★'.repeat(r.rating)}</div>
-            </div>
-          </div>
-          <p class="review-text">"${escHtml(r.text)}"</p>
-        </article>
-      `).join('');
-      document.querySelectorAll('.review-card.fade-up').forEach(el => {
-        if ('IntersectionObserver' in window) {
-          const io2 = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io2.unobserve(e.target); } });
-          }, { threshold: 0.1 });
-          io2.observe(el);
-        } else { el.classList.add('visible'); }
+    /* ─── INTERSECTION OBSERVER (reveal + counter) ─── */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        el.classList.add('visible');
+        if (el.classList.contains('stat-number')) animateCounter(el);
+        io.unobserve(el);
       });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    document.querySelectorAll('.stat-number').forEach(el => io.observe(el));
+
+    /* ─── COUNTER ANIMATION ─── */
+    function animateCounter(el) {
+      const target  = parseFloat(el.dataset.count);
+      const decimal = parseInt(el.dataset.decimal) || 0;
+      const suffix  = el.dataset.suffix || '';
+      const duration = 1600;
+      const start    = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        const val   = (target * eased).toFixed(decimal);
+        el.textContent = val + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
     }
 
-    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', loadReviews);
-    else loadReviews();
+    /* ─── REVIEW CAROUSEL ─── */
+    const track = document.getElementById('reviewsTrack');
+    const cards = track ? track.querySelectorAll('.review-card') : [];
+    const dotsContainer = document.getElementById('carouselDots');
+    let current = 0, autoTimer = null, isPaused = false;
 
-    // ── LAZY IMAGES ──
-    if ('IntersectionObserver' in window) {
-      const imgObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) return;
-          const img = entry.target;
-          img.parentElement.querySelectorAll('source').forEach(s => { if (s.dataset.srcset) { s.srcset = s.dataset.srcset; s.removeAttribute('data-srcset'); } });
-          if (img.dataset.src) { img.src = img.dataset.src; img.removeAttribute('data-src'); }
-          obs.unobserve(img);
-        });
-      }, { rootMargin: '50px' });
-      document.querySelectorAll('img[data-src]').forEach(img => imgObserver.observe(img));
+    function getVisible() {
+      if (window.innerWidth <= 600)  return 1;
+      if (window.innerWidth <= 900)  return 2;
+      return 3;
     }
+
+    function buildDots() {
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = '';
+      const count = Math.ceil(cards.length / getVisible());
+      for (let i = 0; i < count; i++) {
+        const d = document.createElement('button');
+        d.className = 'cdot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', 'Recensione ' + (i + 1));
+        d.setAttribute('role', 'tab');
+        d.addEventListener('click', () => goTo(i * getVisible()));
+        dotsContainer.appendChild(d);
+      }
+    }
+
+    function updateDots() {
+      if (!dotsContainer) return;
+      const vis = getVisible();
+      const idx = Math.floor(current / vis);
+      dotsContainer.querySelectorAll('.cdot').forEach((d, i) => d.classList.toggle('active', i === idx));
+    }
+
+    function goTo(n) {
+      const max = cards.length - getVisible();
+      current = Math.max(0, Math.min(n, max));
+      const cardWidth = cards[0] ? cards[0].offsetWidth + 24 : 0;
+      track.style.transform = `translateX(-${current * cardWidth}px)`;
+      updateDots();
+    }
+
+    if (cards.length) {
+      buildDots();
+      document.getElementById('carouselPrev').addEventListener('click', () => { goTo(current - getVisible()); resetAuto(); });
+      document.getElementById('carouselNext').addEventListener('click', () => {
+        const next = current + getVisible();
+        goTo(next >= cards.length ? 0 : next);
+        resetAuto();
+      });
+      track.addEventListener('mouseenter', () => { isPaused = true; });
+      track.addEventListener('mouseleave', () => { isPaused = false; });
+      function startAuto() { autoTimer = setInterval(() => { if (isPaused) return; const next = current + getVisible(); goTo(next >= cards.length ? 0 : next); }, 5000); }
+      function resetAuto() { clearInterval(autoTimer); startAuto(); }
+      startAuto();
+      window.addEventListener('resize', () => { buildDots(); goTo(0); }, { passive: true });
+    }
+
+    /* ─── CARD 3D TILT ─── */
+    document.querySelectorAll('.service-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - 0.5;
+        const y = (e.clientY - r.top)  / r.height - 0.5;
+        card.style.transform = `translateY(-6px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg) scale(1.01)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
   </script>
+
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", function(user) {
         if (!user) {
-          window.netlifyIdentity.on("login", function() {
-            document.location.href = "/admin/";
-          });
+          window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
         }
       });
     }
