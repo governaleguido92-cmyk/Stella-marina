@@ -16,10 +16,10 @@ environment = { NODE_ENV = "production" }
 # ============================================================================
 # REDIRECTS & REWRITES
 # ============================================================================
-# Main site redirect (www to non-www)
+# Main site redirect (non-www to www)
 [[redirects]]
-from = "https://www.barchefavignana.it/*"
-to = "https://barchefavignana.it/:splat"
+from = "https://barchefavignana.it/*"
+to = "https://www.barchefavignana.it/:splat"
 status = 301
 force = true
 
