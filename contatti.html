@@ -1,191 +1,585 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Contatti Stella Marina Favignana | WhatsApp 329 086 5808</title>
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <meta name="author" content="Stella Marina"><meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Stella Marina">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="geo.region" content="IT-TP"><meta name="geo.placename" content="Favignana, Isole Egadi, Sicilia"><meta name="geo.position" content="37.9216;12.3275"><meta name="ICBM" content="37.9216, 12.3275">
   <meta property="og:type" content="website"><meta property="og:site_name" content="Stella Marina Favignana">
   <meta property="og:image" content="https://www.barchefavignana.it/images/Hero.jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
   <meta property="og:locale" content="it_IT">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://www.barchefavignana.it/images/Hero.jpeg">
   <meta name="theme-color" content="#0a3d5c">
-  <link rel="preload" as="image" href="/images/Hero.jpeg" fetchpriority="high">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/stella.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEY5393Y7F"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-WEY5393Y7F')</script>
   <meta name="description" content="Contatta Stella Marina Favignana per prenotare barche, escursioni e transfer. WhatsApp 329 086 5808. Circolo Nautico Favignana. Risposta in pochi minuti.">
   <link rel="canonical" href="https://www.barchefavignana.it/contatti.html">
   <meta property="og:title" content="Contatti Stella Marina Favignana"><meta property="og:description" content="Prenota via WhatsApp 329 086 5808. Circolo Nautico Favignana. Risposta in pochi minuti.">
   <meta property="og:url" content="https://www.barchefavignana.it/contatti.html">
   <meta name="twitter:title" content="Contatti Stella Marina Favignana"><meta name="twitter:description" content="WhatsApp 329 086 5808. Circolo Nautico Favignana.">
+  <link rel="preload" as="image" href="/images/Hero.jpeg" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ocean:#0a3d5c; --ocean-deep:#061f2e; --sky:#1a7fa8; --teal:#00b5c8; --teal-lt:#4dd4e2;
+      --foam:#e8f4f9; --sand:#fdf6ec; --gold:#e6a817; --gold-warm:#f0b429; --coral:#e8651a;
+      --green:#25D366; --white:#ffffff; --text:#1a2a36; --muted:#4a6a7a; --night:#040f1a;
+      --radius:16px; --radius-lg:28px;
+      --shadow:0 4px 24px rgba(10,61,92,.10); --shadow-lg:0 12px 48px rgba(10,61,92,.20); --shadow-xl:0 24px 80px rgba(10,61,92,.28);
+    }
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'DM Sans',system-ui,sans-serif; color:var(--text); background:#fff; line-height:1.6; overflow-x:hidden; }
+    a { color:var(--sky); text-decoration:none; }
+    img { max-width:100%; height:auto; display:block; }
+
+    .scroll-progress { position:fixed; top:0; left:0; height:3px; width:0%; background:linear-gradient(90deg,var(--teal),var(--gold-warm),var(--coral)); z-index:10000; transition:width .08s linear; pointer-events:none; }
+    .skip-link { position:absolute; top:-40px; left:0; background:var(--sky); color:#fff; padding:.5rem 1rem; border-radius:0 0 8px 0; z-index:99999; font-weight:600; }
+    .skip-link:focus { top:0; }
+
+    .nav { position:fixed; top:0; left:0; right:0; z-index:999; height:68px; display:flex; align-items:center; justify-content:space-between; padding:0 2rem; background:transparent; transition:background .35s ease,box-shadow .35s ease; }
+    .nav.is-scrolled { background:rgba(4,15,26,.97); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); box-shadow:0 1px 0 rgba(255,255,255,.07); }
+    .nav-brand { display:flex; align-items:center; gap:10px; color:#fff; font-family:'Playfair Display',Georgia,serif; font-size:1.1rem; font-weight:700; letter-spacing:.03em; flex-shrink:0; }
+    .nav-brand img { height:36px; width:auto; }
+    .nav-brand small { display:block; font-size:.55rem; letter-spacing:.18em; text-transform:uppercase; color:rgba(255,255,255,.6); font-family:'DM Sans',sans-serif; font-weight:500; }
+    .nav-links { display:flex; align-items:center; gap:.1rem; flex-wrap:nowrap; }
+    .nav-links a { color:rgba(255,255,255,.82); font-size:.8rem; font-weight:500; padding:.4rem .7rem; border-radius:100px; transition:background .2s,color .2s; white-space:nowrap; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color:#fff; background:rgba(255,255,255,.1); }
+    .nav-links a.wa-btn { background:var(--green); color:#fff; font-weight:600; display:flex; align-items:center; gap:6px; padding:.4rem .9rem; margin-left:.4rem; }
+    .nav-links a.wa-btn:hover { background:#1daa4e; }
+    .hamburger { display:none; flex-direction:column; cursor:pointer; gap:5px; background:transparent; border:0; padding:4px; margin-left:.75rem; }
+    .hamburger span { width:22px; height:2px; background:#fff; border-radius:2px; transition:all .3s ease; }
+    .hamburger.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity:0; }
+    .hamburger.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+    @media(max-width:900px) { .hamburger{display:flex} .nav-links a:not(.wa-btn){display:none} }
+    .sidebar-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:997; display:none; opacity:0; transition:opacity .3s; }
+    .sidebar-overlay.active { display:block; opacity:1; }
+    .mobile-sidebar { position:fixed; top:0; left:-100%; width:280px; height:100vh; background:linear-gradient(160deg,#040f1a 0%,#0a3d5c 100%); z-index:998; transition:left .3s ease; overflow-y:auto; padding-top:68px; padding-bottom:80px; }
+    .mobile-sidebar.active { left:0; }
+    .mobile-sidebar nav { display:flex; flex-direction:column; }
+    .mobile-sidebar nav a { display:block; padding:.9rem 1.5rem; color:rgba(255,255,255,.82); border-bottom:1px solid rgba(255,255,255,.07); transition:all .2s; font-weight:500; font-size:.95rem; }
+    .mobile-sidebar nav a:hover, .mobile-sidebar nav a[aria-current="page"] { background:rgba(0,181,200,.12); color:#fff; border-left:3px solid var(--teal); padding-left:calc(1.5rem - 3px); }
+    .mobile-sidebar nav a.wa-sidebar { background:var(--green); color:#fff; margin:1.25rem 1rem 0; border-radius:100px; text-align:center; border:0; font-weight:600; }
+
+    main { margin-top:0; }
+
+    .hero { position:relative; min-height:50vh; display:flex; align-items:center; color:#fff; overflow:hidden; background:url('/images/Hero.jpeg') center/cover no-repeat; }
+    .hero-overlay { position:absolute; inset:0; background:linear-gradient(160deg,rgba(4,15,26,.84) 0%,rgba(10,61,92,.62) 55%,rgba(0,181,200,.15) 100%); z-index:1; }
+    .hero-particles { position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
+    .hero-particles span { position:absolute; bottom:-10%; border-radius:50%; background:rgba(0,181,200,.15); border:1px solid rgba(0,181,200,.25); animation:bubble-rise linear infinite; }
+    .hero-particles span:nth-child(1){left:8%;width:18px;height:18px;animation-duration:12s;animation-delay:0s}
+    .hero-particles span:nth-child(2){left:18%;width:10px;height:10px;animation-duration:9s;animation-delay:2s}
+    .hero-particles span:nth-child(3){left:30%;width:24px;height:24px;animation-duration:15s;animation-delay:1s}
+    .hero-particles span:nth-child(4){left:42%;width:8px;height:8px;animation-duration:11s;animation-delay:4s}
+    .hero-particles span:nth-child(5){left:55%;width:20px;height:20px;animation-duration:13s;animation-delay:.5s}
+    .hero-particles span:nth-child(6){left:67%;width:14px;height:14px;animation-duration:10s;animation-delay:3s}
+    .hero-particles span:nth-child(7){left:78%;width:28px;height:28px;animation-duration:16s;animation-delay:1.5s}
+    .hero-particles span:nth-child(8){left:88%;width:12px;height:12px;animation-duration:8s;animation-delay:5s}
+    .hero-particles span:nth-child(9){left:25%;width:6px;height:6px;animation-duration:14s;animation-delay:2.5s}
+    .hero-particles span:nth-child(10){left:72%;width:16px;height:16px;animation-duration:11s;animation-delay:3.5s}
+    @keyframes bubble-rise { 0%{transform:translateY(0) scale(1);opacity:0} 10%{opacity:.8} 90%{opacity:.3} 100%{transform:translateY(-110vh) scale(1.3);opacity:0} }
+    .hero-inner { position:relative; z-index:3; max-width:760px; margin:0 auto; text-align:center; padding:7rem 1.5rem 8rem; }
+    .hero-badge { display:inline-flex; align-items:center; gap:7px; background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); backdrop-filter:blur(12px); color:rgba(255,255,255,.9); font-size:.78rem; font-weight:600; letter-spacing:.1em; text-transform:uppercase; padding:.38rem 1rem; border-radius:100px; margin-bottom:1.75rem; animation:badge-glow 3s ease-in-out infinite; }
+    @keyframes badge-glow { 0%,100%{box-shadow:0 0 0 0 rgba(0,181,200,0)} 50%{box-shadow:0 0 18px 4px rgba(0,181,200,.25)} }
+    .hero h1 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(2.2rem,6vw,4rem); line-height:1.08; font-weight:900; margin-bottom:1.5rem; text-shadow:0 2px 30px rgba(0,0,0,.35); letter-spacing:-.01em; }
+    .hero h1 em { font-style:italic; background:linear-gradient(135deg,var(--teal-lt),var(--gold-warm)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .hero-lead { font-size:clamp(.95rem,2.2vw,1.15rem); color:rgba(255,255,255,.88); max-width:560px; margin:0 auto 2.5rem; line-height:1.75; font-weight:300; }
+    .hero-ctas { display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; }
+    .hero-wave { position:absolute; bottom:-1px; left:0; right:0; z-index:3; line-height:0; }
+    .hero-wave svg { display:block; width:100%; }
+    .wave-path-1 { animation:wave-anim 8s ease-in-out infinite; transform-origin:center bottom; }
+    .wave-path-2 { animation:wave-anim 10s ease-in-out infinite reverse; transform-origin:center bottom; opacity:.6; }
+    @keyframes wave-anim {
+      0%,100%{d:path("M0,60 C200,20 400,100 600,60 C800,20 1000,80 1200,60 C1400,40 1440,55 1440,55 L1440,100 L0,100 Z")}
+      50%{d:path("M0,40 C200,80 400,20 600,50 C800,80 1000,30 1200,55 C1400,70 1440,45 1440,45 L1440,100 L0,100 Z")}
+    }
+
+    .btn { display:inline-flex; align-items:center; gap:.5rem; padding:.9rem 1.9rem; border-radius:100px; font-size:.95rem; font-weight:600; cursor:pointer; border:0; transition:transform .22s,box-shadow .22s,background .2s; position:relative; overflow:hidden; }
+    .btn::after { content:''; position:absolute; inset:0; background:rgba(255,255,255,0); transition:background .2s; }
+    .btn:hover { transform:translateY(-3px); box-shadow:0 10px 32px rgba(0,0,0,.25); }
+    .btn:hover::after { background:rgba(255,255,255,.08); }
+    .btn:active { transform:translateY(-1px); }
+    .btn-wa { background:var(--green); color:#fff; }
+    .btn-wa:hover { background:#1daa4e; }
+    .btn-sky { background:var(--sky); color:#fff; }
+    .btn-outline { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.45); }
+    .btn-outline:hover { border-color:#fff; background:rgba(255,255,255,.1); }
+    .btn-teal { background:linear-gradient(135deg,var(--sky),var(--teal)); color:#fff; }
+
+    .wave-divider { line-height:0; margin:-1px 0; }
+    .wave-divider svg { display:block; width:100%; }
+
+    .section { padding:5.5rem 1.5rem; }
+    .section-alt { background:var(--sand); }
+    .section-foam { background:var(--foam); }
+    .container { max-width:1100px; margin:0 auto; }
+    .section-eyebrow { display:inline-block; font-size:.74rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:.65rem; }
+    .section-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.12; color:var(--ocean); margin-bottom:1rem; font-weight:700; }
+    .section-title em { color:var(--teal); font-style:italic; }
+    .section-sub { font-size:1.05rem; color:var(--muted); max-width:580px; line-height:1.75; }
+
+    /* TWO COL */
+    .two-col { display:grid; grid-template-columns:1fr 1fr; gap:3.5rem; align-items:start; }
+    @media(max-width:800px) { .two-col{grid-template-columns:1fr} }
+    .text-stack { display:flex; flex-direction:column; gap:.75rem; }
+    .text-stack p { font-size:.97rem; color:var(--muted); line-height:1.75; }
+
+    /* INFO PILLS */
+    .info-pill { display:inline-flex; align-items:center; gap:8px; padding:.55rem 1rem; background:#fff; border-radius:100px; border:1px solid rgba(10,61,92,.1); font-size:.88rem; color:var(--text); box-shadow:var(--shadow); }
+    .info-pill svg { color:var(--teal); flex-shrink:0; }
+    .pills-row { display:flex; flex-direction:column; gap:.5rem; margin-top:.5rem; }
+
+    /* CONTACT INFO COL */
+    .contact-info-col { display:flex; flex-direction:column; gap:1rem; }
+    .contact-block { background:#fff; border-radius:var(--radius-lg); padding:1.75rem; box-shadow:var(--shadow); border:1px solid rgba(10,61,92,.06); transition:transform .3s,box-shadow .3s; }
+    .contact-block:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
+    .contact-block-icon { width:46px; height:46px; background:linear-gradient(135deg,var(--sky),var(--teal)); border-radius:13px; display:flex; align-items:center; justify-content:center; color:#fff; margin-bottom:1rem; }
+    .contact-block-label { font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--teal); margin-bottom:.35rem; }
+    .contact-block-value { font-size:.97rem; font-weight:600; color:var(--ocean); line-height:1.5; }
+    .contact-block-value a { color:var(--ocean); transition:color .2s; }
+    .contact-block-value a:hover { color:var(--sky); }
+    .contact-block-sub { font-size:.84rem; color:var(--muted); margin-top:.25rem; }
+
+    /* HOW TO GET THERE */
+    .reach-col { display:flex; flex-direction:column; gap:1.25rem; }
+    .reach-item { display:flex; gap:1rem; align-items:flex-start; padding:1.5rem; background:var(--foam); border-radius:var(--radius); border:1px solid rgba(10,61,92,.07); transition:transform .3s,box-shadow .3s; }
+    .reach-item:hover { transform:translateY(-3px); box-shadow:var(--shadow); }
+    .reach-icon { width:40px; height:40px; background:linear-gradient(135deg,var(--sky),var(--teal)); border-radius:11px; display:flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0; }
+    .reach-item h4 { font-size:.95rem; font-weight:700; color:var(--ocean); margin-bottom:.3rem; }
+    .reach-item p { font-size:.87rem; color:var(--muted); line-height:1.65; }
+
+    /* MAP LINK */
+    .map-cta { display:flex; align-items:center; gap:1rem; padding:1.5rem; background:var(--ocean); border-radius:var(--radius-lg); color:#fff; margin-top:1.25rem; transition:transform .3s,box-shadow .3s; }
+    .map-cta:hover { transform:translateY(-3px); box-shadow:var(--shadow-lg); color:#fff; }
+    .map-cta-icon { width:46px; height:46px; background:rgba(255,255,255,.15); border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .map-cta-text strong { display:block; font-size:.97rem; font-weight:700; }
+    .map-cta-text span { font-size:.82rem; color:rgba(255,255,255,.72); }
+    .map-cta-arrow { margin-left:auto; flex-shrink:0; opacity:.7; }
+
+    /* CTA section big buttons */
+    .cta-section { padding:7rem 1.5rem; position:relative; overflow:hidden; text-align:center; background:linear-gradient(135deg,var(--ocean-deep) 0%,var(--ocean) 50%,#0d5078 100%); }
+    .cta-bg-blob { position:absolute; border-radius:50%; pointer-events:none; filter:blur(60px); opacity:.25; }
+    .cta-bg-blob.b1 { width:500px; height:500px; background:var(--teal); top:-150px; left:-100px; animation:blob-drift 14s ease-in-out infinite alternate; }
+    .cta-bg-blob.b2 { width:400px; height:400px; background:var(--gold); bottom:-100px; right:-80px; animation:blob-drift 10s ease-in-out infinite alternate-reverse; }
+    .cta-bg-blob.b3 { width:300px; height:300px; background:var(--sky); top:50%; left:50%; transform:translate(-50%,-50%); animation:blob-drift 18s ease-in-out infinite alternate; }
+    @keyframes blob-drift { 0%{transform:translate(0,0) scale(1)} 33%{transform:translate(30px,-20px) scale(1.05)} 66%{transform:translate(-20px,30px) scale(.95)} 100%{transform:translate(15px,15px) scale(1.02)} }
+    .cta-inner { position:relative; z-index:1; }
+    .cta-section h2 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(2rem,5vw,3.2rem); color:#fff; margin-bottom:.85rem; line-height:1.15; }
+    .cta-section h2 em { font-style:italic; background:linear-gradient(135deg,var(--teal-lt),var(--gold-warm)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .cta-section p { color:rgba(255,255,255,.78); font-size:1.1rem; max-width:520px; margin:0 auto 2.75rem; line-height:1.7; }
+    .cta-btns { display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; }
+    .section-dark .section-eyebrow { color:var(--teal-lt); }
+
+    /* BIG CONTACT BTNS */
+    .big-contact-btns { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; max-width:560px; margin:0 auto; }
+    @media(max-width:580px) { .big-contact-btns{grid-template-columns:1fr} }
+    .big-contact-btn { display:flex; flex-direction:column; align-items:center; gap:.75rem; padding:2rem 1.5rem; border-radius:var(--radius-lg); font-size:1.1rem; font-weight:700; text-decoration:none; transition:transform .25s,box-shadow .25s; }
+    .big-contact-btn:hover { transform:translateY(-5px); }
+    .big-contact-btn svg { opacity:.9; }
+    .big-contact-btn-wa { background:var(--green); color:#fff; box-shadow:0 8px 32px rgba(37,211,102,.35); }
+    .big-contact-btn-wa:hover { box-shadow:0 12px 40px rgba(37,211,102,.5); color:#fff; }
+    .big-contact-btn-tel { background:var(--sky); color:#fff; box-shadow:0 8px 32px rgba(26,127,168,.35); }
+    .big-contact-btn-tel:hover { box-shadow:0 12px 40px rgba(26,127,168,.5); color:#fff; }
+    .big-contact-btn span { font-size:.82rem; font-weight:500; opacity:.85; }
+
+    footer { background:var(--night); color:rgba(255,255,255,.7); padding:4.5rem 1.5rem 2.5rem; font-size:.88rem; }
+    .footer-grid { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1.6fr repeat(3,1fr); gap:2.5rem; }
+    .footer-brand h4 { font-family:'Playfair Display',Georgia,serif; font-size:1.35rem; color:#fff; margin-bottom:.3rem; }
+    .footer-brand p { font-size:.83rem; color:rgba(255,255,255,.5); margin-bottom:1.25rem; line-height:1.6; }
+    .footer-col h5 { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.38); margin-bottom:.9rem; font-weight:600; }
+    .footer-col a { display:block; color:rgba(255,255,255,.68); line-height:2.1; transition:color .2s; font-size:.88rem; }
+    .footer-col a:hover { color:var(--teal-lt); }
+    .footer-bottom { max-width:1100px; margin:2.5rem auto 0; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,.08); font-size:.78rem; color:rgba(255,255,255,.38); text-align:center; }
+    @media(max-width:768px) { .footer-grid{grid-template-columns:1fr 1fr;gap:2rem} }
+    @media(max-width:480px) { .footer-grid{grid-template-columns:1fr} }
+
+    .float-wa { position:fixed; bottom:88px; right:22px; z-index:990; width:58px; height:58px; border-radius:50%; background:var(--green); display:flex; align-items:center; justify-content:center; color:#fff; box-shadow:0 4px 20px rgba(37,211,102,.45); transition:transform .2s,box-shadow .2s; }
+    .float-wa:hover { transform:scale(1.12); box-shadow:0 6px 28px rgba(37,211,102,.6); }
+    .float-wa::before,.float-wa::after { content:''; position:absolute; border-radius:50%; background:rgba(37,211,102,.35); animation:wa-ripple 2.5s ease-out infinite; }
+    .float-wa::before { width:100%; height:100%; animation-delay:0s; }
+    .float-wa::after { width:100%; height:100%; animation-delay:.8s; }
+    @keyframes wa-ripple { 0%{transform:scale(1);opacity:.7} 100%{transform:scale(2.2);opacity:0} }
+    @media(max-width:768px) { .float-wa{bottom:76px} }
+
+    .scroll-top-btn { position:fixed; bottom:88px; left:22px; z-index:990; width:46px; height:46px; border-radius:50%; background:var(--ocean); color:#fff; border:0; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:opacity .3s,transform .3s; }
+    .scroll-top-btn.visible { opacity:1; pointer-events:auto; }
+    .scroll-top-btn:hover { transform:scale(1.1); background:var(--sky); }
+    @media(max-width:768px) { .scroll-top-btn{bottom:76px} }
+
+    .mobile-cta { display:none; position:fixed; bottom:0; left:0; right:0; z-index:996; background:rgba(4,15,26,.97); backdrop-filter:blur(12px); padding:.65rem .85rem; border-top:1px solid rgba(255,255,255,.07); gap:.5rem; }
+    @media(max-width:768px) { .mobile-cta{display:flex} body{padding-bottom:64px} .section{padding:4rem 1.25rem} .float-wa{display:none} }
+    .mobile-cta a { flex:1; text-align:center; font-size:.85rem; font-weight:600; border-radius:100px; padding:.72rem .5rem; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .mc-wa { background:var(--green); color:#fff; }
+    .mc-tel { background:var(--sky); color:#fff; }
+
+    .reveal { opacity:0; transform:translateY(30px); transition:opacity .65s ease,transform .65s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-delay-1 { transition-delay:.1s; }
+    .reveal-delay-2 { transition-delay:.2s; }
+    .reveal-delay-3 { transition-delay:.3s; }
+    .reveal-delay-4 { transition-delay:.4s; }
+    .reveal-delay-5 { transition-delay:.5s; }
+
+    @media(prefers-reduced-motion:reduce) {
+      .reveal,.hero-particles span,.wave-path-1,.wave-path-2,.float-wa::before,.float-wa::after,.hero-badge,.cta-bg-blob { animation:none !important; transition:none !important; opacity:1 !important; transform:none !important; }
+    }
+    @media print { .nav,.mobile-cta,.hamburger,.mobile-sidebar,.float-wa,.scroll-top-btn{display:none} }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEY5393Y7F"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-WEY5393Y7F')</script>
 </head>
 <body>
-<div class="scroll-progress" id="scrollProgress"></div>
-<a href="#main" class="skip-link">Salta al contenuto</a>
-<nav class="nav" id="mainNav" role="navigation" aria-label="Navigazione principale">
-  <a class="nav-brand" href="/" aria-label="Stella Marina — Home"><img src="/logo_modern.svg" alt="Stella Marina" width="36" height="36"><span>Stella Marina<small>Favignana</small></span></a>
-  <div class="nav-links" role="list"><a href="/" role="listitem">Home</a>
-    <a href="/noleggio-gommoni-favignana.html" role="listitem">Gommoni</a>
-    <a href="/noleggio-barche-favignana.html" role="listitem">Barche</a>
-    <a href="/escursioni-egadi-favignana.html" role="listitem">Escursioni</a>
-    <a href="/transfer-trapani-favignana.html" role="listitem">Transfer</a>
-    <a href="/aperitivo-tramonto-favignana.html" role="listitem">Aperitivo</a>
-    <a href="/prezzi-noleggio-favignana.html" role="listitem">Prezzi</a>
-    <a href="/faq.html" role="listitem">FAQ</a>
-    <a href="/contatti.html" role="listitem" aria-current="page">Contatti</a>
-    <a href="https://wa.me/393290865808" class="wa-btn" role="listitem" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a></div>
-  <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu" aria-expanded="false"><span></span><span></span><span></span></button>
-</nav>
-<div class="sidebar-overlay" id="sidebarOverlay"></div>
-<aside class="mobile-sidebar" id="mobileSidebar"><nav><a href="/" onclick="closeSidebar()">Home</a>
-    <a href="/noleggio-gommoni-favignana.html" onclick="closeSidebar()">Noleggio Gommoni</a>
-    <a href="/noleggio-barche-favignana.html" onclick="closeSidebar()">Noleggio Barche</a>
-    <a href="/cosa-vedere-favignana-in-barca.html" onclick="closeSidebar()">Cosa Vedere in Barca</a>
-    <a href="/escursioni-egadi-favignana.html" onclick="closeSidebar()">Escursioni Guidate</a>
-    <a href="/transfer-trapani-favignana.html" onclick="closeSidebar()">Transfer Trapani</a>
-    <a href="/aperitivo-tramonto-favignana.html" onclick="closeSidebar()">Aperitivo Tramonto</a>
-    <a href="/prezzi-noleggio-favignana.html" onclick="closeSidebar()">Prezzi 2026</a>
-    <a href="/faq.html" onclick="closeSidebar()">Domande Frequenti</a>
-    <a href="/contatti.html" aria-current="page" onclick="closeSidebar()">Contatti</a>
-    <a href="https://wa.me/393290865808" class="wa-sidebar">WhatsApp — 329 086 5808</a></nav></aside>
 
-<main id="main">
-  <section class="sm-hero">
-    <div class="sm-hero-img" style="background-image:url('/images/Hero.jpeg')" role="img" aria-label="Stella Marina Favignana contatti e prenotazioni"></div>
-    <div class="sm-hero-overlay" aria-hidden="true"></div>
-    <div class="sm-hero-content">
-      <p class="sm-eyebrow-hero">Stella Marina · Favignana</p>
-      <h1 class="sm-hero-title">Contatta<br><em>Stella Marina</em></h1>
-      <p class="sm-hero-lead">Per prenotazioni, disponibilità e prezzi: il modo più rapido è WhatsApp. Siamo aperti tutti i giorni dalle 9:00 alle 18:00 e rispondiamo in pochi minuti.</p>
-      <div class="sm-hero-ctas">
-        <a href="https://wa.me/393290865808" class="sm-btn-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp 329 086 5808</a>
-        <a href="tel:+393290865808" class="sm-btn-outline-w"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Chiama Ora</a>
-      </div>
-    </div>
-    <div class="sm-scroll-hint" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10l5 5 5-5"/></svg></div>
-  </section>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a href="#main" class="skip-link">Salta al contenuto</a>
 
-  <div class="sm-marquee-wrap" aria-hidden="true"><div class="sm-marquee-track"><span class="sm-marquee-item"><span class="sm-marquee-dot"></span>WhatsApp 329 086 5808</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Circolo Nautico Favignana</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Orari 9:00–18:00</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Tutti i Giorni</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Transfer Notturno su Prenotazione</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Risposta in Pochi Minuti</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Noleggio Barche</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Escursioni Guidate</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Aperitivo Tramonto</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Isole Egadi</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>WhatsApp 329 086 5808</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Circolo Nautico Favignana</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Orari 9:00–18:00</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Tutti i Giorni</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Transfer Notturno su Prenotazione</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Risposta in Pochi Minuti</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Noleggio Barche</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Escursioni Guidate</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Aperitivo Tramonto</span>
-    <span class="sm-marquee-item"><span class="sm-marquee-dot"></span>Isole Egadi</span></div></div>
-
-  <section class="sm-section">
-    <div class="sm-container">
-      <span class="sm-eyebrow">Dove siamo</span>
-      <h2 class="sm-title">Come<br><em>raggiungerci</em></h2>
-      <p class="sm-sub" style="margin-bottom:2.5rem">Al Circolo Nautico di Favignana, raggiungibile a piedi o in bici dal centro dell'isola.</p>
-      <div class="sm-contact-grid">
-      <div class="sm-contact-card sm-reveal">
-        <div class="sm-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <div><p class="sm-contact-label">Punto di incontro</p><p class="sm-contact-value">Circolo Nautico Favignana<br>91023 Favignana (TP)</p></div>
-      </div>
-      <div class="sm-contact-card sm-reveal sm-d1">
-        <div class="sm-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <div><p class="sm-contact-label">Orari di apertura</p><p class="sm-contact-value">Tutti i giorni 9:00–18:00<br>Transfer notturni su prenotazione</p></div>
-      </div>
-      <div class="sm-contact-card sm-reveal sm-d2">
-        <div class="sm-contact-icon" style="background:linear-gradient(135deg,#25D366,#1daa4e)"><svg viewBox="0 0 24 24" fill="white" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
-        <div><p class="sm-contact-label">WhatsApp</p><p class="sm-contact-value"><a href="https://wa.me/393290865808">329 086 5808</a><br>Risposta in pochi minuti</p></div>
-      </div>
-      <div class="sm-contact-card sm-reveal sm-d3">
-        <div class="sm-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
-        <div><p class="sm-contact-label">Telefono</p><p class="sm-contact-value"><a href="tel:+393290865808">+39 329 086 5808</a></p></div>
-      </div>
-      <div class="sm-contact-card sm-reveal sm-d4">
-        <div class="sm-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
-        <div><p class="sm-contact-label">Instagram</p><p class="sm-contact-value"><a href="https://www.instagram.com/stellamarinafavignana/" target="_blank" rel="noopener">@stellamarinafavignana</a></p></div>
-      </div>
-      <div class="sm-contact-card sm-reveal sm-d5">
-        <div class="sm-contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-        <div><p class="sm-contact-label">Partita IVA</p><p class="sm-contact-value">IT02781480815</p></div>
-      </div>
-    </div>
-    <a href="https://share.google/E3K0fNaK13dyvTNSR" target="_blank" rel="noopener" class="sm-map-link sm-reveal">
-      <div class="sm-map-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-      <div class="sm-map-link-text"><strong>Visualizza su Google Maps</strong><span>Circolo Nautico Favignana, 91023 Favignana (TP)</span></div>
-      <div class="sm-map-link-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Navigazione principale">
+    <a class="nav-brand" href="/" aria-label="Stella Marina — Home">
+      <img src="/logo_modern.svg" alt="Stella Marina" width="36" height="36">
+      <span>Stella Marina<small>Favignana</small></span>
     </a>
+    <div class="nav-links" role="list">
+      <a href="/" role="listitem">Home</a>
+      <a href="/noleggio-gommoni-favignana.html" role="listitem">Gommoni</a>
+      <a href="/noleggio-barche-favignana.html" role="listitem">Barche</a>
+      <a href="/escursioni-egadi-favignana.html" role="listitem">Escursioni</a>
+      <a href="/transfer-trapani-favignana.html" role="listitem">Transfer</a>
+      <a href="/aperitivo-tramonto-favignana.html" role="listitem">Aperitivo</a>
+      <a href="/prezzi-noleggio-favignana.html" role="listitem">Prezzi</a>
+      <a href="/faq.html" role="listitem">FAQ</a>
+      <a href="/contatti.html" role="listitem" aria-current="page">Contatti</a>
+      <a href="https://wa.me/393290865808" class="wa-btn" role="listitem" aria-label="Contattaci su WhatsApp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
     </div>
-  </section>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Apri menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-  <section class="sm-section-foam">
-    <div class="sm-container">
-      <div class="sm-reveal" style="text-align:center"><span class="sm-eyebrow">I nostri servizi</span><h2 class="sm-title">Cosa offriamo<br><em>a Favignana</em></h2></div>
-      <div class="sm-feat-grid">
-        <div class="sm-feature sm-reveal"><div class="sm-feat-num">01</div><h3>Noleggio Gommoni</h3><p>Senza patente, fino a 40 cv. Snorkeling e mappa calette inclusi.</p></div>
-        <div class="sm-feature sm-reveal sm-d1"><div class="sm-feat-num">02</div><h3>Noleggio Barche</h3><p>Con patente nautica. Più spazio e comfort per gruppi e famiglie.</p></div>
-        <div class="sm-feature sm-reveal sm-d2"><div class="sm-feat-num">03</div><h3>Escursioni Guidate</h3><p>Tour alle Egadi con comandante esperto. Favignana, Levanzo, Marettimo.</p></div>
-        <div class="sm-feature sm-reveal sm-d3"><div class="sm-feat-num">04</div><h3>Transfer Trapani</h3><p>Collegamento marittimo privato. Diurno e notturno su prenotazione.</p></div>
-        <div class="sm-feature sm-reveal sm-d4"><div class="sm-feat-num">05</div><h3>Aperitivo Tramonto</h3><p>Cocktail, vini e stuzzichini in barca mentre il sole cala sulle Egadi.</p></div>
-        <div class="sm-feature sm-reveal sm-d5"><div class="sm-feat-num">06</div><h3>Esperienze su Misura</h3><p>Tour privati personalizzati per coppie, famiglie e team building.</p></div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="mobile-sidebar" id="mobileSidebar" aria-label="Menu mobile">
+    <nav>
+      <a href="/" onclick="closeSidebar()">Home</a>
+      <a href="/noleggio-gommoni-favignana.html" onclick="closeSidebar()">Noleggio Gommoni</a>
+      <a href="/noleggio-barche-favignana.html" onclick="closeSidebar()">Noleggio Barche</a>
+      <a href="/cosa-vedere-favignana-in-barca.html" onclick="closeSidebar()">Cosa Vedere in Barca</a>
+      <a href="/escursioni-egadi-favignana.html" onclick="closeSidebar()">Escursioni Guidate</a>
+      <a href="/transfer-trapani-favignana.html" onclick="closeSidebar()">Transfer Trapani</a>
+      <a href="/aperitivo-tramonto-favignana.html" onclick="closeSidebar()">Aperitivo Tramonto</a>
+      <a href="/prezzi-noleggio-favignana.html" onclick="closeSidebar()">Prezzi 2026</a>
+      <a href="/faq.html" onclick="closeSidebar()">Domande Frequenti</a>
+      <a href="/contatti.html" aria-current="page" onclick="closeSidebar()">Contatti</a>
+      <a href="https://wa.me/393290865808" class="wa-sidebar">WhatsApp — 329 086 5808</a>
+    </nav>
+  </aside>
+
+  <a href="https://wa.me/393290865808" class="float-wa" aria-label="Contattaci su WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Torna in cima">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Contatta Stella Marina Favignana">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-inner">
+        <div class="hero-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Circolo Nautico Favignana
+        </div>
+        <h1>Siamo qui per <em>te</em></h1>
+        <p class="hero-lead">Per prenotazioni, disponibilità e prezzi: il modo più rapido è WhatsApp. Siamo aperti tutti i giorni dalle 9:00 alle 18:00 e rispondiamo in pochi minuti.</p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/393290865808" class="btn btn-wa" aria-label="Scrivici su WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp 329 086 5808
+          </a>
+          <a href="tel:+393290865808" class="btn btn-outline" aria-label="Chiama Stella Marina">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Chiama Ora
+          </a>
+        </div>
+      </div>
+      <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="wave-path-2" d="M0,50 C240,90 480,10 720,50 C960,90 1200,20 1440,55 L1440,100 L0,100 Z" fill="rgba(253,246,236,0.5)"/>
+          <path class="wave-path-1" d="M0,60 C200,20 400,100 600,60 C800,20 1000,80 1200,60 C1400,40 1440,55 1440,55 L1440,100 L0,100 Z" fill="#fdf6ec"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- CONTACT + HOW TO GET THERE -->
+    <section class="section section-alt" aria-labelledby="contatti-title">
+      <div class="container">
+        <div class="two-col">
+
+          <!-- LEFT: info contatto -->
+          <div class="text-stack reveal">
+            <span class="section-eyebrow">Dove siamo</span>
+            <h2 class="section-title" id="contatti-title">I nostri <em>contatti</em></h2>
+            <p style="font-size:.97rem;color:var(--muted);line-height:1.75">Trovaci al Circolo Nautico di Favignana. Siamo operativi da maggio a settembre, tutti i giorni.</p>
+
+            <div class="contact-info-col" style="margin-top:.75rem">
+
+              <div class="contact-block">
+                <div class="contact-block-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-block-label">Punto di incontro</div>
+                <div class="contact-block-value">Circolo Nautico Favignana</div>
+                <div class="contact-block-sub">91023 Favignana (TP) — Isole Egadi, Sicilia</div>
+              </div>
+
+              <div class="contact-block">
+                <div class="contact-block-icon" style="background:linear-gradient(135deg,#25D366,#1daa4e)">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="white" stroke="none" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div class="contact-block-label">WhatsApp</div>
+                <div class="contact-block-value"><a href="https://wa.me/393290865808">329 086 5808</a></div>
+                <div class="contact-block-sub">Risposta in pochi minuti</div>
+              </div>
+
+              <div class="contact-block">
+                <div class="contact-block-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <div class="contact-block-label">Telefono</div>
+                <div class="contact-block-value"><a href="tel:+393290865808">+39 329 086 5808</a></div>
+                <div class="contact-block-sub">Tutti i giorni 9:00–18:00</div>
+              </div>
+
+              <div class="contact-block">
+                <div class="contact-block-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </div>
+                <div class="contact-block-label">Instagram</div>
+                <div class="contact-block-value"><a href="https://www.instagram.com/stellamarinafavignana/" target="_blank" rel="noopener">@stellamarinafavignana</a></div>
+                <div class="contact-block-sub">Seguici per foto e aggiornamenti</div>
+              </div>
+
+              <a href="https://share.google/E3K0fNaK13dyvTNSR" target="_blank" rel="noopener" class="map-cta" aria-label="Visualizza su Google Maps">
+                <div class="map-cta-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="map-cta-text">
+                  <strong>Visualizza su Google Maps</strong>
+                  <span>Circolo Nautico Favignana, 91023 Favignana (TP)</span>
+                </div>
+                <div class="map-cta-arrow">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </div>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: come raggiungerci -->
+          <div class="reveal reveal-delay-1">
+            <span class="section-eyebrow">Logistica</span>
+            <h2 class="section-title" style="margin-bottom:1.5rem">Come <em>raggiungerci</em></h2>
+            <div class="reach-col">
+
+              <div class="reach-item">
+                <div class="reach-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z"/><path d="M9 4v13M15 7v13"/></svg>
+                </div>
+                <div>
+                  <h4>Da Trapani in traghetto o aliscafo</h4>
+                  <p>Traghetti e aliscafi partono regolarmente dal porto di Trapani. Il viaggio dura 30–40 minuti. Arrivato al porto di Favignana, siamo a pochi minuti a piedi.</p>
+                </div>
+              </div>
+
+              <div class="reach-item">
+                <div class="reach-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88" fill="currentColor" stroke="none" opacity=".9"/></svg>
+                </div>
+                <div>
+                  <h4>Con il nostro transfer privato</h4>
+                  <p>Il modo più comodo per raggiungere Favignana. Transfer marittimi privati da Trapani, anche di notte su prenotazione. Scrivici per organizzare il tuo arrivo.</p>
+                </div>
+              </div>
+
+              <div class="reach-item">
+                <div class="reach-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4>Dal porto al Circolo Nautico</h4>
+                  <p>Il Circolo Nautico si trova a pochi minuti a piedi o in bici dal porto di Favignana. L'isola è piccola e comodissima da girare senza auto.</p>
+                </div>
+              </div>
+
+              <div class="reach-item">
+                <div class="reach-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <h4>Orari e stagionalità</h4>
+                  <p>Operativi da <strong>maggio a settembre</strong>, tutti i giorni dalle 9:00 alle 18:00. Transfer notturni disponibili su prenotazione anticipata.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave sand → foam -->
+    <div class="wave-divider" aria-hidden="true" style="background:#fdf6ec">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#e8f4f9"/>
+      </svg>
+    </div>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" aria-label="Contattaci ora">
+      <div class="cta-bg-blob b1" aria-hidden="true"></div>
+      <div class="cta-bg-blob b2" aria-hidden="true"></div>
+      <div class="cta-bg-blob b3" aria-hidden="true"></div>
+      <div class="cta-inner container reveal">
+        <span class="section-eyebrow" style="color:var(--teal-lt)">Siamo a un messaggio di distanza</span>
+        <h2>Pronti a <em>salpare?</em></h2>
+        <p>Scrivici su WhatsApp o chiamaci direttamente. Rispondiamo entro pochi minuti e organizziamo tutto per te.</p>
+        <div class="big-contact-btns" style="margin-top:0">
+          <a href="https://wa.me/393290865808" class="big-contact-btn big-contact-btn-wa" aria-label="WhatsApp 329 086 5808">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+            <span>329 086 5808</span>
+          </a>
+          <a href="tel:+393290865808" class="big-contact-btn big-contact-btn-tel" aria-label="Chiama 329 086 5808">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            Chiama Ora
+            <span>+39 329 086 5808</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Stella Marina</h4>
+        <p>Circolo Nautico Favignana<br>Isole Egadi, Sicilia — 91023</p>
+        <a href="https://www.instagram.com/stellamarinafavignana/" target="_blank" rel="noopener" aria-label="Seguici su Instagram" style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.55);font-size:.85rem;transition:color .2s" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(255,255,255,.55)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          Instagram
+        </a>
+      </div>
+      <div class="footer-col">
+        <h5>Servizi</h5>
+        <a href="/noleggio-gommoni-favignana.html">Noleggio Gommoni</a>
+        <a href="/noleggio-barche-favignana.html">Noleggio Barche</a>
+        <a href="/transfer-trapani-favignana.html">Transfer Trapani</a>
+        <a href="/prezzi-noleggio-favignana.html">Prezzi 2026</a>
+      </div>
+      <div class="footer-col">
+        <h5>Esplorare</h5>
+        <a href="/cosa-vedere-favignana-in-barca.html">Cosa Vedere</a>
+        <a href="/escursioni-egadi-favignana.html">Escursioni</a>
+        <a href="/aperitivo-tramonto-favignana.html">Aperitivo Tramonto</a>
+        <a href="/faq.html">Domande Frequenti</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contatti</h5>
+        <a href="https://wa.me/393290865808">WhatsApp</a>
+        <a href="tel:+393290865808">329 086 5808</a>
+        <a href="/contatti.html">Pagina Contatti</a>
+        <a href="https://share.google/E3K0fNaK13dyvTNSR" target="_blank" rel="noopener">Google Maps</a>
+        <a href="#privacy">Privacy Policy</a>
       </div>
     </div>
-  </section>
-
-  <section class="sm-cta">
-    <div class="sm-cta-inner sm-reveal">
-      <span class="sm-eyebrow" style="display:block;text-align:center;margin-bottom:1rem;color:#4dd4e2">Siamo a un messaggio di distanza</span>
-      <h2 class="sm-cta-title">Pronti a<br><em>salpare?</em></h2>
-      <p class="sm-cta-lead">Scrivici su WhatsApp per disponibilità e prezzi. Rispondiamo entro pochi minuti.</p>
-      <div class="sm-cta-btns">
-        <a href="https://wa.me/393290865808" class="sm-btn-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp — 329 086 5808</a>
-        <a href="tel:+393290865808" class="sm-btn-outline-w"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Chiama Ora</a>
-      </div>
+    <div class="footer-bottom">
+      &copy; 2026 Stella Marina Favignana. Tutti i diritti riservati. | P.IVA IT02781480815
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand"><h4>Stella Marina</h4><p>Circolo Nautico Favignana<br>Isole Egadi, Sicilia — 91023</p><a href="https://www.instagram.com/stellamarinafavignana/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.55);font-size:.85rem;transition:color .2s" onmouseover="this.style.color='#4dd4e2'" onmouseout="this.style.color='rgba(255,255,255,.55)'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</a></div>
-    <div class="footer-col"><h5>Servizi</h5><a href="/noleggio-gommoni-favignana.html">Noleggio Gommoni</a><a href="/noleggio-barche-favignana.html">Noleggio Barche</a><a href="/transfer-trapani-favignana.html">Transfer Trapani</a><a href="/prezzi-noleggio-favignana.html">Prezzi 2026</a></div>
-    <div class="footer-col"><h5>Esplorare</h5><a href="/cosa-vedere-favignana-in-barca.html">Cosa Vedere</a><a href="/escursioni-egadi-favignana.html">Escursioni</a><a href="/aperitivo-tramonto-favignana.html">Aperitivo Tramonto</a><a href="/faq.html">Domande Frequenti</a></div>
-    <div class="footer-col"><h5>Contatti</h5><a href="https://wa.me/393290865808">WhatsApp</a><a href="tel:+393290865808">329 086 5808</a><a href="/contatti.html">Pagina Contatti</a></div>
+  <div class="mobile-cta" aria-label="Contatti rapidi">
+    <a href="https://wa.me/393290865808" class="mc-wa" aria-label="WhatsApp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a href="tel:+393290865808" class="mc-tel" aria-label="Chiama">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      Chiama
+    </a>
   </div>
-  <div class="footer-bottom">&copy; 2026 Stella Marina Favignana. Tutti i diritti riservati. | P.IVA IT02781480815</div>
-</footer>
-<div class="mobile-cta" aria-label="Contatti rapidi">
-  <a href="https://wa.me/393290865808" class="mc-wa" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
-  <a href="tel:+393290865808" class="mc-tel" aria-label="Chiama"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.25 12a19.79 19.79 0 01-3.07-8.63A2 2 0 012.18 1.18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 9.4a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>Chiama</a>
-</div>
-<a href="https://wa.me/393290865808" class="float-wa" aria-label="Contattaci su WhatsApp"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
-<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Torna in cima"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg></button>
-<script>
-const nav=document.getElementById('mainNav');
-function updateNav(){nav.classList.toggle('is-scrolled',window.scrollY>40)}
-window.addEventListener('scroll',updateNav,{passive:true});updateNav();
-const progressBar=document.getElementById('scrollProgress');
-window.addEventListener('scroll',()=>{const m=document.documentElement.scrollHeight-window.innerHeight;progressBar.style.width=(m>0?(window.scrollY/m)*100:0)+'%'},{passive:true});
-const scrollTopBtn=document.getElementById('scrollTopBtn');
-window.addEventListener('scroll',()=>{scrollTopBtn.classList.toggle('visible',window.scrollY>400)},{passive:true});
-scrollTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
-const hamburgerBtn=document.getElementById('hamburgerBtn'),mobileSidebar=document.getElementById('mobileSidebar'),sidebarOverlay=document.getElementById('sidebarOverlay');
-function toggleSidebar(){const o=mobileSidebar.classList.toggle('active');hamburgerBtn.classList.toggle('active');sidebarOverlay.classList.toggle('active');hamburgerBtn.setAttribute('aria-expanded',o)}
-function closeSidebar(){hamburgerBtn.classList.remove('active');mobileSidebar.classList.remove('active');sidebarOverlay.classList.remove('active');hamburgerBtn.setAttribute('aria-expanded','false')}
-hamburgerBtn.addEventListener('click',toggleSidebar);sidebarOverlay.addEventListener('click',closeSidebar);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSidebar()});
-const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.1});
-document.querySelectorAll('.sm-reveal').forEach(el=>io.observe(el));
-</script>
+
+  <script>
+    const nav = document.getElementById('mainNav');
+    function updateNav() { nav.classList.toggle('is-scrolled', window.scrollY > 40); }
+    window.addEventListener('scroll', updateNav, { passive: true });
+    updateNav();
+
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    }, { passive: true });
+
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+    scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileSidebar = document.getElementById('mobileSidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    function toggleSidebar() {
+      const open = mobileSidebar.classList.toggle('active');
+      hamburgerBtn.classList.toggle('active');
+      sidebarOverlay.classList.toggle('active');
+      hamburgerBtn.setAttribute('aria-expanded', open);
+    }
+    function closeSidebar() {
+      hamburgerBtn.classList.remove('active');
+      mobileSidebar.classList.remove('active');
+      sidebarOverlay.classList.remove('active');
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+    hamburgerBtn.addEventListener('click', toggleSidebar);
+    sidebarOverlay.addEventListener('click', closeSidebar);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidebar(); });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() { document.location.href = "/admin/"; });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
