@@ -15,13 +15,13 @@
   <meta property="og:type" content="website"><meta property="og:site_name" content="Stella Marina Favignana">
   <meta property="og:title" content="Noleggio Gommoni a Favignana senza Patente | Stella Marina">
   <meta property="og:description" content="Noleggio gommoni a Favignana senza patente. Esplora le calette delle Egadi in autonomia. Borsa frigo inclusa, tendalino e doccetta a bordo.">
-  <meta property="og:image" content="https://www.barchefavignana.it/images/Hero.jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:image" content="https://www.barchefavignana.it/images/Hero.webp"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
   <meta property="og:url" content="https://www.barchefavignana.it/noleggio-gommoni-favignana.html"><meta property="og:locale" content="it_IT">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Noleggio Gommoni Favignana | Stella Marina"><meta name="twitter:description" content="Gommoni senza patente a Favignana. Borsa frigo inclusa, tendalino e doccetta a bordo."><meta name="twitter:image" content="https://www.barchefavignana.it/images/Hero.jpeg">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Noleggio Gommoni Favignana | Stella Marina"><meta name="twitter:description" content="Gommoni senza patente a Favignana. Borsa frigo inclusa, tendalino e doccetta a bordo."><meta name="twitter:image" content="https://www.barchefavignana.it/images/Hero.webp">
   <meta name="theme-color" content="#0a3d5c">
   <meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="sitemap" type="application/xml" href="https://www.barchefavignana.it/sitemap.xml">
-  <link rel="preload" as="image" href="/images/Hero.jpeg" fetchpriority="high">
+  <link rel="preload" as="image" href="/images/Hero.webp" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 
@@ -70,7 +70,7 @@
 
     main { margin-top:0; }
 
-    .hero { position:relative; min-height:calc(100vh - 68px); display:flex; align-items:center; color:#fff; overflow:hidden; background:url('/images/Hero.jpeg') center/cover no-repeat; }
+    .hero { position:relative; min-height:calc(100vh - 68px); display:flex; align-items:center; color:#fff; overflow:hidden; background:url('/images/Hero.webp') center/cover no-repeat; }
     .hero-overlay { position:absolute; inset:0; background:linear-gradient(160deg,rgba(4,15,26,.84) 0%,rgba(10,61,92,.62) 55%,rgba(0,181,200,.15) 100%); z-index:1; }
     .hero-particles { position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
     .hero-particles span { position:absolute; bottom:-10%; border-radius:50%; background:rgba(0,181,200,.15); border:1px solid rgba(0,181,200,.25); animation:bubble-rise linear infinite; }
@@ -286,15 +286,31 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Stella Marina Favignana",
-    "url": "https://www.barchefavignana.it",
-    "telephone": "+393290865808",
-    "description": "Noleggio gommoni senza patente a Favignana. Esplora le calette delle Isole Egadi in autonomia.",
-    "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"24"},
-    "address": {"@type":"PostalAddress","streetAddress":"Circolo Nautico Favignana","addressLocality":"Favignana","addressRegion":"TP","postalCode":"91023","addressCountry":"IT"},
-    "geo": {"@type":"GeoCoordinates","latitude":37.9216,"longitude":12.3275},
-    "openingSeasons": "Maggio–Settembre"
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Noleggio Gommoni Senza Patente a Favignana",
+        "description": "Noleggio gommoni fino a 40 cv senza patente nautica a Favignana. Giornata intera 8 ore. Borsa frigo, carburante e briefing inclusi.",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Stella Marina Favignana",
+          "url": "https://www.barchefavignana.it",
+          "telephone": "+393290865808",
+          "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"24"},
+          "address": {"@type":"PostalAddress","streetAddress":"Circolo Nautico Favignana","addressLocality":"Favignana","addressRegion":"TP","postalCode":"91023","addressCountry":"IT"},
+          "geo": {"@type":"GeoCoordinates","latitude":37.9216,"longitude":12.3275}
+        },
+        "areaServed": {"@type":"Place","name":"Favignana, Isole Egadi"},
+        "offers": {"@type":"Offer","priceCurrency":"EUR","price":"140","priceValidUntil":"2026-10-31","availability":"https://schema.org/InStock"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.barchefavignana.it/"},
+          {"@type":"ListItem","position":2,"name":"Noleggio Gommoni Favignana","item":"https://www.barchefavignana.it/noleggio-gommoni-favignana.html"}
+        ]
+      }
+    ]
   }
   </script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WEY5393Y7F"></script>
@@ -436,7 +452,7 @@
       <div class="container">
         <div class="two-col">
           <div class="reveal">
-            <img src="/images/16.JPG" alt="Barca noleggio Stella Marina con gruppo nelle acque turchesi di Favignana" class="two-col-img">
+            <img src="/images/16.webp" alt="Barca noleggio Stella Marina con gruppo nelle acque turchesi di Favignana" class="two-col-img">
           </div>
           <div class="text-stack reveal reveal-delay-1">
             <span class="section-eyebrow">La libertà</span>
@@ -553,9 +569,9 @@
           <h2 class="section-title" style="margin-bottom:0;">Libertà vera,<br><em>ricordi per sempre</em></h2>
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;">
-          <img src="/images/20.JPG" alt="Famiglia in barca a Favignana con bambini — Stella Marina" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:16px;">
-          <img src="/images/8.JPG" alt="Coppia a prua barca nelle acque turchesi di Favignana — Stella Marina" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:16px;">
-          <img src="/images/10.JPG" alt="Snorkeling e relax in barca a Favignana con Stella Marina" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:16px;">
+          <img src="/images/20.webp" alt="Famiglia in barca a Favignana con bambini — Stella Marina" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:16px;">
+          <img src="/images/8.webp" alt="Coppia a prua barca nelle acque turchesi di Favignana — Stella Marina" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:16px;">
+          <img src="/images/10.webp" alt="Snorkeling e relax in barca a Favignana con Stella Marina" loading="lazy" style="width:100%;height:260px;object-fit:cover;border-radius:16px;">
         </div>
       </div>
     </section>
