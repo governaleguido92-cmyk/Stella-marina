@@ -83,11 +83,3 @@ collections:
         extension: html
         fields:
           - { label: "Contenuto", name: "body", widget: "text" }
-
-      - name: "prezzi"
-        label: "Prezzi Noleggio"
-        file: "prezzi-noleggio-favignana.html"
-        format: raw
-        extension: html
-        fields:
-          - { label: "Contenuto", name: "body", widget: "text" }
