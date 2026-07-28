@@ -192,7 +192,7 @@
 
     .reviews-wrapper { position:relative; margin-top:3rem; overflow:hidden; }
     .reviews-track { display:flex; transition:transform .55s cubic-bezier(.4,0,.2,1); will-change:transform; }
-    .review-card { min-width:calc(33.333% - 1rem); margin-right:1.5rem; background:#fff; border-radius:var(--radius-lg); padding:1.85rem; box-shadow:var(--shadow); border-left:4px solid var(--gold-warm); flex-shrink:0; transition:transform .3s,box-shadow .3s; }
+    .review-card { width:calc(33.333% - 1rem); min-width:calc(33.333% - 1rem); margin-right:1.5rem; background:#fff; border-radius:var(--radius-lg); padding:1.85rem; box-shadow:var(--shadow); border-left:4px solid var(--gold-warm); flex-shrink:0; transition:transform .3s,box-shadow .3s; }
     .review-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-lg); }
     .review-header { display:flex; align-items:center; gap:.9rem; margin-bottom:1rem; }
     .review-avatar { width:44px; height:44px; background:linear-gradient(135deg,var(--ocean),var(--teal)); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:1.05rem; flex-shrink:0; }
@@ -206,8 +206,8 @@
     .carousel-dots { display:flex; gap:8px; }
     .cdot { width:8px; height:8px; border-radius:100px; background:rgba(10,61,92,.2); border:0; cursor:pointer; padding:0; transition:width .3s,background .3s; }
     .cdot.active { width:24px; background:var(--sky); }
-    @media(max-width:900px) { .review-card{min-width:calc(80% - 1rem)} }
-    @media(max-width:600px) { .review-card{min-width:calc(100% - 1rem)} }
+    @media(max-width:900px) { .review-card{width:calc(80% - 1rem);min-width:calc(80% - 1rem)} }
+    @media(max-width:600px) { .review-card{width:calc(100% - 1rem);min-width:calc(100% - 1rem)} }
     .rating-summary { display:inline-flex; align-items:center; gap:1.25rem; background:#fff; border-radius:var(--radius); padding:1.5rem 2rem; box-shadow:var(--shadow); }
     .rating-number { font-family:'Playfair Display',Georgia,serif; font-size:3rem; font-weight:900; color:var(--sky); line-height:1; }
     .rating-info { text-align:left; }
