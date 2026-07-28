@@ -65,6 +65,31 @@
           {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.barchefavignana.it/"},
           {"@type": "ListItem", "position": 2, "name": "Aperitivo al Tramonto Favignana", "item": "https://www.barchefavignana.it/aperitivo-tramonto-favignana.html"}
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A che ora è l'imbarco per l'aperitivo al tramonto?",
+            "acceptedAnswer": {"@type":"Answer","text":"L'imbarco è alle ore 19:30, l'orario perfetto per essere in posizione quando il cielo si accende e le Egadi si tingono di arancio e rosa."}
+          },
+          {
+            "@type": "Question",
+            "name": "Cosa è incluso nell'aperitivo?",
+            "acceptedAnswer": {"@type":"Answer","text":"Vini siciliani come Grillo, Catarratto e Nero d'Avola, cocktail classici e stuzzichini gourmet: bruschette, olive di Nocellara, formaggi locali, salumi siciliani e pesce marinato delle Egadi."}
+          },
+          {
+            "@type": "Question",
+            "name": "Quante persone partecipano all'aperitivo in barca?",
+            "acceptedAnswer": {"@type":"Answer","text":"L'esperienza è pensata per un massimo di 8-10 persone, per garantire un'atmosfera intima e curata senza affollamento."}
+          },
+          {
+            "@type": "Question",
+            "name": "In quale periodo è disponibile l'aperitivo al tramonto?",
+            "acceptedAnswer": {"@type":"Answer","text":"Il servizio è disponibile da marzo a ottobre. Scrivici su WhatsApp per verificare tariffe e disponibilità."}
+          }
+        ]
       }
     ]
   }
@@ -194,6 +219,16 @@
     .dk-feature-num{font-family:'Cormorant Garamond','Playfair Display',Georgia,serif;font-size:2.8rem;color:#d4a574;line-height:1;margin-bottom:.75rem;font-style:italic;font-weight:400}
     .dk-feature h3{font-family:'DM Sans',sans-serif;font-size:.98rem;color:#fff;margin-bottom:.5rem;font-weight:600;letter-spacing:.02em}
     .dk-feature p{font-family:'DM Sans',sans-serif;font-size:.86rem;color:rgba(255,255,255,.5);line-height:1.72}
+
+    /* FAQ */
+    .dk-faq-list{max-width:800px;margin:3rem auto 0;display:flex;flex-direction:column;gap:.85rem}
+    .dk-faq-item{background:rgba(255,255,255,.04);border:1px solid rgba(212,165,116,.22);border-radius:12px;overflow:hidden;transition:background .2s}
+    .dk-faq-item[open]{background:rgba(255,255,255,.06)}
+    .dk-faq-item summary{cursor:pointer;padding:1.25rem 1.5rem;font-family:'DM Sans',sans-serif;font-weight:600;color:#fff;font-size:.98rem;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .dk-faq-item summary::-webkit-details-marker{display:none}
+    .dk-faq-item summary::after{content:'+';font-size:1.4rem;font-weight:400;color:#d4a574;flex-shrink:0;transition:transform .25s ease;line-height:1}
+    .dk-faq-item[open] summary::after{transform:rotate(45deg)}
+    .dk-faq-item .dk-faq-answer{padding:0 1.5rem 1.25rem;font-family:'DM Sans',sans-serif;color:rgba(255,255,255,.63);font-size:.9rem;line-height:1.7}
 
     /* REVIEWS */
     .dk-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
@@ -435,6 +470,32 @@
             <p>Esperienza intima e curata. Niente folla — solo il tramonto e le persone che contano.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 5.5 FAQ -->
+    <section class="dk-section">
+      <div class="dk-container-md dk-reveal" style="text-align:center">
+        <span class="dk-section-eyebrow">Domande frequenti</span>
+        <h2 class="dk-section-title">Tutto quello che<br><em>vuoi sapere prima di partire</em></h2>
+      </div>
+      <div class="dk-faq-list">
+        <details class="dk-faq-item">
+          <summary>A che ora è l'imbarco?</summary>
+          <div class="dk-faq-answer">L'imbarco è alle ore 19:30, l'orario perfetto per essere in posizione quando il cielo si accende e le Egadi si tingono di arancio e rosa.</div>
+        </details>
+        <details class="dk-faq-item">
+          <summary>Cosa è incluso nell'aperitivo?</summary>
+          <div class="dk-faq-answer">Vini siciliani come Grillo, Catarratto e Nero d'Avola, cocktail classici e stuzzichini gourmet: bruschette, olive di Nocellara, formaggi locali, salumi siciliani e pesce marinato delle Egadi.</div>
+        </details>
+        <details class="dk-faq-item">
+          <summary>Quante persone partecipano?</summary>
+          <div class="dk-faq-answer">L'esperienza è pensata per un massimo di 8-10 persone, per garantire un'atmosfera intima e curata senza affollamento.</div>
+        </details>
+        <details class="dk-faq-item">
+          <summary>In quale periodo è disponibile?</summary>
+          <div class="dk-faq-answer">Il servizio è disponibile da marzo a ottobre. Scrivici su WhatsApp per verificare tariffe e disponibilità.</div>
+        </details>
       </div>
     </section>
 

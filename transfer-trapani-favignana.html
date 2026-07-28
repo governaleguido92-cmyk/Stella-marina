@@ -256,6 +256,15 @@
       .reveal,.hero-particles span,.wave-path-1,.wave-path-2,.float-wa::before,.float-wa::after,.hero-badge,.cta-bg-blob { animation:none !important; transition:none !important; opacity:1 !important; transform:none !important; }
     }
     @media print { .nav,.mobile-cta,.hamburger,.mobile-sidebar,.float-wa,.scroll-top-btn{display:none} }
+
+    .faq-list { max-width:800px; margin:3rem auto 0; display:flex; flex-direction:column; gap:.85rem; }
+    .faq-item { background:#fff; border-radius:var(--radius); border:1px solid rgba(10,61,92,.08); overflow:hidden; transition:box-shadow .2s; }
+    .faq-item[open] { box-shadow:var(--shadow); }
+    .faq-item summary { cursor:pointer; padding:1.25rem 1.5rem; font-weight:700; color:var(--ocean); font-size:1rem; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item summary::after { content:'+'; font-size:1.4rem; font-weight:400; color:var(--teal); flex-shrink:0; transition:transform .25s ease; line-height:1; }
+    .faq-item[open] summary::after { transform:rotate(45deg); }
+    .faq-item .faq-answer { padding:0 1.5rem 1.25rem; color:var(--muted); font-size:.94rem; line-height:1.7; }
   </style>
 
   <script type="application/ld+json">
@@ -271,6 +280,34 @@
       "telephone": "+393290865808",
       "address": {"@type":"PostalAddress","streetAddress":"Circolo Nautico Favignana","addressLocality":"Favignana","addressRegion":"TP","postalCode":"91023","addressCountry":"IT"}
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto dura la traversata Trapani-Favignana?",
+        "acceptedAnswer": {"@type":"Answer","text":"Con condizioni di mare favorevoli la traversata dura 30-40 minuti, con partenza dal porto di Trapani e arrivo al porto di Favignana."}
+      },
+      {
+        "@type": "Question",
+        "name": "Il transfer è disponibile anche di notte?",
+        "acceptedAnswer": {"@type":"Answer","text":"Sì, il servizio è disponibile sia di giorno che di sera e di notte su prenotazione: perfetto per arrivare tardi sull'isola o rientrare a Trapani dopo cena."}
+      },
+      {
+        "@type": "Question",
+        "name": "Posso portare bagagli o biciclette?",
+        "acceptedAnswer": {"@type":"Answer","text":"Sì, bagagli, biciclette e attrezzatura sportiva sono accettati: gestiamo il carico a bordo senza costi extra."}
+      },
+      {
+        "@type": "Question",
+        "name": "Da dove parte il transfer?",
+        "acceptedAnswer": {"@type":"Answer","text":"Il transfer parte dal porto di Trapani e arriva al porto di Favignana. Il servizio è attivo da marzo a ottobre, con possibilità su richiesta anche fuori stagione."}
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.barchefavignana.it/"},{"@type":"ListItem","position":2,"name":"Transfer Trapani Favignana","item":"https://www.barchefavignana.it/transfer-trapani-favignana.html"}]}</script>
@@ -523,8 +560,41 @@
       </div>
     </section>
 
-    <!-- Wave: foam → white -->
+    <!-- Wave: foam → sand -->
     <div class="wave-divider" aria-hidden="true" style="background:#e8f4f9">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#fdf6ec"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ FAQ ═══════ -->
+    <section class="section section-alt" aria-labelledby="faq-title">
+      <div class="container" style="text-align:center;">
+        <span class="section-eyebrow">Domande frequenti</span>
+        <h2 class="section-title" id="faq-title">Tutto quello che<br><em>vuoi sapere prima di partire</em></h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Quanto dura la traversata?</summary>
+          <div class="faq-answer">Con condizioni di mare favorevoli la traversata dura 30-40 minuti, con partenza dal porto di Trapani e arrivo al porto di Favignana.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Il transfer è disponibile anche di notte?</summary>
+          <div class="faq-answer">Sì, il servizio è disponibile sia di giorno che di sera e di notte su prenotazione: perfetto per arrivare tardi sull'isola o rientrare a Trapani dopo cena.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Posso portare bagagli o biciclette?</summary>
+          <div class="faq-answer">Sì, bagagli, biciclette e attrezzatura sportiva sono accettati: gestiamo il carico a bordo senza costi extra.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Da dove parte il transfer?</summary>
+          <div class="faq-answer">Il transfer parte dal porto di Trapani e arriva al porto di Favignana. Il servizio è attivo da marzo a ottobre, con possibilità su richiesta anche fuori stagione.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Wave: sand → white -->
+    <div class="wave-divider" aria-hidden="true" style="background:#fdf6ec">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff"/>
       </svg>

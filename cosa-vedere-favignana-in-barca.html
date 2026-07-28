@@ -253,6 +253,15 @@
       .reveal,.hero-particles span,.wave-path-1,.wave-path-2,.float-wa::before,.float-wa::after,.hero-badge,.cta-bg-blob { animation:none !important; transition:none !important; opacity:1 !important; transform:none !important; }
     }
     @media print { .nav,.mobile-cta,.hamburger,.mobile-sidebar,.float-wa,.scroll-top-btn{display:none} }
+
+    .faq-list { max-width:800px; margin:3rem auto 0; display:flex; flex-direction:column; gap:.85rem; }
+    .faq-item { background:#fff; border-radius:var(--radius); border:1px solid rgba(10,61,92,.08); overflow:hidden; transition:box-shadow .2s; }
+    .faq-item[open] { box-shadow:var(--shadow); }
+    .faq-item summary { cursor:pointer; padding:1.25rem 1.5rem; font-weight:700; color:var(--ocean); font-size:1rem; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item summary::after { content:'+'; font-size:1.4rem; font-weight:400; color:var(--teal); flex-shrink:0; transition:transform .25s ease; line-height:1; }
+    .faq-item[open] summary::after { transform:rotate(45deg); }
+    .faq-item .faq-answer { padding:0 1.5rem 1.25rem; color:var(--muted); font-size:.94rem; line-height:1.7; }
   </style>
 
   <script type="application/ld+json">
@@ -268,6 +277,34 @@
       "telephone": "+393290865808",
       "address": {"@type":"PostalAddress","streetAddress":"Circolo Nautico Favignana","addressLocality":"Favignana","addressRegion":"TP","postalCode":"91023","addressCountry":"IT"}
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quali sono le calette più belle raggiungibili solo in barca?",
+        "acceptedAnswer": {"@type":"Answer","text":"Cala del Bue Marino, con la sua grotta dalle pareti di tufo, e le fessure rocciose di Punta Faragone sono accessibili solo via mare: qui i fondali sono i più ricchi di biodiversità dell'isola."}
+      },
+      {
+        "@type": "Question",
+        "name": "Dove è possibile fare snorkeling a Favignana?",
+        "acceptedAnswer": {"@type":"Answer","text":"Le zone migliori sono Cala del Bue Marino, Cala Azzurra, Punta Faragone e le aree rocciose intorno a Cala Rossa, con avvistamenti di cernie, aragoste, ricci e polpi."}
+      },
+      {
+        "@type": "Question",
+        "name": "Meglio noleggiare un gommone o prenotare un'escursione guidata?",
+        "acceptedAnswer": {"@type":"Answer","text":"Per esplorare le calette in autonomia scegli un gommone senza patente; se preferisci una guida esperta che ti porti nei posti migliori, prenota un'escursione guidata con comandante."}
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto tempo serve per vedere le calette principali?",
+        "acceptedAnswer": {"@type":"Answer","text":"Una giornata intera è l'ideale per esplorare con calma le calette più belle di Favignana, tra soste per il bagno e lo snorkeling nei punti migliori."}
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.barchefavignana.it/"},{"@type":"ListItem","position":2,"name":"Cosa Vedere Favignana in Barca","item":"https://www.barchefavignana.it/cosa-vedere-favignana-in-barca.html"}]}</script>
@@ -515,8 +552,41 @@
       </div>
     </section>
 
-    <!-- Wave: foam → white -->
+    <!-- Wave: foam → sand -->
     <div class="wave-divider" aria-hidden="true" style="background:#e8f4f9">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#fdf6ec"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ FAQ ═══════ -->
+    <section class="section section-alt" aria-labelledby="faq-title">
+      <div class="container" style="text-align:center;">
+        <span class="section-eyebrow">Domande frequenti</span>
+        <h2 class="section-title" id="faq-title">Tutto quello che<br><em>vuoi sapere prima di partire</em></h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Quali sono le calette più belle raggiungibili solo in barca?</summary>
+          <div class="faq-answer">Cala del Bue Marino, con la sua grotta dalle pareti di tufo, e le fessure rocciose di Punta Faragone sono accessibili solo via mare: qui i fondali sono i più ricchi di biodiversità dell'isola.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Dove è possibile fare snorkeling?</summary>
+          <div class="faq-answer">Le zone migliori sono Cala del Bue Marino, Cala Azzurra, Punta Faragone e le aree rocciose intorno a Cala Rossa, con avvistamenti di cernie, aragoste, ricci e polpi.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Meglio noleggiare un gommone o prenotare un'escursione guidata?</summary>
+          <div class="faq-answer">Per esplorare le calette in autonomia scegli un gommone senza patente; se preferisci una guida esperta che ti porti nei posti migliori, prenota un'escursione guidata con comandante.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Quanto tempo serve per vedere le calette principali?</summary>
+          <div class="faq-answer">Una giornata intera è l'ideale per esplorare con calma le calette più belle di Favignana, tra soste per il bagno e lo snorkeling nei punti migliori.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Wave: sand → white -->
+    <div class="wave-divider" aria-hidden="true" style="background:#fdf6ec">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff"/>
       </svg>

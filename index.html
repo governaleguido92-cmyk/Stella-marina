@@ -272,6 +272,15 @@
       .reveal,.hero-particles span,.wave-path-1,.wave-path-2,.float-wa::before,.float-wa::after,.hero-badge,.cta-bg-blob { animation:none !important; transition:none !important; opacity:1 !important; transform:none !important; }
     }
     @media print { .nav,.mobile-cta,.hamburger,.mobile-sidebar,.float-wa,.scroll-top-btn{display:none} }
+
+    .faq-list { max-width:800px; margin:3rem auto 0; display:flex; flex-direction:column; gap:.85rem; }
+    .faq-item { background:#fff; border-radius:var(--radius); border:1px solid rgba(10,61,92,.08); overflow:hidden; transition:box-shadow .2s; }
+    .faq-item[open] { box-shadow:var(--shadow); }
+    .faq-item summary { cursor:pointer; padding:1.25rem 1.5rem; font-weight:700; color:var(--ocean); font-size:1rem; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .faq-item summary::-webkit-details-marker { display:none; }
+    .faq-item summary::after { content:'+'; font-size:1.4rem; font-weight:400; color:var(--teal); flex-shrink:0; transition:transform .25s ease; line-height:1; }
+    .faq-item[open] summary::after { transform:rotate(45deg); }
+    .faq-item .faq-answer { padding:0 1.5rem 1.25rem; color:var(--muted); font-size:.94rem; line-height:1.7; }
   </style>
 
   <script type="application/ld+json">
@@ -642,6 +651,46 @@
         </div>
       </div>
     </section>
+
+    <!-- Wave: sand → sand -->
+    <div class="wave-divider" aria-hidden="true" style="background:#fdf6ec">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#fdf6ec"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ FAQ ═══════ -->
+    <section class="section section-alt" aria-labelledby="faq-title">
+      <div class="container" style="text-align:center;">
+        <span class="section-eyebrow">Domande frequenti</span>
+        <h2 class="section-title" id="faq-title">Tutto quello che<br><em>vuoi sapere prima di prenotare</em></h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Quali servizi offre Stella Marina?</summary>
+          <div class="faq-answer">Stella Marina offre noleggio gommoni senza patente, barche con patente, transfer marittimi Trapani-Favignana, escursioni guidate alle Isole Egadi e aperitivi al tramonto.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Come si prenota il noleggio?</summary>
+          <div class="faq-answer">Puoi prenotare direttamente su WhatsApp al 329 086 5808. Ti consigliamo la prenotazione anticipata soprattutto nei mesi di luglio e agosto.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Che cosa è incluso nel noleggio?</summary>
+          <div class="faq-answer">Barca/gommone, assicurazione base, briefing di sicurezza, mappa delle rotte consigliate e informazioni su aree marine protette.</div>
+        </details>
+        <details class="faq-item">
+          <summary>È possibile noleggiare una barca senza patente nautica?</summary>
+          <div class="faq-answer">Sì. Offriamo gommoni fino a 40 cv noleggiabili senza patente nautica. Sono agili e perfetti per scoprire le calette di Favignana, Cala Rossa, Cala Azzurra e Cala Rotonda.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- Wave: sand → white -->
+    <div class="wave-divider" aria-hidden="true" style="background:#fdf6ec">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
 
     <!-- ═══════ REVIEWS ═══════ -->
     <section class="section" aria-label="Recensioni dei clienti">
