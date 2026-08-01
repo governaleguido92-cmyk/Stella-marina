@@ -182,7 +182,10 @@ status = 200
 # ============================================================================
 # PLUGINS (Optional - for future enhancements)
 # ============================================================================
-# Uncomment to use Netlify plugins
+# @netlify/plugin-lighthouse tentato il 2026-08-01: causa timeout/crash in
+# fase build (Chrome headless non parte in modo affidabile in questo ambiente
+# Netlify). Rimosso per non bloccare i deploy. Se si vuole riprovare, testare
+# prima con `netlify build` in locale prima di pushare su main.
 # [[plugins]]
 # package = "@netlify/plugin-lighthouse"
 # [plugins.inputs]
