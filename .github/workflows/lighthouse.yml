@@ -13,6 +13,8 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Wait for Netlify deploy
         if: github.event_name == 'push'
         run: sleep 60
