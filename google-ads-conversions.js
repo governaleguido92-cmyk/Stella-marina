@@ -16,6 +16,7 @@ gtag('config', ADS_ID);
 // ── WhatsApp ─────────────────────────────────────────────────
 document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
   el.addEventListener('click', function() {
+    gtag('event', 'click_whatsapp'); // evento chiave GA4
     gtag('event', 'conversion', {
       send_to: CONV_WHATSAPP,
       value: 1.0,
@@ -27,6 +28,7 @@ document.querySelectorAll('a[href*="wa.me"]').forEach(function(el) {
 // ── Chiamata telefonica ───────────────────────────────────────
 document.querySelectorAll('a[href*="tel:"]').forEach(function(el) {
   el.addEventListener('click', function() {
+    gtag('event', 'click_telefono'); // evento chiave GA4
     gtag('event', 'conversion', {
       send_to: CONV_TELEFONO,
       value: 1.0,
