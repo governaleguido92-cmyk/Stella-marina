@@ -180,14 +180,13 @@ to = "/admin/index.html"
 status = 200
 
 # ============================================================================
-# PLUGINS (Optional - for future enhancements)
+# PLUGINS
 # ============================================================================
-# Uncomment to use Netlify plugins
-# [[plugins]]
-# package = "@netlify/plugin-lighthouse"
-# [plugins.inputs]
-# output_dir = "lighthousereport"
-# audits = ["accessibility", "best-practices", "performance", "pwa", "seo"]
+[[plugins]]
+package = "@netlify/plugin-lighthouse"
+[plugins.inputs]
+output_dir = "lighthousereport"
+audits = ["accessibility", "best-practices", "performance", "pwa", "seo"]
 
 # ============================================================================
 # FORMS (for future contact form integration)
