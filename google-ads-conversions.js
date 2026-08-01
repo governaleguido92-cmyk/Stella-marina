@@ -1,14 +1,12 @@
 // ============================================================
 // Stella Marina – Google Ads Conversion Tracking
 // barchefavignana.it
-//
-// SETUP: sostituisci i tre valori sotto con i tuoi ID reali
 // ============================================================
 
-var ADS_ID          = 'AW-XXXXXXXXXX';          // es. AW-1234567890
-var CONV_WHATSAPP   = 'AW-XXXXXXXXXX/AAAAAAAAA'; // ID conversione "Click WhatsApp"
-var CONV_TELEFONO   = 'AW-XXXXXXXXXX/BBBBBBBBB'; // ID conversione "Chiamata telefonica"
-var CONV_PREZZI     = 'AW-XXXXXXXXXX/CCCCCCCCC'; // ID conversione "Visita pagina prezzi"
+var ADS_ID          = 'AW-18209845790';
+var CONV_WHATSAPP   = 'AW-18209845790/aCvICKqLg9ocEJ7kkOtD'; // "Click WhatsApp"
+var CONV_TELEFONO   = 'AW-18209845790/MYxQCK2Lg9ocEJ7kkOtD'; // "Chiamata Telefonica"
+var CONV_PREZZI     = 'AW-18209845790/MKg_CLCLg9ocEJ7kkOtD'; // "Visita Pagina Prezzi"
 
 // Registra il tag Google Ads (si appoggia al gtag.js già caricato)
 gtag('config', ADS_ID);
@@ -36,6 +34,9 @@ document.querySelectorAll('a[href*="tel:"]').forEach(function(el) {
 });
 
 // ── Micro-conversione: visita pagina prezzi ───────────────────
+// TODO: 'prezzi-noleggio' non corrisponde a nessuna pagina esistente sul
+// sito (verificato 01/08/26) — questo evento non scatta mai. Correggere il
+// path quando si sa quale pagina reale rappresenta i "prezzi".
 if (window.location.pathname.indexOf('prezzi-noleggio') !== -1) {
   gtag('event', 'conversion', {
     send_to: CONV_PREZZI,
