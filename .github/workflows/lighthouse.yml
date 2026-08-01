@@ -1,0 +1,34 @@
+name: Lighthouse audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.html"
+  schedule:
+    - cron: "0 6 * * 1" # ogni lunedì 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for Netlify deploy
+        if: github.event_name == 'push'
+        run: sleep 60
+
+      - name: Run Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v11
+        with:
+          urls: |
+            https://www.barchefavignana.it/
+            https://www.barchefavignana.it/noleggio-barche-favignana.html
+            https://www.barchefavignana.it/noleggio-gommoni-favignana.html
+            https://www.barchefavignana.it/escursioni-egadi-favignana.html
+            https://www.barchefavignana.it/cosa-vedere-favignana-in-barca.html
+            https://www.barchefavignana.it/aperitivo-tramonto-favignana.html
+            https://www.barchefavignana.it/transfer-trapani-favignana.html
+            https://www.barchefavignana.it/faq.html
+            https://www.barchefavignana.it/contatti.html
+          uploadArtifacts: true
+          temporaryPublicStorage: true
