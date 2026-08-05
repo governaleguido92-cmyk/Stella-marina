@@ -442,6 +442,144 @@
       </div>
     </section>
 
+    <!-- Wave: white → white -->
+    <div class="wave-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ QUIZ: QUALE BARCA FA PER TE ═══════ -->
+    <section class="section" aria-labelledby="quiz-title">
+      <div class="container" style="max-width:680px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:2rem;">
+          <span class="section-eyebrow">In 3 domande</span>
+          <h2 id="quiz-title" class="section-title" style="margin-bottom:0;">Quale barca fa<br><em>per te?</em></h2>
+        </div>
+
+        <div id="sm-quiz" style="background:var(--foam);border-radius:20px;padding:2rem;min-height:260px;">
+          <!-- Progress -->
+          <div id="sm-quiz-progress" style="display:flex;gap:.4rem;margin-bottom:1.5rem;">
+            <span class="sm-quiz-dot" data-step="1" style="height:5px;flex:1;border-radius:3px;background:var(--teal);"></span>
+            <span class="sm-quiz-dot" data-step="2" style="height:5px;flex:1;border-radius:3px;background:#d7e8ee;"></span>
+            <span class="sm-quiz-dot" data-step="3" style="height:5px;flex:1;border-radius:3px;background:#d7e8ee;"></span>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="sm-quiz-step" data-step="1">
+            <p style="font-weight:700;color:var(--ocean);font-size:1.15rem;margin-bottom:1.25rem;">Hai la patente nautica?</p>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+              <button type="button" class="sm-quiz-btn" data-q="patente" data-v="si">Sì, ce l'ho</button>
+              <button type="button" class="sm-quiz-btn" data-q="patente" data-v="no">No, non ce l'ho</button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="sm-quiz-step" data-step="2" hidden>
+            <p style="font-weight:700;color:var(--ocean);font-size:1.15rem;margin-bottom:1.25rem;">Quante persone siete?</p>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+              <button type="button" class="sm-quiz-btn" data-q="persone" data-v="1-4">1–4 persone</button>
+              <button type="button" class="sm-quiz-btn" data-q="persone" data-v="5-8">5–8 persone</button>
+              <button type="button" class="sm-quiz-btn" data-q="persone" data-v="9+">9 o più</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="sm-quiz-step" data-step="3" hidden>
+            <p style="font-weight:700;color:var(--ocean);font-size:1.15rem;margin-bottom:1.25rem;">Cosa cerchi?</p>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+              <button type="button" class="sm-quiz-btn" data-q="cosa" data-v="libera">Giornata libera in autonomia</button>
+              <button type="button" class="sm-quiz-btn" data-q="cosa" data-v="guidata">Escursione guidata</button>
+              <button type="button" class="sm-quiz-btn" data-q="cosa" data-v="aperitivo">Aperitivo al tramonto</button>
+            </div>
+          </div>
+
+          <!-- Result -->
+          <div id="sm-quiz-result" hidden>
+            <p class="sm-quiz-eyebrow" style="color:var(--teal);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.5rem;">Consigliato per te</p>
+            <h3 id="sm-quiz-result-title" style="font-family:'Playfair Display',Georgia,serif;color:var(--ocean);font-size:1.6rem;margin-bottom:.6rem;"></h3>
+            <p id="sm-quiz-result-desc" style="color:var(--muted);line-height:1.6;margin-bottom:1.25rem;"></p>
+            <div style="display:flex;align-items:center;gap:.7rem;background:#fff;border:2px dashed var(--teal);border-radius:12px;padding:.75rem 1rem;margin-bottom:1.5rem;max-width:fit-content;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00b5c8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1"/></svg>
+              <span style="color:var(--ocean);font-size:.92rem;">Codice <strong id="sm-quiz-code" style="color:var(--teal);letter-spacing:.03em;">QUIZ10</strong> &mdash; <strong>10% di sconto</strong></span>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+              <a id="sm-quiz-result-cta" href="#" class="btn btn-wa" style="text-decoration:none;">Scopri l'offerta su WhatsApp</a>
+              <button type="button" id="sm-quiz-restart" style="background:none;border:none;color:var(--ocean);font-weight:600;text-decoration:underline;cursor:pointer;">Rifai il quiz</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .sm-quiz-btn{background:#fff;border:2px solid #d7e8ee;color:var(--ocean);font-weight:600;padding:.7rem 1.2rem;border-radius:12px;cursor:pointer;font-size:.95rem;transition:border-color .2s,background .2s;}
+      .sm-quiz-btn:hover{border-color:var(--teal);background:#f0fbfd;}
+    </style>
+    <script>
+      (function(){
+        var answers = {};
+        var quiz = document.getElementById('sm-quiz');
+        if (!quiz) return;
+        var steps = quiz.querySelectorAll('.sm-quiz-step');
+        var dots = quiz.querySelectorAll('.sm-quiz-dot');
+        var result = document.getElementById('sm-quiz-result');
+
+        function goToStep(n){
+          steps.forEach(function(s){ s.hidden = (s.dataset.step != n); });
+          dots.forEach(function(d){ d.style.background = (d.dataset.step <= n) ? 'var(--teal)' : '#d7e8ee'; });
+        }
+
+        quiz.querySelectorAll('.sm-quiz-btn').forEach(function(btn){
+          btn.addEventListener('click', function(){
+            answers[btn.dataset.q] = btn.dataset.v;
+            var currentStep = btn.closest('.sm-quiz-step');
+            var next = parseInt(currentStep.dataset.step, 10) + 1;
+            if (next <= 3) {
+              goToStep(next);
+            } else {
+              showResult();
+            }
+          });
+        });
+
+        function showResult(){
+          steps.forEach(function(s){ s.hidden = true; });
+          dots.forEach(function(d){ d.style.background = 'var(--teal)'; });
+
+          var title, desc;
+          if (answers.cosa === 'aperitivo') {
+            title = 'Aperitivo al Tramonto';
+            desc = "L'esperienza esclusiva Stella Marina: uscita in barca al calar del sole con drink e vista sulle Egadi.";
+          } else if (answers.cosa === 'guidata') {
+            title = 'Escursione Guidata alle Egadi';
+            desc = 'Un comandante esperto ti porta nelle calette più belle, senza pensieri: rotta, sicurezza e soste tutte incluse.';
+          } else if (answers.patente === 'no') {
+            title = 'Gommone Senza Patente';
+            desc = 'Libertà totale per esplorare le coste di Favignana in autonomia, ' + (answers.persone === '9+' ? 'anche in gruppo numeroso' : 'perfetto per il vostro gruppo') + ', nessuna patente richiesta.';
+          } else {
+            title = 'Barca a Noleggio';
+            desc = 'Con la tua patente nautica sei libero di esplorare le Egadi come vuoi, alla tua velocità e sui tuoi tempi.';
+          }
+
+          var code = 'QUIZ10';
+          var waText = "Ciao! Ho fatto il quiz sul sito e mi interessa: " + title + ". Voglio usare il codice " + code + " per il 10% di sconto.";
+
+          document.getElementById('sm-quiz-result-title').textContent = title;
+          document.getElementById('sm-quiz-result-desc').textContent = desc;
+          document.getElementById('sm-quiz-code').textContent = code;
+          document.getElementById('sm-quiz-result-cta').href = 'https://wa.me/393290865808?text=' + encodeURIComponent(waText);
+          result.hidden = false;
+        }
+
+        document.getElementById('sm-quiz-restart').addEventListener('click', function(){
+          answers = {};
+          result.hidden = true;
+          goToStep(1);
+        });
+      })();
+    </script>
+
     <!-- Wave: white → sand -->
     <div class="wave-divider" aria-hidden="true">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
