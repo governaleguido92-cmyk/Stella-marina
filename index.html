@@ -318,6 +318,7 @@
     gtag('config', 'G-WEY5393Y7F');
     gtag('config', 'AW-18209845790');
   </script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head>
 <body>
 
@@ -652,7 +653,78 @@
       </div>
     </section>
 
-    <!-- Wave: sand → sand -->
+    <!-- Wave: sand → white -->
+    <div class="wave-divider" aria-hidden="true" style="background:#ffffff">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+
+    <!-- ═══════ ESPLORA FAVIGNANA ═══════ -->
+    <section class="section" aria-labelledby="esplora-title">
+      <div class="container">
+        <div class="two-col">
+        <div class="text-stack reveal">
+          <span class="section-eyebrow">Le nostre mete</span>
+          <h2 id="esplora-title" class="section-title">Esplora Favignana<br><em>e Levanzo con noi</em></h2>
+          <p style="color:var(--muted);font-size:1.05rem;line-height:1.6;margin-bottom:1.25rem;">
+            Scopri le calette più belle di Favignana, da Cala Rossa a Cala Azzurra, e le nostre escursioni fino a Levanzo. Si parte dal nostro ormeggio al Circolo Nautico e si va alla libertà del mare, con o senza patente.
+          </p>
+          <p style="color:var(--teal);font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.6rem;">Favignana</p>
+          <ul style="list-style:none;padding:0;margin:0 0 1.25rem;display:flex;flex-direction:column;gap:.7rem;">
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00b5c8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Cala Rossa
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#00b5c8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Cala Azzurra
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0a3d5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Bue Marino
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0a3d5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Cala Rotonda
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0a3d5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Punta Sottile
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#0a3d5c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Punta Faraglione
+            </li>
+          </ul>
+          <p style="color:var(--sky);font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.6rem;">Isola di Levanzo</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.7rem;">
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1a7fa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Cala Dogana (porto)
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1a7fa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Grotta del Genovese
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1a7fa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Cala Faraglione
+            </li>
+            <li style="display:flex;align-items:center;gap:.6rem;color:var(--ocean);font-weight:600;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1a7fa8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+              Cala Minnola
+            </li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-1">
+          <div id="favignana-map" role="img" aria-label="Mappa di Favignana e Levanzo con calette, punti panoramici e siti di interesse" style="width:100%;height:460px;border-radius:16px;overflow:hidden;background:#e8f4f9;"></div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave: white → sand -->
     <div class="wave-divider" aria-hidden="true" style="background:#fdf6ec">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0,20 C480,60 960,0 1440,40 L1440,60 L0,60 Z" fill="#fdf6ec"/>
@@ -1004,5 +1076,56 @@
     }
   </script>
 <script src="/google-ads-conversions.js"></script>
+
+  <!-- Mappa Esplora Favignana (Leaflet + OpenStreetMap) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script>
+    (function(){
+      var el = document.getElementById('favignana-map');
+      if (!el || typeof L === 'undefined') return;
+      var map = L.map('favignana-map', { scrollWheelZoom:false }).setView([37.955, 12.320], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      function pin(lat, lng, label, color){
+        var marker = L.circleMarker([lat, lng], {
+          radius: 7, color: '#fff', weight: 2, fillColor: color, fillOpacity: 1
+        }).addTo(map);
+        marker.bindTooltip(label, { permanent:true, direction:'right', offset:[8,0], className:'sm-map-label' });
+        return marker;
+      }
+
+      var points = [
+        // Favignana
+        [37.9315, 12.3274, 'Ormeggio · Circolo Nautico', '#d4a574'],
+        [37.9222, 12.3657, 'Cala Rossa', '#00b5c8'],
+        [37.9098, 12.3615, 'Cala Azzurra', '#00b5c8'],
+        [37.9174, 12.3690, 'Bue Marino', '#0a3d5c'],
+        [37.9225, 12.2846, 'Cala Rotonda', '#0a3d5c'],
+        [37.9351, 12.2723, 'Punta Sottile', '#0a3d5c'],
+        [37.9565, 12.3095, 'Punta Faraglione', '#0a3d5c'],
+        // Levanzo
+        [37.9856, 12.3450, 'Cala Dogana · Levanzo', '#1a7fa8'],
+        [38.0017, 12.3216, 'Grotta del Genovese', '#1a7fa8'],
+        [37.9871, 12.3299, 'Cala Faraglione · Levanzo', '#1a7fa8'],
+        [37.9840, 12.3420, 'Cala Fredda', '#1a7fa8'],
+        [37.9928, 12.3509, 'Cala Minnola', '#1a7fa8']
+      ];
+
+      var latlngs = [];
+      points.forEach(function(p){
+        pin(p[0], p[1], p[2], p[3]);
+        latlngs.push([p[0], p[1]]);
+      });
+
+      map.fitBounds(L.latLngBounds(latlngs), { padding:[40,40] });
+    })();
+  </script>
+  <style>
+    .sm-map-label{background:#fff;border:none;box-shadow:0 2px 6px rgba(10,61,92,.18);color:#0a3d5c;font-weight:600;font-size:.78rem;padding:.2rem .5rem;border-radius:6px;}
+    .sm-map-label::before{display:none;}
+  </style>
 </body>
 </html>
